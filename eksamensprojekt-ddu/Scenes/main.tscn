@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://dc4wl8t6em67j"]
+
+[ext_resource type="Script" path="res://Scripts/unit_container.gd" id="1_iuhs0"]
+[ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="2_3ivyf"]
+[ext_resource type="PackedScene" uid="uid://t2vi15opsa00" path="res://Scenes/unit.tscn" id="4_a8img"]
+[ext_resource type="Script" path="res://Scripts/lane_1.gd" id="4_ju18q"]
+[ext_resource type="Script" path="res://Scripts/lane_2.gd" id="5_2hdvy"]
+[ext_resource type="Script" path="res://Scripts/lane_3.gd" id="6_iuvp6"]
+[ext_resource type="Script" path="res://Scripts/lane_4.gd" id="7_1nknt"]
+
+[node name="Main" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UnitLayer1" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_top = -0.01
+anchor_right = 0.042
+anchor_bottom = 0.103
+offset_top = 6.48
+offset_right = -48.384
+offset_bottom = 197.256
+script = ExtResource("2_3ivyf")
+
+[node name="UnitContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.576
+anchor_bottom = 0.407
+offset_right = -663.552
+offset_bottom = -263.736
+script = ExtResource("1_iuhs0")
+
+[node name="Unit" parent="CanvasLayer/UnitContainer" instance=ExtResource("4_a8img")]
+layout_mode = 2
+
+[node name="Lane1" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 51.0
+offset_right = 1152.0
+offset_bottom = 150.0
+script = ExtResource("4_ju18q")
+
+[node name="Lane2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 150.0
+offset_right = 1152.0
+offset_bottom = 250.0
+script = ExtResource("5_2hdvy")
+
+[node name="Lane3" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 250.0
+offset_right = 1152.0
+offset_bottom = 351.0
+script = ExtResource("6_iuvp6")
+
+[node name="Lane4" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 350.0
+offset_right = 1153.0
+offset_bottom = 450.0
+script = ExtResource("7_1nknt")
+
+[connection signal="mouse_entered" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Lane2" to="CanvasLayer/Lane2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane2" to="CanvasLayer/Lane2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Lane3" to="CanvasLayer/Lane3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane3" to="CanvasLayer/Lane3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Lane4" to="CanvasLayer/Lane4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane4" to="CanvasLayer/Lane4" method="_on_mouse_exited"]

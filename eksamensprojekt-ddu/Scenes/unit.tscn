@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://t2vi15opsa00"]
+
+[ext_resource type="Script" path="res://Scripts/unit.gd" id="1_075gf"]
+[ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="2_7igmw"]
+
+[node name="Unit" type="Container"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+script = ExtResource("1_075gf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 22)
+scale = Vector2(0.320313, 0.34375)
+texture = ExtResource("2_7igmw")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
