@@ -9,7 +9,7 @@ var lane3 = false
 var lane4 = false
 var moving = false
 var attacking = false
-var speed = 100  # Speed of movement to the right
+var speed = -100  # Speed of movement to the right
 
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 10  # Default attack damage
@@ -35,13 +35,13 @@ func _on_gui_input(event):
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
-				move_to_position(Vector2(50, 100))
+				move_to_position(Vector2(1000, 100))
 			if lane2:
-				move_to_position(Vector2(50, 200))
+				move_to_position(Vector2(1000, 200))
 			if lane3:
-				move_to_position(Vector2(50, 300))
+				move_to_position(Vector2(1000, 300))
 			if lane4:
-				move_to_position(Vector2(50, 400))
+				move_to_position(Vector2(1000, 400))
 
 func nolane():
 	lane1 = false
@@ -82,25 +82,25 @@ func _process(delta):
 		else:
 			nolane()
 	elif moving and !attacking:
-		self.global_position.x += speed * delta 
+		self.global_position.x += speed * delta  # Moves right
 
 func _on_attack_area_body_entered(body):
-	print("Detected collision with:", body.name) 
+	print("Detected collision with:", body.name)  # Debugging
 
 	if body == self:
 		print("Ignoring self-collision.")
 		return
 
-	if body.has_method(take_damage):
+	if body.has_method("take_damage"):
 		print("Attacking:", body.name)
-		attacking = true 
+		attacking = true  # Stop movement when attacking
 		body.take_damage(attack_damage)
 		can_attack = false
 		
 		await get_tree().create_timer(attack_cooldown).timeout
 		
 		can_attack = true
-		attacking = false  
+		attacking = false  # Resume movement after attack cooldown
 	else:
 		print("Body does not have 'take_damage' method:", body.name)
 
