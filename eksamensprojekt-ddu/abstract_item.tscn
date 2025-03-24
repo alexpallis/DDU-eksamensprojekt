@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4aux5431bqxf"]
+
+[ext_resource type="Script" path="res://abstract_item.gd" id="1_pkwgu"]
+
+[node name="AbstractItem" type="Sprite2D"]
+script = ExtResource("1_pkwgu")

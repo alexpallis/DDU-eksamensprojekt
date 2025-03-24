@@ -1,0 +1,17 @@
+{
+  "0": {
+	"Name": "David",
+	"Texture": "damin1-Sheet.png",
+	"Description": "does cleave damage"
+  },
+  "1": {
+	"Name": "david long legs",
+	"Texture": "Davidlonglegs-Sheet.png",
+	"Description": "does bludgeon damage"
+  },
+  "2": {
+	"Name": "Beefcake David",
+	"Texture": "davidbeefcake-Sheet.png",
+	"Description": "Lights"
+  }
+}

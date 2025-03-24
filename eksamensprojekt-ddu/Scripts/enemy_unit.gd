@@ -10,6 +10,7 @@ var lane4 = false
 var moving = false
 var attacking = false
 var speed = -100  # Speed of movement to the right
+var speed2 = -150
 
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 10  # Default attack damage
