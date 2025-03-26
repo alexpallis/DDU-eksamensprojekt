@@ -27,7 +27,7 @@ func _ready():
 	
 	#Connecting request handler:
 	add_child(http_request)
-	http_request.connect("request_completed", self, "_http_request_completed")
+	http_request.connect("request_completed", Callable(self, "_http_request_completed"))
 	
 func _process(delta: float):
 	if is_requesting:
