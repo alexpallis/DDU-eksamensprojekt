@@ -84,14 +84,27 @@ func _process(delta):
 	elif moving and !attacking:
 		self.global_position.x += speed * delta 
 
-func _on_attack_area_body_entered(body):
+	
+
+func take_damage(amount):
+	health -= amount
+	print("Unit took damage! Remaining health:", health)
+	if health <= 0:
+		die()
+
+func die():
+	print("Unit has been defeated.")
+	queue_free()
+
+
+func _on_attack_area_area_entered(body):
 	print("Detected collision with:", body.name) 
 
 	if body == self:
 		print("Ignoring self-collision.")
 		return
 
-	if body.has_method(take_damage):
+	if body.has_method("take_damage"):
 		print("Attacking:", body.name)
 		attacking = true 
 		body.take_damage(attack_damage)
@@ -103,13 +116,3 @@ func _on_attack_area_body_entered(body):
 		attacking = false  
 	else:
 		print("Body does not have 'take_damage' method:", body.name)
-
-func take_damage(amount):
-	health -= amount
-	print("Unit took damage! Remaining health:", health)
-	if health <= 0:
-		die()
-
-func die():
-	print("Unit has been defeated.")
-	queue_free()
