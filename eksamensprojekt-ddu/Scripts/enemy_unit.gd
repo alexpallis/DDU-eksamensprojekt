@@ -117,3 +117,4 @@ func _on_attack_area_area_entered(body):
 		attacking = false  # Resume movement after attack cooldown
 	else:
 		print("Body does not have 'take_damage' method:", body.name)
+		

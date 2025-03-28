@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dus5m8j6wbvcg"]
+[gd_scene load_steps=5 format=3 uid="uid://dus5m8j6wbvcg"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_unit.gd" id="1_3pi63"]
 [ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="2_785fn"]
+[ext_resource type="Script" path="res://Scenes/test.gd" id="3_2xxkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5r5f1"]
 size = Vector2(59.25, 20)
@@ -20,6 +21,7 @@ texture = ExtResource("2_785fn")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
+script = ExtResource("3_2xxkk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(-50.625, -3)

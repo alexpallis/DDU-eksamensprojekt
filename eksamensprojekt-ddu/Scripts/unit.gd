@@ -17,6 +17,7 @@ var health = 100  # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D
+@onready var cooldown = $cooldown
 
 func _ready():
 	start_position = self.global_position

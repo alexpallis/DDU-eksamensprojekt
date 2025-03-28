@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://t2vi15opsa00"]
+[gd_scene load_steps=5 format=3 uid="uid://t2vi15opsa00"]
 
 [ext_resource type="Script" path="res://Scripts/unit.gd" id="1_075gf"]
 [ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="2_7igmw"]
+[ext_resource type="Script" path="res://Scenes/test.gd" id="3_85w2g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olmj3"]
 size = Vector2(67, 20)
@@ -20,12 +21,16 @@ texture = ExtResource("2_7igmw")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
+script = ExtResource("3_85w2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(-25.5, -1)
 shape = SubResource("RectangleShape2D_olmj3")
 
+[node name="cooldown" type="Timer" parent="."]
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
