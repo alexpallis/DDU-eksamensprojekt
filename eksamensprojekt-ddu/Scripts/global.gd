@@ -36,7 +36,6 @@ func _ready():
 func _process(delta: float):
 	#gamecoin 
 	Coin += CoinSpeed * delta
-	print(Coin)
 
 
 	if is_requesting:
