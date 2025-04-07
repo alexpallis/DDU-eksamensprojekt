@@ -17,8 +17,8 @@ func die():
 	queue_free()
 
 func _ready():
-	$CanvasLayer/David_healthbar.value = Maxhealth
+	$CanvasLayer/David_health_bar.value = Maxhealth
 	set_healthbar()
 
 func set_healthbar():
-	$CanvasLayer/David_healthbar.value = health
+	$CanvasLayer/David_health_bar.value = health
