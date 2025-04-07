@@ -1,10 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxu7i4e0sme3y"]
+[gd_scene load_steps=3 format=3 uid="uid://brrp86bshmvfw"]
 
 [ext_resource type="Script" path="res://Scripts/inventoria.gd" id="1_1t2tk"]
+[ext_resource type="Script" path="res://Scenes/additem.gd" id="2_xjgxw"]
 
 [node name="Node" type="Node"]
 
-[node name="ItemList" type="ItemList" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Inventoria" type="ItemList" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_1t2tk")
+
+[node name="DevTool" type="CanvasLayer" parent="UI"]
+
+[node name="AddItem" type="Button" parent="UI/DevTool"]
+offset_left = 386.0
+offset_top = 252.0
+offset_right = 568.0
+offset_bottom = 324.0
+script = ExtResource("2_xjgxw")
+
+[connection signal="pressed" from="UI/DevTool/AddItem" to="UI/DevTool/AddItem" method="_on_pressed"]
