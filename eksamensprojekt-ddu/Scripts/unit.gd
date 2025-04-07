@@ -132,10 +132,9 @@ func _on_attack_area_area_exited(_area):
 
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		if can_attack:
-			print("Attacking:", body.name)
-			body.take_damage(attack_damage)
-			await get_tree().create_timer(attack_cooldown).timeout
+		print("Attacking:", body.name)
+		body.take_damage(attack_damage)
+		await get_tree().create_timer(attack_cooldown).timeout
 
 
 	
