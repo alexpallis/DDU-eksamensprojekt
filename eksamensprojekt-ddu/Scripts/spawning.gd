@@ -5,18 +5,7 @@ var enemy_types = [
 	preload("res://Scenes/enemy_unit.tscn")
 ]
 
-var lane1 = Vector2(1000, 100)
-var lane2 = Vector2(1000, 200)
-var lane3 = Vector2(1000, 300)
-var lane4 = Vector2(1000, 400)
-
-<<<<<<< HEAD
-func _on_spawning_timer_timeout():
-	var enemy = ENEMY_UNIT.instantiate()
-	enemy.position = lane1
-	self.add_sibling(enemy)
 	
-=======
 var lanes = [
 	Vector2(1000, 100),  # lane1
 	Vector2(1000, 200),  # lane2
@@ -83,4 +72,3 @@ func spawn_enemy(enemy_type_index: int, lane_index: int):
 	add_child(enemy_instance)
 
 	enemy_instance.position = lanes[lane_index]
->>>>>>> 1b7606626b309f0f0ebebc1f13b3bad4521257cc
