@@ -19,3 +19,9 @@ script = ExtResource("2_wvwd6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_jht6k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="David_health_bar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 4.0
+offset_bottom = 27.0

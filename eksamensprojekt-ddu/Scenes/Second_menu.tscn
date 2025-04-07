@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cv13tbq4urmff"]
+[gd_scene load_steps=9 format=3 uid="uid://csu0qbcaagjhm"]
 
 [ext_resource type="Script" path="res://Second_menu.gd" id="1_dudou"]
 
@@ -71,7 +71,7 @@ corner_radius_bottom_left = 15
 shadow_size = 10
 shadow_offset = Vector2(0, 10)
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
