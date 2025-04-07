@@ -1,3 +1,114 @@
-[gd_scene format=3 uid="uid://7i081076hyvh"]
+[gd_scene load_steps=4 format=3 uid="uid://7i081076hyvh"]
 
-[node name="LevelSelect" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dgxlhedwmo4kn" path="res://assets/garden.png" id="1_8xl8g"]
+[ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_nrl1x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db7t0"]
+resource_local_to_scene = true
+texture = ExtResource("1_8xl8g")
+
+[node name="LevelSelect" type="Node"]
+script = ExtResource("1_nrl1x")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_db7t0")
+
+[node name="Mony" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_top = 79.0
+offset_right = -28.0
+offset_bottom = 102.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.5
+offset_top = -145.0
+offset_right = 45.5
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.0
+offset_top = -35.0
+offset_right = -159.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -6.28319
+scale = Vector2(6, 6)
+localize_numeral_system = false
+columns = 7
+
+[node name="Day-2" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day-1" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day0" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day1" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day2" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day3" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day4" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -48.0
+offset_right = -24.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="Panel/GridContainer/Day1" to="." method="_on_day_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day2" to="." method="_on_day_2_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day3" to="." method="_on_day_3_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day4" to="." method="_on_day_4_pressed"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
