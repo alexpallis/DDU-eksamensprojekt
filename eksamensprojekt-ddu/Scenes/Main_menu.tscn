@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://crcn4sl7va7a0"]
+
+[ext_resource type="Script" path="res://Main_manu.gd" id="1_m5lkf"]
+
+[sub_resource type="Theme" id="Theme_yoygw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5lkf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.156734, 0.177662, 0.213966, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="Button_Start_game" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
+modulate = Color(0.972549, 1, 1, 1)
+layout_mode = 2
+theme = SubResource("Theme_yoygw")
+text = "Start game
+"
+
+[node name="Button_Settings" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="Button_Exit" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Button_Start_game" to="." method="_on_Start_game_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Button_Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Button_Exit" to="." method="_on_Exit_pressed"]

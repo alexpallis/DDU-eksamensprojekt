@@ -1,0 +1,133 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3enfqg4yv62e"]
+
+[ext_resource type="Script" path="res://Second_menu.gd" id="1_dudou"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px10d"]
+bg_color = Color(0.729412, 0, 0.298039, 0.741176)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.670588)
+shadow_size = 5
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrldd"]
+bg_color = Color(0.980392, 0, 0.352941, 0.65098)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok47y"]
+bg_color = Color(0, 0.301961, 0.301961, 0.72549)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5v7u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gk3nv"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 0.639216)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv21u"]
+bg_color = Color(0.686275, 0.686275, 0.686275, 0.611765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aejkd"]
+bg_color = Color(0.109804, 0.388235, 0, 0.717647)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dudou")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00336266, 0.123243, 0.208639, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="Button_Select_level" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_px10d")
+text = "Level select"
+
+[node name="Button_Inventory" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrldd")
+text = "Inventory"
+
+[node name="Button_Gacha" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ok47y")
+text = "Cloning station"
+
+[node name="Button_Back" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a5v7u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gk3nv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xv21u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_aejkd")
+text = "Back"
+
+[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Select_level" to="." method="_on_button_select_level_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Inventory" to="." method="_on_button_inventory_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Gacha" to="." method="_on_button_gacha_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Back" to="." method="_on_button_back_pressed"]

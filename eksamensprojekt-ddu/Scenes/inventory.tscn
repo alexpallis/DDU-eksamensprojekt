@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpmcw0u6i3cnu"]
+
+[ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="1_f1ulc"]
+[ext_resource type="Script" path="res://Scenes/inventory.gd" id="1_wtbc2"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_2ox6v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl5ny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kld6k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6v7s3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8735t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yheom"]
+
+[sub_resource type="Theme" id="Theme_4uhuo"]
+VScrollBar/icons/decrement = SubResource("ImageTexture_2ox6v")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_2ox6v")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_2ox6v")
+VScrollBar/icons/increment = SubResource("ImageTexture_2ox6v")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_2ox6v")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_2ox6v")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_gl5ny")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_kld6k")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_6v7s3")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_8735t")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_yheom")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wtbc2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 1280)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.214106, 0.000143201, 0.273041, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+custom_minimum_size = Vector2(1152, 640)
+layout_mode = 0
+offset_right = 336.0
+offset_bottom = 230.0
+theme = SubResource("Theme_4uhuo")
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/ScrollContainer"]
+custom_minimum_size = Vector2(1152, 1280)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/ScrollContainer/CenterContainer"]
+custom_minimum_size = Vector2(1152, 1280)
+layout_mode = 2
+columns = 22
+
+[node name="Icon" type="Sprite2D" parent="ColorRect/ScrollContainer/CenterContainer"]
+position = Vector2(32, 32)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_f1ulc")
+
+[node name="Icon2" type="Sprite2D" parent="ColorRect/ScrollContainer/CenterContainer"]
+position = Vector2(34, 1242)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_f1ulc")
+
+[node name="back_Button" type="Button" parent="ColorRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 10
+text = "Back"
+
+[connection signal="pressed" from="ColorRect/ScrollContainer/back_Button" to="." method="_on_back_pressed"]
