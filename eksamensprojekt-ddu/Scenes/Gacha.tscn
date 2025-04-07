@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxu7i4e0sme3y"]
+
+[ext_resource type="Script" path="res://Scripts/inventoria.gd" id="1_1t2tk"]
+
+[node name="Node" type="Node"]
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1t2tk")

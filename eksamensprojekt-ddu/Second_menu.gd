@@ -12,7 +12,7 @@ func _on_button_inventory_pressed() -> void:
 
 
 func _on_button_gacha_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/Gacha.tscn")
 
 
 
