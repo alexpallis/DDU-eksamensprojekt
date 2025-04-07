@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmhuk052doa8h"]
+
+[ext_resource type="Script" path="res://Scripts/david_thief.gd" id="1_j1ced"]
+[ext_resource type="Texture2D" uid="uid://11cgkg7i1i38" path="res://assets/damin1-Sheet.png" id="2_j1mn3"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_xs13m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_illvs"]
+size = Vector2(59.25, 20)
+
+[node name="david_thief" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j1ced")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.112667, 0, 0.26, 0.752941)
+position = Vector2(20, 22)
+scale = Vector2(0.133949, 0.14375)
+texture = ExtResource("2_j1mn3")
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 2
+script = ExtResource("3_xs13m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-50.625, -3)
+shape = SubResource("RectangleShape2D_illvs")
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

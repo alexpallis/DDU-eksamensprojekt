@@ -17,6 +17,7 @@ script = ExtResource("1_ql63i")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 2
 script = ExtResource("2_fcj1s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]

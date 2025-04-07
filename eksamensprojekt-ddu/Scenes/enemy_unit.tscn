@@ -15,13 +15,14 @@ size_flags_horizontal = 4
 script = ExtResource("1_3pi63")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.2925, 0.65, 0.358042, 1)
+modulate = Color(0.447417, 0.2925, 0.65, 1)
 position = Vector2(20, 22)
 scale = Vector2(0.133949, 0.14375)
 texture = ExtResource("2_i1rh7")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
+collision_layer = 2
 script = ExtResource("3_2xxkk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]

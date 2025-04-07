@@ -2,7 +2,7 @@ extends Control
 
 # Preload enemy scenes
 var enemy_types = [
-	preload("res://Scenes/enemy_unit.tscn")
+	preload("res://Scenes/enemy_unit.tscn"), preload("res://Scenes/david_legs.tscn"), preload("res://Scenes/david_arms.tscn"), preload("res://Scripts/david_thief.gd") 
 ]
 
 	

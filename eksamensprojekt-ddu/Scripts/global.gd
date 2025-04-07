@@ -26,6 +26,8 @@ var Coin = 0
 
 var mony = 0
 
+var enemy_difficulty = 1
+
 
 func _ready():
 	

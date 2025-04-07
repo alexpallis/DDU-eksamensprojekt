@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://sbmxd476tedo"]
+
+[ext_resource type="Script" path="res://Scripts/david_legs.gd" id="1_0pcfc"]
+[ext_resource type="Texture2D" uid="uid://y0xqnpj0rte4" path="res://assets/Davidlonglegs-Sheet.png" id="2_2hwvc"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_plybb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tc2vl"]
+size = Vector2(78, 20)
+
+[node name="DavidLegs" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0pcfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.36352, 0.2769, 0.71, 1)
+position = Vector2(16, 18)
+scale = Vector2(0.0680438, 0.0680438)
+texture = ExtResource("2_2hwvc")
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 2
+script = ExtResource("3_plybb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-60, -3)
+shape = SubResource("RectangleShape2D_tc2vl")
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
