@@ -147,6 +147,7 @@ func _submit_coins():
 	#The same function but for units
 	
 func _submit_units():
+	
 	var id = ""
 	var Dave = 0
 	var D1 = 0

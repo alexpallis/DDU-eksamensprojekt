@@ -9,7 +9,6 @@ var lane3 = Vector2(1000, 300)
 var lane4 = Vector2(1000, 400)
 
 func _on_spawning_timer_timeout():
-	print("hi")
 	var enemy = ENEMY_UNIT.instantiate()
 	enemy.position = lane1
 	self.add_sibling(enemy)
