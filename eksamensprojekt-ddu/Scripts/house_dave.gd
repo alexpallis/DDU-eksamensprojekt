@@ -6,6 +6,7 @@ var health = 10000
 
 func have_been_stolen(amount):
 	health -= amount
+
 	print("Daves house took damage! Remaining health:", health)
 	if health <= 0:
 		die()

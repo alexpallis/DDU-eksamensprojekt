@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc4wl8t6em67j"]
+[gd_scene load_steps=11 format=3 uid="uid://dc4wl8t6em67j"]
 
 [ext_resource type="Script" path="res://Scripts/unit_container.gd" id="1_iuhs0"]
+[ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="1_t6xxw"]
 [ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="2_3ivyf"]
 [ext_resource type="PackedScene" uid="uid://t2vi15opsa00" path="res://Scenes/unit.tscn" id="4_a8img"]
 [ext_resource type="Script" path="res://Scripts/lane_1.gd" id="4_ju18q"]
@@ -8,10 +9,23 @@
 [ext_resource type="Script" path="res://Scripts/lane_3.gd" id="6_iuvp6"]
 [ext_resource type="Script" path="res://Scripts/lane_4.gd" id="7_1nknt"]
 [ext_resource type="PackedScene" uid="uid://htefkhk0jtbt" path="res://Scenes/spawning.tscn" id="9_4upet"]
+[ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="9_yi04b"]
 
 [node name="Main" type="Node"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="House_David" parent="CanvasLayer" instance=ExtResource("1_t6xxw")]
+offset_left = 1248.0
+offset_top = 324.0
+offset_right = 1288.0
+offset_bottom = 364.0
+scale = Vector2(-2.26287, 3.69943)
+
+[node name="House_Dave" parent="CanvasLayer" instance=ExtResource("9_yi04b")]
+offset_top = 323.0
+offset_bottom = 323.0
+scale = Vector2(3.76, 3.76)
 
 [node name="UnitLayer1" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -72,6 +86,12 @@ script = ExtResource("7_1nknt")
 [node name="Spawning" parent="CanvasLayer" instance=ExtResource("9_4upet")]
 offset_left = 132.0
 offset_right = 132.0
+
+[node name="CoinCounter" type="Label" parent="CanvasLayer"]
+offset_left = 182.0
+offset_top = 11.0
+offset_right = 222.0
+offset_bottom = 34.0
 
 [connection signal="mouse_entered" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_exited"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dus5m8j6wbvcg"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_unit.gd" id="1_3pi63"]
-[ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="2_785fn"]
+[ext_resource type="Texture2D" uid="uid://11cgkg7i1i38" path="res://assets/damin1-Sheet.png" id="2_i1rh7"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_2xxkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5r5f1"]
@@ -15,9 +15,10 @@ size_flags_horizontal = 4
 script = ExtResource("1_3pi63")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.2925, 0.65, 0.358042, 1)
 position = Vector2(20, 22)
-scale = Vector2(0.320313, 0.34375)
-texture = ExtResource("2_785fn")
+scale = Vector2(0.133949, 0.14375)
+texture = ExtResource("2_i1rh7")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
