@@ -11,6 +11,8 @@ var moving = false
 var attacking = false
 var speed = 100  # Speed of movement to the right
 
+var steal_value = 10
+
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 10  # Default attack damage
 var health = 100  # Unit health
@@ -114,6 +116,10 @@ func _on_attack_area_area_entered(body):
 		await get_tree().create_timer(attack_cooldown).timeout
 		
 		can_attack = true
-		attacking = false  
+		attacking = false 
+	if body.has_method("have_been_stolen"):
+		print("stealing:", body.name)
+		body.have_been_stolen(steal_value)
+		die()
 	else:
 		print("Body does not have 'take_damage' method:", body.name)

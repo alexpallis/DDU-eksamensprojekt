@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsieoyi3d0kwl"]
+
+[ext_resource type="Script" path="res://house_dave.gd" id="1_ql63i"]
+[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="2_fcj1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8llum"]
+size = Vector2(20, 176)
+
+[node name="House_Dave" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ql63i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource("2_fcj1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_8llum")

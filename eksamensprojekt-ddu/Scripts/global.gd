@@ -20,6 +20,13 @@ var nonce = null
 var request_que : Array = []
 var is_requesting : bool = false
 
+var StandardCoinSpeed = 1
+var CoinSpeed = 1
+var Coin = 0
+
+var mony = 0
+
+
 func _ready():
 	
 	#Connecting request handler:
@@ -27,6 +34,11 @@ func _ready():
 	http_request.connect("request_completed", Callable(self, "_http_request_completed"))
 	
 func _process(delta: float):
+	#gamecoin 
+	Coin += CoinSpeed * delta
+	print(Coin)
+
+
 	if is_requesting:
 		return
 		

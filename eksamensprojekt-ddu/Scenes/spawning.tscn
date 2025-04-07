@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://htefkhk0jtbt"]
 
 [ext_resource type="Script" path="res://Scripts/spawning.gd" id="1_qu6c5"]
-[ext_resource type="Script" path="res://Scenes/spawning_timer.gd" id="2_f2x1s"]
+[ext_resource type="Script" path="res://Scripts/spawning_timer.gd" id="2_f2x1s"]
 
 [node name="Spawning" type="Control"]
 layout_mode = 3
@@ -13,3 +13,5 @@ script = ExtResource("1_qu6c5")
 [node name="SpawningTimer" type="Timer" parent="."]
 one_shot = true
 script = ExtResource("2_f2x1s")
+
+[connection signal="timeout" from="SpawningTimer" to="." method="_on_spawning_timer_timeout"]
