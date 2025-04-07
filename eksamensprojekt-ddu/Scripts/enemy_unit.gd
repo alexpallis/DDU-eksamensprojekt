@@ -7,7 +7,7 @@ var lane1 = false
 var lane2 = false
 var lane3 = false
 var lane4 = false
-var moving = false
+var moving = true
 var attacking = false
 var speed = -100  # Speed of movement to the right
 var speed2 = -150
@@ -34,7 +34,8 @@ func _on_mouse_exited():
 func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if unit_highlighted and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			moveable = true
+			#moveable = true
+			pass
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
