@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvoqgwkhuwwas"]
 
-[ext_resource type="Script" path="res://inventoria.gd" id="1_qc8p1"]
-[ext_resource type="Script" path="res://additem.gd" id="2_8loky"]
-[ext_resource type="PackedScene" path="res://abstract_item.tscn" id="3_w6hm3"]
+[ext_resource type="Script" path="res://Scripts/inventoria.gd" id="1_qc8p1"]
+[ext_resource type="Script" path="res://Scripts/additem.gd" id="2_8loky"]
+[ext_resource type="PackedScene" uid="uid://d4aux5431bqxf" path="res://Scenes/abstract_item.tscn" id="3_w6hm3"]
 
 [node name="TestScene" type="Node2D"]
 position = Vector2(522, 288)
