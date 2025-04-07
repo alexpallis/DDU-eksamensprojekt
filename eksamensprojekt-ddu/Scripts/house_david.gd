@@ -1,14 +1,18 @@
 extends Container
 
-const Maxhealth = 10000
+
 var health = 10000 
 
 @onready var hitbox = $Hitbox
 
+func _ready():
+	set_healthbar()
+	set_health_label()
+
 func have_been_stolen(amount):
 	health -= amount
 	print("Daves house took damage! Remaining health:", health)
-	set_healthbar()
+	update_health_bar()
 	if health <= 0:
 		die()
 
@@ -16,9 +20,13 @@ func die():
 	print("YOU WIN")
 	queue_free()
 
-func _ready():
-	$CanvasLayer/David_healthbar.value = Maxhealth
+
+func update_health_bar():
 	set_healthbar()
+	set_health_label()
 
 func set_healthbar():
-	$CanvasLayer/David_healthbar.value = health
+	$CanvasLayer/David_health_bar.value = health
+
+func set_health_label():
+	$CanvasLayer/David_health_Label.text = "hp: %s " % health

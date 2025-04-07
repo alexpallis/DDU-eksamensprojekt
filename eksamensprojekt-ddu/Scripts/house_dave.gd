@@ -5,9 +5,13 @@ var health = 10000
 
 @onready var hitbox = $Hitbox
 
+func _ready():
+	set_healthbar()
+	set_health_label()
+	
 func have_been_stolen(amount):
 	health -= amount
-	set_healthbar()
+	update_health_bar()
 
 	print("Daves house took damage! Remaining health:", health)
 	if health <= 0:
@@ -18,10 +22,13 @@ func die():
 	print("YOU LOOS")
 	queue_free()
 
-func _ready():
-	$CanvasLayer/Dave_health_bar.value = Maxhealth
+func update_health_bar():
 	set_healthbar()
+	set_health_label()
 
 func set_healthbar():
 	$CanvasLayer/Dave_health_bar.value = health
+
+func set_health_label():
+	$CanvasLayer/Label.text = "hp: %s " % health
 	
