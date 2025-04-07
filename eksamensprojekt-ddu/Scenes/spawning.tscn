@@ -5,10 +5,12 @@
 [sub_resource type="GDScript" id="GDScript_wfn8c"]
 
 [node name="Spawning" type="Control"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 0.035
+anchor_bottom = 0.064
+offset_right = -0.32
+offset_bottom = -1.472
 script = ExtResource("1_qu6c5")
 
 [node name="SpawningTimer" type="Timer" parent="."]
