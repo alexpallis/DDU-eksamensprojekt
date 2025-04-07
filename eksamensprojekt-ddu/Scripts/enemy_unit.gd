@@ -7,7 +7,7 @@ var lane1 = false
 var lane2 = false
 var lane3 = false
 var lane4 = false
-var moving = false
+var moving = true
 var attacking = false
 var speed = -100  # Speed of movement to the right
 var speed2 = -150
@@ -16,7 +16,7 @@ var steal_value = 10
 
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 10  # Default attack damage
-var health = 100  # Unit health
+var health = 80  # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D
@@ -34,7 +34,8 @@ func _on_mouse_exited():
 func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if unit_highlighted and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			moveable = true
+			#moveable = true
+			pass
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
@@ -90,10 +91,11 @@ func _process(delta):
 	
 
 func take_damage(amount):
-	health -= amount
-	print("Unit took damage! Remaining health:", health)
-	if health <= 0:
-		die()
+	if moving:
+		health -= amount
+		print("Unit took damage! Remaining health:", health)
+		if health <= 0:
+			die()
 
 func die():
 	print("Unit has been defeated.")
@@ -107,22 +109,29 @@ func _on_attack_area_area_entered(body):
 		print("Ignoring self-collision.")
 		return
 
-	if body.has_method("take_damage"):
-		print("Attacking:", body.name)
-		attacking = true  # Stop movement when attacking
-		body.take_damage(attack_damage)
-		can_attack = false
-		
-		await get_tree().create_timer(attack_cooldown).timeout
-		
-		can_attack = true
-		attacking = false  # Resume movement after attack cooldown
-		
-	if body.has_method("have_been_stolen"):
+	if body.has_method("have_been_stolen") and moving == true:
 		print("stealing:", body.name)
 		body.have_been_stolen(steal_value)
 		die()
 	
+	if body.has_method("take_damage") and moving == true:
+		attacking = true  # Stop movement when attacking
+		await attack_target(body)
+
+
 	else:
 		print("Body does not have 'take_damage' method:", body.name)
 		
+
+
+func _on_attack_area_area_exited(_area):
+	
+	attacking = false
+	print("hi")
+	
+func attack_target(body):
+	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
+		if can_attack:
+			print("Attacking:", body.name)
+			body.take_damage(attack_damage)
+			await get_tree().create_timer(attack_cooldown).timeout

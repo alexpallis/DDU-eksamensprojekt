@@ -90,10 +90,11 @@ func _process(delta):
 	
 
 func take_damage(amount):
-	health -= amount
-	print("Unit took damage! Remaining health:", health)
-	if health <= 0:
-		die()
+	if moving:
+		health -= amount
+		print("Unit took damage! Remaining health:", health)
+		if health <= 0:
+			die()
 
 func die():
 	print("Unit has been defeated.")
@@ -107,19 +108,34 @@ func _on_attack_area_area_entered(body):
 		print("Ignoring self-collision.")
 		return
 
-	if body.has_method("take_damage"):
-		print("Attacking:", body.name)
-		attacking = true 
-		body.take_damage(attack_damage)
-		can_attack = false
-		
-		await get_tree().create_timer(attack_cooldown).timeout
-		
-		can_attack = true
-		attacking = false 
-	if body.has_method("have_been_stolen"):
+	if body.has_method("have_been_stolen") and moving == true:
 		print("stealing:", body.name)
 		body.have_been_stolen(steal_value)
 		die()
+
+
+	if body.has_method("take_damage") and moving == true:
+		print("Attacking:", body.name)
+		attacking = true 
+		await attack_target(body)
+	
+
 	else:
 		print("Body does not have 'take_damage' method:", body.name)
+
+
+func _on_attack_area_area_exited(_area):
+
+	can_attack = true
+	attacking = false
+	print("hi")
+
+func attack_target(body):
+	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
+		if can_attack:
+			print("Attacking:", body.name)
+			body.take_damage(attack_damage)
+			await get_tree().create_timer(attack_cooldown).timeout
+
+
+	

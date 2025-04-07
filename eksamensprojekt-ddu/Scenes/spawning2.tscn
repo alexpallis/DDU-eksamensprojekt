@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://daxkoeu2wghx1"]
+
+[sub_resource type="GDScript" id="GDScript_nbrlw"]
+script/source = "extends Node2D
+
+@onready var spawning_timer = $SpawningTimer
+@export var ENEMY_UNIT = preload(\"res://Scenes/enemy_unit.tscn\")
+
+var lane1 = Vector2(1000, 100)
+var lane2 = Vector2(1000, 200)
+var lane3 = Vector2(1000, 300)
+var lane4 = Vector2(1000, 400)
+
+func _on_spawning_timer_timeout():
+	print(\"hi\")
+	var enemy = ENEMY_UNIT.instantiate()
+	enemy.position = lane1
+	get_parent().add_child(enemy)
+	
+"
+
+[node name="Spawning" type="Node2D"]
+script = SubResource("GDScript_nbrlw")
+
+[node name="SpawningTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="SpawningTimer" to="." method="_on_spawning_timer_timeout"]

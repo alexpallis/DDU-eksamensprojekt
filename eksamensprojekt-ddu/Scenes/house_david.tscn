@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ikx80jmdxv27"]
 
-[ext_resource type="Script" path="res://Scenes/house_david.gd" id="1_7du2g"]
+[ext_resource type="Script" path="res://Scripts/house_david.gd" id="1_7du2g"]
 [ext_resource type="Script" path="res://Scripts/hitbox.gd" id="2_wvwd6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jht6k"]
