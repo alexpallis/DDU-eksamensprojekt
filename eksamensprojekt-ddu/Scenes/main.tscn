@@ -41,6 +41,8 @@ offset_right = -48.384
 offset_bottom = 197.256
 script = ExtResource("2_3ivyf")
 
+[node name="DaveSpawner" parent="CanvasLayer" instance=ExtResource("10_glegk")]
+
 [node name="UnitContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_right = 0.576
@@ -48,8 +50,6 @@ anchor_bottom = 0.407
 offset_right = -663.552
 offset_bottom = -263.736
 script = ExtResource("1_iuhs0")
-
-[node name="DaveSpawner" parent="CanvasLayer" instance=ExtResource("10_glegk")]
 
 [node name="Lane1" type="Control" parent="CanvasLayer"]
 layout_mode = 3

@@ -7,17 +7,20 @@ var lane1 = false
 var lane2 = false
 var lane3 = false
 var lane4 = false
-var moving = true
+var moving = false
 var attacking = false
+var unitid = 1
 
-var speed = 250 * Global.enemy_difficulty  # Speed of movement to the right
-var steal_value = 100 * Global.enemy_difficulty # the amount the unit steals from the hous
-var attack_cooldown = 1.0 * Global.enemy_difficulty # Time between attacks
-var attack_damage = 10 * Global.enemy_difficulty # Default attack damage
-var health = 30 * Global.enemy_difficulty # Unit health
+var speed = 200  # Speed of movement to the right
+var steal_value = 10 # the amount the unit steals from the hous
+var attack_cooldown = 1.0  # Time between attacks
+var attack_damage = 15  # Default attack damage
+var health = 100  # Unit health
 var can_attack = true
+var price = 10 # how much the unit cost
 
 @onready var attack_area = $AttackArea2D
+@onready var cooldown = $cooldown
 
 func _ready():
 	start_position = self.global_position
@@ -32,18 +35,17 @@ func _on_mouse_exited():
 func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if unit_highlighted and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			#moveable = true
-			pass
+			moveable = true
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
-				move_to_position(Vector2(1000, 100))
+				move_to_position(Vector2(50, 100))
 			if lane2:
-				move_to_position(Vector2(1000, 200))
+				move_to_position(Vector2(50, 200))
 			if lane3:
-				move_to_position(Vector2(1000, 300))
+				move_to_position(Vector2(50, 300))
 			if lane4:
-				move_to_position(Vector2(1000, 400))
+				move_to_position(Vector2(50, 400))
 
 func nolane():
 	lane1 = false
@@ -65,9 +67,23 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	print("Unit has reached its position and is now moving.")  # Debugging
 	moving = true
-
+	Global.Coin -= price
+	if unitid == Global.handdave1:
+		Global.handdave1cdstart = true
+	if unitid == Global.handdave2:
+		Global.handdave2cdstart = true
+	if unitid == Global.handdave3:
+		Global.handdave3cdstart = true
+	if unitid == Global.handdave4:
+		Global.handdave4cdstart = true
+	if unitid == Global.handdave5:
+		Global.handdave5cdstart = true
+	if unitid == Global.handdave6:
+		Global.handdave6cdstart = true
+	
+	
 func _process(delta):
-	if moveable:
+	if moveable and Global.Coin >= price:
 		self.global_position = get_global_mouse_position()
 		if Global.Lane1MouseOn:
 			nolane()
@@ -84,7 +100,7 @@ func _process(delta):
 		else:
 			nolane()
 	elif moving and !attacking:
-		self.global_position.x += -speed * delta  # Moves right
+		self.global_position.x += speed * delta 
 
 	
 
@@ -101,7 +117,7 @@ func die():
 
 
 func _on_attack_area_area_entered(body):
-	print("Detected collision with:", body.name)  # Debugging
+	print("Detected collision with:", body.name) 
 
 	if body == self:
 		print("Ignoring self-collision.")
@@ -111,25 +127,26 @@ func _on_attack_area_area_entered(body):
 		print("stealing:", body.name)
 		body.have_been_stolen(steal_value)
 		die()
-	
-	if body.has_method("take_damage") and moving == true:
-		attacking = true  # Stop movement when attacking
-		await attack_target(body)
 
+
+	if body.has_method("take_damage") and moving == true:
+		print("Attacking:", body.name)
+		attacking = true 
+		await attack_target(body)
+	
 
 	else:
 		print("Body does not have 'take_damage' method:", body.name)
-		
 
 
 func _on_attack_area_area_exited(_area):
-	
+
+	can_attack = true
 	attacking = false
 	print("hi")
-	
+
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		if can_attack:
-			print("Attacking:", body.name)
-			body.take_damage(attack_damage)
-			await get_tree().create_timer(attack_cooldown).timeout
+		print("Attacking:", body.name)
+		body.take_damage(attack_damage)
+		await get_tree().create_timer(attack_cooldown).timeout

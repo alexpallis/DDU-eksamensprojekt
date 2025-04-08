@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca2bfbhkght7y"]
+
+[ext_resource type="Script" path="res://Scripts/dave_legs.gd" id="1_0ytrs"]
+[ext_resource type="Texture2D" uid="uid://y0xqnpj0rte4" path="res://assets/Davidlonglegs-Sheet.png" id="2_k4611"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_7vumw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps37u"]
+size = Vector2(67, 20)
+
+[node name="DaveLegs" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0ytrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 22)
+scale = Vector2(0.096676, 0.10375)
+texture = ExtResource("2_k4611")
+flip_h = true
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_mask = 2
+script = ExtResource("3_7vumw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-25.5, -1)
+shape = SubResource("RectangleShape2D_ps37u")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]

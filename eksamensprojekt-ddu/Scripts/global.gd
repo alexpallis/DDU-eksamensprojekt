@@ -20,7 +20,7 @@ var nonce = null
 var request_que : Array = []
 var is_requesting : bool = false
 
-var StandardCoinSpeed = 1
+var StandardCoinSpeed = 5
 var CoinSpeed = 1
 var Coin = 0
 
@@ -29,11 +29,11 @@ var money = 0
 var enemy_difficulty = 1
 #unit id number
 var handdave1 = 0
-var handdave2 = 0
-var handdave3 = 0
-var handdave4 = 0
-var handdave5 = 0
-var handdave6 = 0
+var handdave2 = 1
+var handdave3 = 2
+var handdave4 = 3
+var handdave5 = 4
+var handdave6 = 5
 #unit cooldown in seconds
 var handdave1cd = 4.0
 var handdave2cd = 4.0
