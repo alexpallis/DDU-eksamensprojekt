@@ -2,7 +2,10 @@ extends Control
 
 # Preload enemy scenes
 var enemy_types = [
-	preload("res://Scenes/enemy_unit.tscn"), preload("res://Scenes/david_legs.tscn"), preload("res://Scenes/david_arms.tscn"), preload("res://Scenes/david_thief.tscn") 
+	preload("res://Scenes/enemy_unit.tscn"), 
+	preload("res://Scenes/david_legs.tscn"), 
+	preload("res://Scenes/david_arms.tscn"), 
+	preload("res://Scenes/david_thief.tscn") 
 ]
 
 	
@@ -15,10 +18,10 @@ var lanes = [
 
 # Format: [enemy_type_index, delay_seconds, lane_index, loop (true/false)]
 var spawn_pattern = [
-	[0, 5.5, 0, false],  # spawn once
-	[1, 10.0, 2, true],   # loop this one
-	[2, 1.0, 3, false],
-	[3, 8.2, 1, true],
+	[0, 5.5, 0, false], 
+	[0, 10.0, 2, true],   
+	[0, 1.0, 3, false],
+	[0, 8.2, 1, true],
 ]
 
 var current_spawn_index := 0

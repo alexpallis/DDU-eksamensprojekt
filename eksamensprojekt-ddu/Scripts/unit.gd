@@ -9,6 +9,7 @@ var lane3 = false
 var lane4 = false
 var moving = false
 var attacking = false
+var unitid = 0
 
 var speed = 100  # Speed of movement to the right
 var steal_value = 10 # the amount the unit steals from the hous
@@ -19,7 +20,6 @@ var can_attack = true
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
-@onready var unit = preload("res://Scenes/unit.tscn")
 
 func _ready():
 	start_position = self.global_position
@@ -35,12 +35,6 @@ func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if unit_highlighted and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			moveable = true
-			var unit_clone = unit.instantiate()
-			var parent = get_parent()
-			parent.add_child(unit_clone)
-			var sibling_unit_clone = parent.get_child(parent.get_child_count() - 1)
-			sibling_unit_clone.moveable = false  # Disable movement
-			self.global_position = get_global_mouse_position()
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
@@ -72,9 +66,23 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	print("Unit has reached its position and is now moving.")  # Debugging
 	moving = true
-
+	if unitid == Global.handdave1:
+		Global.handdave1cdstart = true
+	if unitid == Global.handdave2:
+		Global.handdave2cdstart = true
+	if unitid == Global.handdave3:
+		Global.handdave3cdstart = true
+	if unitid == Global.handdave4:
+		Global.handdave4cdstart = true
+	if unitid == Global.handdave5:
+		Global.handdave5cdstart = true
+	if unitid == Global.handdave6:
+		Global.handdave6cdstart = true
+	
+	
 func _process(delta):
 	if moveable:
+		self.global_position = get_global_mouse_position()
 		if Global.Lane1MouseOn:
 			nolane()
 			lane1 = true
@@ -140,6 +148,3 @@ func attack_target(body):
 		print("Attacking:", body.name)
 		body.take_damage(attack_damage)
 		await get_tree().create_timer(attack_cooldown).timeout
-
-
-	

@@ -1,6 +1,6 @@
 extends Node
 
-@onready var mony = $Panel/Mony
+@onready var money = $Panel/Mony
 
 
 func _on_day_1_pressed():
@@ -30,4 +30,4 @@ func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Second_menu.tscn")
 
 func _ready():
-	mony.text ="You have " + str(Global.mony) + " Yudos"
+	money.text ="You have " + str(Global.money) + " Yudos"

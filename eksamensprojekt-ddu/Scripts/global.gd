@@ -24,10 +24,30 @@ var StandardCoinSpeed = 1
 var CoinSpeed = 1
 var Coin = 0
 
-var mony = 0
+var money = 0
 
 var enemy_difficulty = 1
-
+#unit id number
+var handdave1 = 0
+var handdave2 = 0
+var handdave3 = 0
+var handdave4 = 0
+var handdave5 = 0
+var handdave6 = 0
+#unit cooldown in seconds
+var handdave1cd = 4.0
+var handdave2cd = 4.0
+var handdave3cd = 4.0
+var handdave4cd = 4.0
+var handdave5cd = 4.0
+var handdave6cd = 4.0
+#Cooldown checker slighty messy but idc
+var handdave1cdstart = false
+var handdave2cdstart = false
+var handdave3cdstart = false
+var handdave4cdstart = false
+var handdave5cdstart = false
+var handdave6cdstart = false
 
 func _ready():
 	
