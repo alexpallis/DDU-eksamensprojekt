@@ -11,9 +11,9 @@ var enemy_types = [
 	
 var lanes = [
 	Vector2(1000, 100),  # lane1
-	Vector2(1000, 200),  # lane2
-	Vector2(1000, 300),  # lane3
-	Vector2(1000, 400),  # lane4
+	Vector2(1000, 210),  # lane2
+	Vector2(1000, 320),  # lane3
+	Vector2(1000, 430),  # lane4
 ]
 
 # Format: [enemy_type_index, delay_seconds, lane_index, loop (true/false)]

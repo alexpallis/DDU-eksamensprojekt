@@ -39,13 +39,13 @@ func _on_gui_input(event):
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
-				move_to_position(Vector2(50, 100))
+				move_to_position(Vector2(200, 100))
 			if lane2:
-				move_to_position(Vector2(50, 200))
+				move_to_position(Vector2(200, 210))
 			if lane3:
-				move_to_position(Vector2(50, 300))
+				move_to_position(Vector2(200, 320))
 			if lane4:
-				move_to_position(Vector2(50, 400))
+				move_to_position(Vector2(200, 430))
 
 func nolane():
 	lane1 = false

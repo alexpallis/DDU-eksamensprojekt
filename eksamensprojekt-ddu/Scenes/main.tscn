@@ -68,10 +68,10 @@ script = ExtResource("1_iuhs0")
 layout_mode = 3
 anchors_preset = 0
 offset_left = -1.0
-offset_top = 59.0
+offset_top = 0.999996
 offset_right = 1152.0
-offset_bottom = 158.0
-scale = Vector2(1.04, 1.2)
+offset_bottom = 100.0
+scale = Vector2(1.29995, 1.78596)
 script = ExtResource("4_ju18q")
 
 [node name="Lane2" type="Control" parent="CanvasLayer"]

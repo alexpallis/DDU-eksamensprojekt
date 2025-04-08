@@ -15,7 +15,7 @@ var speed = 200  # Speed of movement to the right
 var steal_value = 10 # the amount the unit steals from the hous
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 15  # Default attack damage
-var health = 100  # Unit health
+var health = 200  # Unit health
 var can_attack = true
 var price = 10 # how much the unit cost
 
@@ -39,13 +39,13 @@ func _on_gui_input(event):
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
-				move_to_position(Vector2(50, 100))
+				move_to_position(Vector2(200, 100))
 			if lane2:
-				move_to_position(Vector2(50, 200))
+				move_to_position(Vector2(200, 210))
 			if lane3:
-				move_to_position(Vector2(50, 300))
+				move_to_position(Vector2(200, 320))
 			if lane4:
-				move_to_position(Vector2(50, 400))
+				move_to_position(Vector2(200, 430))
 
 func nolane():
 	lane1 = false

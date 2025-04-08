@@ -1,7 +1,7 @@
 extends Container
 
 const Maxhealth = 10000
-var health = 10000 
+var health = 1000
 
 @onready var hitbox = $Hitbox
 @onready var coin_counter = $CanvasLayer/Coin_counter
@@ -23,6 +23,7 @@ func have_been_stolen(amount):
 func die():
 	print("YOU LOOS")
 	queue_free()
+	get_tree().change_scene_to_file("res://Scenes/You_lose.tscn")
 
 func update_health_bar():
 	set_healthbar()
