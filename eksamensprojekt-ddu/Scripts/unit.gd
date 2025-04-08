@@ -17,6 +17,7 @@ var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 10  # Default attack damage
 var health = 100  # Unit health
 var can_attack = true
+var price = 10 # how much the unit cost
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
@@ -66,6 +67,7 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	print("Unit has reached its position and is now moving.")  # Debugging
 	moving = true
+	Global.Coin -= price
 	if unitid == Global.handdave1:
 		Global.handdave1cdstart = true
 	if unitid == Global.handdave2:
@@ -81,7 +83,7 @@ func start_moving():
 	
 	
 func _process(delta):
-	if moveable:
+	if moveable and Global.Coin >= price:
 		self.global_position = get_global_mouse_position()
 		if Global.Lane1MouseOn:
 			nolane()

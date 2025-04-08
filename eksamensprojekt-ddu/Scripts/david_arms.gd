@@ -133,11 +133,3 @@ func attack_target(body):
 			print("Attacking:", body.name)
 			body.take_damage(attack_damage)
 			await get_tree().create_timer(attack_cooldown).timeout
-
-
-func _on_attack_area_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_attack_area_body_exited(body):
-	pass # Replace with function body.
