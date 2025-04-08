@@ -35,4 +35,4 @@ func set_healthbar():
 
 
 func set_health_label():
-	$CanvasLayer/David_health_Label.text = "hp: %s " % health
+	$CanvasLayer/David_health_Label.text = "Valuables left: %s " % health

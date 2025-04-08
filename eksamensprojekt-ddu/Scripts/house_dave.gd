@@ -33,7 +33,7 @@ func set_healthbar():
 	$CanvasLayer/Dave_health_bar.value = health
 
 func set_health_label():
-	$CanvasLayer/Label.text = "hp: %s " % health
+	$CanvasLayer/Label.text = "Valuables left: %s " % health
 
 func _process(delta):
 	coin_counter.text = "you have " + str(int(Global.Coin)) + " coins."
