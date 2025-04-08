@@ -4,6 +4,8 @@ const Maxhealth = 10000
 var health = 10000 
 
 @onready var hitbox = $Hitbox
+@onready var coin_counter = $CanvasLayer/Coin_counter
+
 
 func _ready():
 	set_healthbar()
@@ -31,4 +33,7 @@ func set_healthbar():
 
 func set_health_label():
 	$CanvasLayer/Label.text = "hp: %s " % health
+
+func _process(delta):
+	coin_counter.text = "you have " + str(int(Global.Coin)) + " coins."
 	
