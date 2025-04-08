@@ -43,20 +43,26 @@ func spawn_dave(type_index: int, position_index: int):
 	dave_instance.position = positions[position_index]
 func _physics_process(delta):
 	if Global.handdave1cdstart == true:
+		Global.handdave1cdstart = false
 		await get_tree().create_timer(Global.handdave1cd).timeout
 		spawn_dave(Global.handdave1,0)
 	if Global.handdave2cdstart == true:
+		Global.handdave2cdstart = false
 		await get_tree().create_timer(Global.handdave2cd).timeout
 		spawn_dave(Global.handdave2,1)
 	if Global.handdave3cdstart == true:
+		Global.handdave3cdstart = false
 		await get_tree().create_timer(Global.handdave3cd).timeout
 		spawn_dave(Global.handdave3,2)
-	if Global.handdave1cdstart == true:
+	if Global.handdave4cdstart == true:
+		Global.handdave4cdstart = false
 		await get_tree().create_timer(Global.handdave4cd).timeout
 		spawn_dave(Global.handdave4,3)
-	if Global.handdave2cdstart == true:
+	if Global.handdave5cdstart == true:
+		Global.handdave5cdstart = false
 		await get_tree().create_timer(Global.handdave5cd).timeout
 		spawn_dave(Global.handdave5,4)
-	if Global.handdave3cdstart == true:
+	if Global.handdave6cdstart == true:
+		Global.handdave6cdstart = false
 		await get_tree().create_timer(Global.handdave6cd).timeout
 		spawn_dave(Global.handdave6,5)
