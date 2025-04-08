@@ -19,6 +19,7 @@ var can_attack = true
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
+@onready var unit = preload("res://Scenes/unit.tscn")
 
 func _ready():
 	start_position = self.global_position
@@ -34,6 +35,12 @@ func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if unit_highlighted and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			moveable = true
+			var unit_clone = unit.instantiate()
+			var parent = get_parent()
+			parent.add_child(unit_clone)
+			var sibling_unit_clone = parent.get_child(parent.get_child_count() - 1)
+			sibling_unit_clone.moveable = false  # Disable movement
+			self.global_position = get_global_mouse_position()
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if lane1:
@@ -68,7 +75,6 @@ func start_moving():
 
 func _process(delta):
 	if moveable:
-		self.global_position = get_global_mouse_position()
 		if Global.Lane1MouseOn:
 			nolane()
 			lane1 = true
