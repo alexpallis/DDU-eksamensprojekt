@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dc4wl8t6em67j"]
+[gd_scene load_steps=13 format=3 uid="uid://dc4wl8t6em67j"]
 
+[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://hus3.png" id="1_4ycb1"]
 [ext_resource type="Script" path="res://Scripts/unit_container.gd" id="1_iuhs0"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="1_t6xxw"]
 [ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="2_3ivyf"]
@@ -11,9 +12,21 @@
 [ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="9_yi04b"]
 [ext_resource type="PackedScene" uid="uid://p4m5cmvoi0gn" path="res://Scenes/dave_spawner.tscn" id="10_glegk"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcrhk"]
+texture = ExtResource("1_4ycb1")
+
 [node name="Main" type="Node"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fcrhk")
 
 [node name="Spawning" parent="CanvasLayer" instance=ExtResource("9_4upet")]
 offset_left = 132.0
@@ -55,35 +68,40 @@ script = ExtResource("1_iuhs0")
 layout_mode = 3
 anchors_preset = 0
 offset_left = -1.0
-offset_top = 51.0
+offset_top = 59.0
 offset_right = 1152.0
-offset_bottom = 150.0
+offset_bottom = 158.0
+scale = Vector2(1.04, 1.2)
 script = ExtResource("4_ju18q")
 
 [node name="Lane2" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -1.0
-offset_top = 150.0
+offset_top = 168.0
 offset_right = 1152.0
-offset_bottom = 250.0
+offset_bottom = 268.0
+scale = Vector2(1.08, 1.24)
 script = ExtResource("5_2hdvy")
 
 [node name="Lane3" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 2.0
-offset_top = 236.0
-offset_right = 1153.0
-offset_bottom = 337.0
+offset_left = 8.0
+offset_top = 278.0
+offset_right = 1159.0
+offset_bottom = 379.0
+scale = Vector2(1, 1.28)
 script = ExtResource("6_iuvp6")
 
 [node name="Lane4" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 350.0
-offset_right = 1153.0
-offset_bottom = 450.0
+offset_left = 10.0
+offset_top = 390.0
+offset_right = 1163.0
+offset_bottom = 490.0
+scale = Vector2(1, 1.04)
 script = ExtResource("7_1nknt")
 
 [node name="CoinCounter" type="Label" parent="CanvasLayer"]
