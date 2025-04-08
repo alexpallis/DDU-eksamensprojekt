@@ -1,10 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://0mnb1n3noh6a"]
+[gd_scene load_steps=3 format=3 uid="uid://0mnb1n3noh6a"]
 
 [ext_resource type="Script" path="res://Scripts/inventoria.gd" id="1_1t2tk"]
+[ext_resource type="Script" path="res://Scripts/additem.gd" id="2_y0w4j"]
 
 [node name="Node" type="Node"]
 
-[node name="ItemList" type="ItemList" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Inventoria" type="ItemList" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_1t2tk")
+
+[node name="DevTool" type="CanvasLayer" parent="."]
+
+[node name="Additem" type="Button" parent="DevTool"]
+offset_left = 413.0
+offset_top = 277.0
+offset_right = 667.0
+offset_bottom = 467.0
+text = "Roll
+"
+script = ExtResource("2_y0w4j")
+
+[connection signal="pressed" from="DevTool/Additem" to="DevTool/Additem" method="_on_pressed"]

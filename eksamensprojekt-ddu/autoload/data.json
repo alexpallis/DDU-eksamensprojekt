@@ -2,16 +2,56 @@
   "0": {
 	"Name": "David",
 	"Texture": "damin1-Sheet.png",
-	"Description": "does cleave damage"
+	"Description": "It's david"
   },
   "1": {
 	"Name": "david long legs",
 	"Texture": "Davidlonglegs-Sheet.png",
-	"Description": "does bludgeon damage"
+	"Description": "Didn't skip leg day"
   },
   "2": {
 	"Name": "Beefcake David",
 	"Texture": "davidbeefcake-Sheet.png",
-	"Description": "Lights"
-  }
+	"Description": "Skipped leg day"
+  },
+  "3": {
+	"Name": "Burgler David",
+	"Texture": "Burgledavid.png",
+	"Description": "What's mine is mine and what's yours is also mine"
+  },
+  "4": {
+	"Name": "Saiyan David",
+	"Texture": "SaiyanDavid.png",
+	"Description": "IT'S OVER 9000!"
+  },
+  "5": {
+	"Name": "David with a gun",
+	"Texture": "Gun_dave.png",
+	"Description": "he has a gun"
+  },
+  "6": {
+	"Name": "Wizard David",
+	"Texture": "Wizard_Dave.png",
+	"Description": "A david never arrives too early nor too late"
+  },  
+  "7": {
+	"Name": "Pearl David",
+	"Texture": "Pearl_david.png",
+	"Description": "Fire Pearl Daitokuten"
+  },
+  "8": {
+	"Name": "Dynamite explosion murder David",
+	"Texture": "Bomb_dave.png",
+	"Description": "*tsssst"
+  },
+  "9": {
+	"Name": "Wizard David",
+	"Texture": "Wizard_Dave.png",
+	"Description": "A david never arrives too early nor too late"
+  },
+  "10": {
+	"Name": "Wizard David",
+	"Texture": "Wizard_Dave.png",
+	"Description": "A david never arrives too early nor too late"
+  },
 }
