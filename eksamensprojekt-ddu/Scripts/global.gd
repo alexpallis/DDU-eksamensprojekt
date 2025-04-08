@@ -24,7 +24,7 @@ var StandardCoinSpeed = 1
 var CoinSpeed = 1
 var Coin = 0
 
-var mony = 0
+var money = 0
 
 var enemy_difficulty = 1
 

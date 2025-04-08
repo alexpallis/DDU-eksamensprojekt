@@ -30,4 +30,4 @@ func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Second_menu.tscn")
 
 func _ready():
-	mony.text ="You have " + str(Global.mony) + " Yudos"
+	mony.text ="You have " + str(Global.money) + " Yudos"
