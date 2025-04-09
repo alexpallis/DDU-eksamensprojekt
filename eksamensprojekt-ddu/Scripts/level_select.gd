@@ -6,13 +6,13 @@ extends Node
 func _on_day_1_pressed():
 	Global.Coin = 0
 	Global.CoinSpeed = Global.StandardCoinSpeed
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
 
 
 func _on_day_2_pressed():
 	Global.Coin = 0
 	Global.CoinSpeed = Global.StandardCoinSpeed
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Level/Levels/level_2.tscn")
 
 
 func _on_day_3_pressed():

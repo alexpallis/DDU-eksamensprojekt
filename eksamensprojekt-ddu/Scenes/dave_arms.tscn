@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvb7enmue4od6"]
 
-[ext_resource type="Script" path="res://dave_arms.gd" id="1_tuprl"]
+[ext_resource type="Script" path="res://Scripts/dave_arms.gd" id="1_tuprl"]
 [ext_resource type="Texture2D" uid="uid://dqx70uykmhu27" path="res://assets/davidbeefcake-Sheet.png" id="2_xyc8y"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_abpr1"]
 
