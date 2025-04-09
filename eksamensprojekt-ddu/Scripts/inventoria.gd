@@ -2,9 +2,14 @@ extends ItemList
 
 
 func add_slot(ID = "0"):
-	var item_texture = load("res://assets/" + ItemD.get_texture_name(ID))
+	var image = Image.load_from_file("res://assets/" + ItemD.get_texture_name(ID))
+	image.resize(image.get_width() / 2, image.get_height() / 2, Image.INTERPOLATE_LANCZOS)
+
+	var texture = ImageTexture.create_from_image(image)
+
 	var item_name = ItemD.get_item_name(ID)
-	add_item(item_name,item_texture)
+	add_item(item_name, texture)
+
 	
 
 func _input(event):
