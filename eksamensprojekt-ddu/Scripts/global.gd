@@ -49,6 +49,12 @@ var handdave4cdstart = false
 var handdave5cdstart = false
 var handdave6cdstart = false
 
+var handdave1cost
+var handdave2cost
+var handdave3cost
+var handdave4cost
+var handdave5cost
+var handdave6cost
 #list of enemys
 var enemy = [
 	preload("res://Scenes/enemy_unit.tscn"), 

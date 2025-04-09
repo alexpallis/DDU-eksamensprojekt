@@ -24,6 +24,19 @@ var price = 10 # how much the unit cost
 
 func _ready():
 	start_position = self.global_position
+	print("AAAAAAAA")
+	if unitid == Global.handdave1:
+		Global.handdave1cost = price
+	if unitid == Global.handdave2:
+		Global.handdave2cost = price
+	if unitid == Global.handdave3:
+		Global.handdave3cost = price
+	if unitid == Global.handdave4:
+		Global.handdave4cost = price
+	if unitid == Global.handdave5:
+		Global.handdave5cost = price
+	if unitid == Global.handdave6:
+		Global.handdave6cost = price
 
 
 func _on_mouse_entered():
@@ -46,6 +59,8 @@ func _on_gui_input(event):
 				move_to_position(Vector2(200, 320))
 			if lane4:
 				move_to_position(Vector2(200, 430))
+			else:
+				move_to_position(start_position)
 
 func nolane():
 	lane1 = false
@@ -54,7 +69,7 @@ func nolane():
 	lane4 = false
 
 func move_to_position(target_position: Vector2):
-	print("Moving unit to:", target_position)  # Debugging
+	#print("Moving unit to:", target_position)  # Debugging
 	
 	moveable = false  # Disable dragging
 	var tween = create_tween()
@@ -65,7 +80,7 @@ func move_to_position(target_position: Vector2):
 	start_moving()
 
 func start_moving():
-	print("Unit has reached its position and is now moving.")  # Debugging
+	#print("Unit has reached its position and is now moving.")  # Debugging
 	moving = true
 	Global.Coin -= price
 	if unitid == Global.handdave1:
@@ -107,7 +122,7 @@ func _process(delta):
 func take_damage(amount):
 	if moving:
 		health -= amount
-		print("Unit took damage! Remaining health:", health)
+		#print("Unit took damage! Remaining health:", health)
 		if health <= 0:
 			die()
 
@@ -117,20 +132,20 @@ func die():
 
 
 func _on_attack_area_area_entered(body):
-	print("Detected collision with:", body.name) 
+	#print("Detected collision with:", body.name) 
 
 	if body == self:
-		print("Ignoring self-collision.")
+		#print("Ignoring self-collision.")
 		return
 
 	if body.has_method("have_been_stolen") and moving == true:
-		print("stealing:", body.name)
+		#print("stealing:", body.name)
 		body.have_been_stolen(steal_value)
 		die()
 
 
 	if body.has_method("take_damage") and moving == true:
-		print("Attacking:", body.name)
+	#	print("Attacking:", body.name)
 		attacking = true 
 		await attack_target(body)
 	
@@ -143,10 +158,10 @@ func _on_attack_area_area_exited(_area):
 
 	can_attack = true
 	attacking = false
-	print("hi")
+	#print("hi")
 
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		print("Attacking:", body.name)
+	#	print("Attacking:", body.name)
 		body.take_damage(attack_damage)
 		await get_tree().create_timer(attack_cooldown).timeout

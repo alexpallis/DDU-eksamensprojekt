@@ -95,5 +95,5 @@ offset_right = 520.0
 offset_bottom = -148.0
 theme = SubResource("Theme_bvskq")
 
-[connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_button_pressed"]
