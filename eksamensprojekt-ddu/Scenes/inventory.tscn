@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cpmcw0u6i3cnu"]
 
-[ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="1_f1ulc"]
-[ext_resource type="Script" path="res://Scenes/inventory.gd" id="1_sdley"]
+[ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://Scripts/icon.svg" id="1_f1ulc"]
+[ext_resource type="Script" path="res://Scripts/inventory.gd" id="1_sdley"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_2ox6v"]
 
@@ -95,5 +95,5 @@ offset_right = 520.0
 offset_bottom = -148.0
 theme = SubResource("Theme_bvskq")
 
-[connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_pressed"]

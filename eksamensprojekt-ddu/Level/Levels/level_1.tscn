@@ -1,21 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://dc4wl8t6em67j"]
+[gd_scene load_steps=14 format=3 uid="uid://doif5osswasg7"]
 
-[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://hus3.png" id="1_4ycb1"]
-[ext_resource type="Script" path="res://Scripts/unit_container.gd" id="1_iuhs0"]
-[ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="1_t6xxw"]
-[ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="2_3ivyf"]
-[ext_resource type="Script" path="res://Scripts/lane_1.gd" id="4_ju18q"]
-[ext_resource type="Script" path="res://Scripts/lane_2.gd" id="5_2hdvy"]
-[ext_resource type="Script" path="res://Scripts/lane_3.gd" id="6_iuvp6"]
-[ext_resource type="Script" path="res://Scripts/lane_4.gd" id="7_1nknt"]
-[ext_resource type="PackedScene" uid="uid://htefkhk0jtbt" path="res://Scenes/spawning.tscn" id="9_4upet"]
-[ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="9_yi04b"]
-[ext_resource type="PackedScene" uid="uid://p4m5cmvoi0gn" path="res://Scenes/dave_spawner.tscn" id="10_glegk"]
+[ext_resource type="Script" path="res://Level/Level scripts/level_1.gd" id="1_bo74x"]
+[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://hus3.png" id="1_vxofx"]
+[ext_resource type="Script" path="res://Level/Spawner/spawner_lv_1.gd" id="2_ur0co"]
+[ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="3_rhts2"]
+[ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="4_8cp3k"]
+[ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="5_ef4up"]
+[ext_resource type="PackedScene" uid="uid://p4m5cmvoi0gn" path="res://Scenes/dave_spawner.tscn" id="6_xgwfl"]
+[ext_resource type="Script" path="res://Scripts/unit_container.gd" id="7_h20ux"]
+[ext_resource type="Script" path="res://Scripts/lane_1.gd" id="8_0cjah"]
+[ext_resource type="Script" path="res://Scripts/lane_2.gd" id="9_ombn8"]
+[ext_resource type="Script" path="res://Scripts/lane_3.gd" id="10_qtebk"]
+[ext_resource type="Script" path="res://Scripts/lane_4.gd" id="11_pal8x"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcrhk"]
-texture = ExtResource("1_4ycb1")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sggnj"]
+texture = ExtResource("1_vxofx")
 
-[node name="Main" type="Node"]
+[node name="Level 1" type="Node"]
+script = ExtResource("1_bo74x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -26,15 +28,17 @@ anchor_bottom = 1.0
 offset_right = 116.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fcrhk")
+theme_override_styles/panel = SubResource("StyleBoxTexture_sggnj")
 metadata/_edit_use_anchors_ = true
 
-[node name="Spawning" parent="CanvasLayer" instance=ExtResource("9_4upet")]
-offset_left = 132.0
-offset_right = 132.0
-metadata/_edit_use_anchors_ = true
+[node name="SpawnerLV1" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_ur0co")
 
-[node name="House_David" parent="CanvasLayer" instance=ExtResource("1_t6xxw")]
+[node name="House_David" parent="CanvasLayer" instance=ExtResource("3_rhts2")]
 offset_left = 1248.0
 offset_top = 324.0
 offset_right = 1288.0
@@ -42,11 +46,10 @@ offset_bottom = 364.0
 scale = Vector2(-2.26287, 3.69943)
 metadata/_edit_use_anchors_ = true
 
-[node name="House_Dave" parent="CanvasLayer" instance=ExtResource("9_yi04b")]
+[node name="House_Dave" parent="CanvasLayer" instance=ExtResource("4_8cp3k")]
 offset_top = 323.0
 offset_bottom = 323.0
 scale = Vector2(3.76, 3.76)
-metadata/_edit_use_anchors_ = true
 
 [node name="UnitLayer1" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -56,11 +59,9 @@ anchor_bottom = 0.103
 offset_top = 6.48
 offset_right = -48.384
 offset_bottom = 197.256
-script = ExtResource("2_3ivyf")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("5_ef4up")
 
-[node name="DaveSpawner" parent="CanvasLayer" instance=ExtResource("10_glegk")]
-metadata/_edit_use_anchors_ = true
+[node name="DaveSpawner" parent="CanvasLayer" instance=ExtResource("6_xgwfl")]
 
 [node name="UnitContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1
@@ -68,8 +69,7 @@ anchor_right = 0.576
 anchor_bottom = 0.407
 offset_right = -663.552
 offset_bottom = -263.736
-script = ExtResource("1_iuhs0")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("7_h20ux")
 
 [node name="Lane1" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -79,8 +79,7 @@ offset_top = 0.999996
 offset_right = 1152.0
 offset_bottom = 100.0
 scale = Vector2(1.29995, 1.78596)
-script = ExtResource("4_ju18q")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("8_0cjah")
 
 [node name="Lane2" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -90,8 +89,7 @@ offset_top = 168.0
 offset_right = 1152.0
 offset_bottom = 268.0
 scale = Vector2(1.08, 1.24)
-script = ExtResource("5_2hdvy")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("9_ombn8")
 
 [node name="Lane3" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -101,8 +99,7 @@ offset_top = 278.0
 offset_right = 1159.0
 offset_bottom = 379.0
 scale = Vector2(1, 1.28)
-script = ExtResource("6_iuvp6")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("10_qtebk")
 
 [node name="Lane4" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -112,8 +109,7 @@ offset_top = 390.0
 offset_right = 1163.0
 offset_bottom = 490.0
 scale = Vector2(1, 1.04)
-script = ExtResource("7_1nknt")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("11_pal8x")
 
 [connection signal="mouse_entered" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_exited"]

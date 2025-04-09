@@ -1,7 +1,9 @@
 extends Control
 
+
 # Preload enemy scenes
 var enemy_types = Global.enemy
+
 	
 var lanes = [
 	Vector2(1000, 100),  # lane1

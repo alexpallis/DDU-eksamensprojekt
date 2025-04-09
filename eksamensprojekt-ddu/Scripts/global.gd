@@ -49,6 +49,17 @@ var handdave4cdstart = false
 var handdave5cdstart = false
 var handdave6cdstart = false
 
+#list of enemys
+var enemy = [
+	preload("res://Scenes/enemy_unit.tscn"), 
+	preload("res://Scenes/david_legs.tscn"), 
+	preload("res://Scenes/david_arms.tscn"), 
+	preload("res://Scenes/david_thief.tscn") 
+]
+
+#current level
+var level = 0
+
 func _ready():
 	
 	#Connecting request handler:
@@ -151,7 +162,6 @@ func _send_request(request: Dictionary):
 	
 func  _submit_level():
 	var id = ""
-	var level = 0
 	
 	var command = "add_level"
 	var data = {"level" : level, "id" : id}

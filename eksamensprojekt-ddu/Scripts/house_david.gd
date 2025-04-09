@@ -20,7 +20,7 @@ func have_been_stolen(amount):
 func die():
 	print("YOU WIN")
 	queue_free()
-	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
+	
 
 
 
