@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cpmcw0u6i3cnu"]
 
 [ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://icon.svg" id="1_f1ulc"]
-[ext_resource type="Script" path="res://Scenes/inventory.gd" id="1_wtbc2"]
+[ext_resource type="Script" path="res://Scenes/inventory.gd" id="1_sdley"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_2ox6v"]
 
@@ -35,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wtbc2")
+script = ExtResource("1_sdley")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(0, 1280)
@@ -81,3 +81,4 @@ size_flags_vertical = 10
 text = "Back"
 
 [connection signal="pressed" from="ColorRect/ScrollContainer/back_Button" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/back_Button" to="." method="_on_back_button_pressed"]
