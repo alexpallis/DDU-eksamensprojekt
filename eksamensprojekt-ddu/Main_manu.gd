@@ -7,7 +7,7 @@ func _on_Start_game_pressed() -> void:
 
 
 func _on_Settings_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
 
 
 
