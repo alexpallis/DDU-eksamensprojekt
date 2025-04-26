@@ -1,8 +1,10 @@
 extends Button
 
 
+var currdavid
 
 
 
 func _on_pressed():
-	owner.find_child("Inventoria").add_slot(str(randi() % 11))
+	var currdavid = str(randi() % 11)
+	owner.find_child("Inventoria").add_slot(currdavid)
