@@ -115,6 +115,7 @@ func _process(delta):
 		else:
 			nolane()
 	elif moving and !attacking:
+		$AttackArea.visible = true
 		self.global_position.x += speed * delta 
 
 	

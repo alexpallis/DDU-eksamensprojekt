@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://t2vi15opsa00"]
+[gd_scene load_steps=6 format=3 uid="uid://t2vi15opsa00"]
 
 [ext_resource type="Script" path="res://Scripts/unit.gd" id="1_075gf"]
 [ext_resource type="Texture2D" uid="uid://11cgkg7i1i38" path="res://assets/damin1-Sheet.png" id="2_2sx44"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_85w2g"]
+[ext_resource type="Script" path="res://Scripts/UnitCost.gd" id="4_vpiv1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olmj3"]
 size = Vector2(67, 20)
@@ -14,9 +15,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -576.0
+offset_left = -578.0
 offset_top = -324.0
-offset_right = -536.0
+offset_right = -538.0
 offset_bottom = -284.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -30,6 +31,7 @@ texture = ExtResource("2_2sx44")
 flip_h = true
 
 [node name="AttackArea" type="Area2D" parent="."]
+visible = false
 position = Vector2(60, 25)
 collision_mask = 2
 script = ExtResource("3_85w2g")
@@ -38,8 +40,14 @@ script = ExtResource("3_85w2g")
 position = Vector2(-25.5, -1)
 shape = SubResource("RectangleShape2D_olmj3")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+script = ExtResource("4_vpiv1")
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="tree_entered" from="Label" to="Label" method="_on_tree_entered"]
