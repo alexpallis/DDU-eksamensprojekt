@@ -1,57 +1,57 @@
 {
   "0": {
-	"Name": "David",
+	"Name": "Dave",
 	"Texture": "damin1-Sheet.png",
-	"Description": "It's david"
+	"Description": "It's dave"
   },
   "1": {
-	"Name": "david long legs",
+	"Name": "dave long legs",
 	"Texture": "Davidlonglegs-Sheet.png",
 	"Description": "Didn't skip leg day"
   },
   "2": {
-	"Name": "Beefcake David",
+	"Name": "Beefcake Dave",
 	"Texture": "davidbeefcake-Sheet.png",
 	"Description": "Skipped leg day"
   },
   "3": {
-	"Name": "Burgler David",
+	"Name": "Burgler Dave",
 	"Texture": "Burgledavid.png",
 	"Description": "What's mine is mine and what's yours is also mine"
   },
   "4": {
-	"Name": "Saiyan David",
+	"Name": "Saiyan Dave",
 	"Texture": "SaiyanDavid.png",
 	"Description": "IT'S OVER 9000!"
   },
   "5": {
-	"Name": "David with a gun",
+	"Name": "Dave with a gun",
 	"Texture": "Gun_dave.png",
 	"Description": "he has a gun"
   },
   "6": {
-	"Name": "Wizard David",
+	"Name": "Wizard Dave",
 	"Texture": "Wizard_Dave.png",
-	"Description": "A david never arrives too early nor too late"
+	"Description": "A dave never arrives too early nor too late"
   },  
   "7": {
-	"Name": "Pearl David",
+	"Name": "Pearl Dave",
 	"Texture": "Pearl_david.png",
 	"Description": "Fire Pearl Daitokuten"
   },
   "8": {
-	"Name": "Dynamite explosion murder David",
+	"Name": "Dynamite explosion murder Dave",
 	"Texture": "Bomb_dave.png",
 	"Description": "*tsssst"
   },
   "9": {
-	"Name": "Wizard David",
+	"Name": "Wizard Dave",
 	"Texture": "Wizard_Dave.png",
-	"Description": "A david never arrives too early nor too late"
+	"Description": "A dave never arrives too early nor too late"
   },
   "10": {
-	"Name": "Wizard David",
+	"Name": "Wizard Dave",
 	"Texture": "Wizard_Dave.png",
-	"Description": "A david never arrives too early nor too late"
+	"Description": "A dave never arrives too early nor too late"
   },
 }
