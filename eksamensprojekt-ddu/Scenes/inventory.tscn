@@ -95,51 +95,56 @@ offset_bottom = 176.0
 alignment = 1
 
 [node name="Hand1" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand2" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand3" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand4" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand5" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand6" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand7" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand8" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand9" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
 [node name="Hand10" type="Control" parent="Camera2D/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
-[node name="DaveLegs" parent="Camera2D/ColorRect" instance=ExtResource("2_nfrs2")]
-layout_mode = 2
-offset_left = 100.0
-offset_top = 246.0
-offset_right = 100.0
-offset_bottom = 246.0
+[node name="DaveLegs" parent="." instance=ExtResource("2_nfrs2")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.107
+anchor_top = 1.358
+anchor_right = 0.152
+anchor_bottom = 1.812
+offset_left = 32.736
+offset_top = -633.984
+offset_right = 32.896
+offset_bottom = -854.176
 
 [connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_button_pressed"]

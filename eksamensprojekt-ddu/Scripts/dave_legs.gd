@@ -29,7 +29,7 @@ var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 15  # Default attack damage
 var health = 200  # Unit health
 var can_attack = true
-var price = 10 # how much the unit cost
+var price = 0 # how much the unit cost
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
@@ -61,25 +61,25 @@ func _on_gui_input(event):
 				move_to_position(Vector2(200, 430))
 
 			if hand1:
-				select(Vector2(200, 100))
+				select(Vector2(91, 84))
 			if hand2:
-				select(Vector2(200, 100))
+				select(Vector2(193, 84))
 			if hand3:
-				select(Vector2(200, 100))
+				select(Vector2(295, 84))
 			if hand4:
-				select(Vector2(200, 100))
+				select(Vector2(397, 84))
 			if hand5:
-				select(Vector2(200, 100))
+				select(Vector2(499, 84))
 			if hand6:
-				select(Vector2(200, 100))
+				select(Vector2(601, 84))
 			if hand7:
-				select(Vector2(200, 100))
+				select(Vector2(703, 84))
 			if hand8:
-				select(Vector2(200, 100))
+				select(Vector2(805, 84))
 			if hand9:
-				select(Vector2(200, 100))
+				select(Vector2(907, 84))
 			if hand10:
-				select(Vector2(200, 100))
+				select(Vector2(1009, 84))
 
 func nolane():
 	lane1 = false
@@ -147,33 +147,43 @@ func _process(delta):
 		elif Global.Hand1MouseOn:
 			nolane()
 			hand1 = true
+			print("hand 1")
 		elif Global.Hand2MouseOn:
 			nolane()
 			hand2 = true
+			print("hand 2")
 		elif Global.Hand3MouseOn:
 			nolane()
 			hand3 = true
+			print("hand 3")
 		elif Global.Hand4MouseOn:
 			nolane()
 			hand4 = true
+			print("hand 4")
 		elif Global.Hand5MouseOn:
 			nolane()
 			hand5 = true
+			print("hand 5")
 		elif Global.Hand6MouseOn:
 			nolane()
 			hand6 = true
+			print("hand 6")
 		elif Global.Hand7MouseOn:
 			nolane()
 			hand7 = true
+			print("hand 7")
 		elif Global.Hand8MouseOn:
 			nolane()
 			hand8 = true
+			print("hand 8")
 		elif Global.Hand9MouseOn:
 			nolane()
 			hand9 = true
+			print("hand 9")
 		elif Global.Hand10MouseOn:
 			nolane()
 			hand10 = true
+			print("hand 10")
 
 		else:
 			nolane()
