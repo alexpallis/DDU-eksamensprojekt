@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://doif5osswasg7"]
 
 [ext_resource type="Script" path="res://Level/Level scripts/level_1.gd" id="1_bo74x"]
-[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://hus3.png" id="1_vxofx"]
+[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="1_vxofx"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_1.gd" id="2_ur0co"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="3_rhts2"]
 [ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="4_8cp3k"]

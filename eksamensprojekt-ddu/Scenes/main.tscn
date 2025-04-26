@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dc4wl8t6em67j"]
 
-[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://hus3.png" id="1_4ycb1"]
+[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="1_4ycb1"]
 [ext_resource type="Script" path="res://Scripts/unit_container.gd" id="1_iuhs0"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="1_t6xxw"]
 [ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="2_3ivyf"]

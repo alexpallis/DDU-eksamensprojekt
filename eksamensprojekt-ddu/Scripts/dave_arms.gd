@@ -21,10 +21,12 @@ var price = 10 # how much the unit cost
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
+@onready var cost = $"cost hide/Cost"
+
 
 func _ready():
 	start_position = self.global_position
-
+	cost.text = str(price) + " coins"
 
 func _on_mouse_entered():
 	unit_highlighted = true
@@ -68,6 +70,7 @@ func start_moving():
 	print("Unit has reached its position and is now moving.")  # Debugging
 	moving = true
 	Global.Coin -= price
+	cost.visible = false
 	if unitid == Global.handdave1:
 		Global.handdave1cdstart = true
 	if unitid == Global.handdave2:
@@ -100,6 +103,7 @@ func _process(delta):
 		else:
 			nolane()
 	elif moving and !attacking:
+		$AttackArea.collision_layer = 1
 		self.global_position.x += speed * delta 
 
 	
