@@ -2,7 +2,7 @@ extends HBoxContainer
 
 
 var startPosition
-var maxUnitsAllowed = 5
+var maxUnitsAllowed = 10
 
 func _ready():
 	self.size.x = maxUnitsAllowed*105

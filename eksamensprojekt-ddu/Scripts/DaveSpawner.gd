@@ -9,11 +9,15 @@ var dave_types = [
 ]
 var positions = [
 	Vector2(200, 550), 
-	Vector2(300, 550),  
-	Vector2(400, 550),  
-	Vector2(500, 550), 
-	Vector2(600, 550),  
-	Vector2(700, 550),
+	Vector2(285, 550),  
+	Vector2(370, 550),  
+	Vector2(455, 550), 
+	Vector2(520, 550),  
+	Vector2(625, 550),
+	Vector2(710, 550),
+	Vector2(795, 550),
+	Vector2(880, 550),
+	Vector2(965, 550),
 ]
 var handplacement = [ 
 	[Global.handdave1,Global.handdave1cd,0],
@@ -21,7 +25,11 @@ var handplacement = [
 	[Global.handdave3,Global.handdave3cd,2],
 	[Global.handdave4,Global.handdave4cd,3],
 	[Global.handdave5,Global.handdave5cd,4],
-	[Global.handdave6,Global.handdave6cd,5]
+	[Global.handdave6,Global.handdave6cd,5],
+	[Global.handdave7,Global.handdave6cd,6],
+	[Global.handdave8,Global.handdave6cd,7],
+	[Global.handdave9,Global.handdave6cd,8],
+	[Global.handdave10,Global.handdave6cd,9],
 ]
 func _ready():
 	spawnonboard()
@@ -70,3 +78,19 @@ func _physics_process(delta):
 		Global.handdave6cdstart = false
 		await get_tree().create_timer(Global.handdave6cd).timeout
 		spawn_dave(Global.handdave6,5)
+	if Global.handdave7cdstart == true:
+		Global.handdave7cdstart = false
+		await get_tree().create_timer(Global.handdave7cd).timeout
+		spawn_dave(Global.handdave7,6)
+	if Global.handdave8cdstart == true:
+		Global.handdave8cdstart = false
+		await get_tree().create_timer(Global.handdave8cd).timeout
+		spawn_dave(Global.handdave8,7)
+	if Global.handdave9cdstart == true:
+		Global.handdave9cdstart = false
+		await get_tree().create_timer(Global.handdave9cd).timeout
+		spawn_dave(Global.handdave9,8)
+	if Global.handdave10cdstart == true:
+		Global.handdave10cdstart = false
+		await get_tree().create_timer(Global.handdave10cd).timeout
+		spawn_dave(Global.handdave10,9)

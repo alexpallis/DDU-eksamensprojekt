@@ -18,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_1t2tk")
 
 [node name="back_button" type="Button" parent="Inventoria"]
+layout_mode = 0
 offset_left = 1000.0
 offset_top = 621.0
 offset_right = 1292.0
