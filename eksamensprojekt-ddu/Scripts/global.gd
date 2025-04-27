@@ -83,6 +83,58 @@ var enemy = [
 #current level
 var level = 0
 
+#Unit amount 
+var Dave = 0
+var D1 = 0
+var D2 = 0
+var D3 = 0
+var D4 = 0
+var D5 = 0
+var D6 = 0
+var D7 = 0
+var D8 = 0
+var D9 = 0
+var D10 = 0
+var D11 = 0
+var D12 = 0
+var D13 = 0
+var D14 = 0
+var D15 = 0
+var D16 = 0
+var D17 = 0
+var D18 = 0
+var D19 = 0
+var D20 = 0
+var D21 = 0
+var D22 = 0
+var D23 = 0
+var D24 = 0
+var D25 = 0
+var D26 = 0
+var D27 = 0
+var D28 = 0
+var D29 = 0
+var D30 = 0
+var D31 = 0
+var D32 = 0
+var D33 = 0
+var D34 = 0
+var D35 = 0
+var D36 = 0
+var D37 = 0
+var D38 = 0
+var D39 = 0
+var D40 = 0
+var D41 = 0
+var D42 = 0
+var D43 = 0
+var D44 = 0
+var D45 = 0
+var D46 = 0
+var D47 = 0
+var D48 = 0
+var D49 = 0
+
 func _ready():
 	
 	#Connecting request handler:
@@ -204,56 +256,7 @@ func _submit_coins():
 func _submit_units():
 	
 	var id = ""
-	var Dave = 0
-	var D1 = 0
-	var D2 = 0
-	var D3 = 0
-	var D4 = 0
-	var D5 = 0
-	var D6 = 0
-	var D7 = 0
-	var D8 = 0
-	var D9 = 0
-	var D10 = 0
-	var D11 = 0
-	var D12 = 0
-	var D13 = 0
-	var D14 = 0
-	var D15 = 0
-	var D16 = 0
-	var D17 = 0
-	var D18 = 0
-	var D19 = 0
-	var D20 = 0
-	var D21 = 0
-	var D22 = 0
-	var D23 = 0
-	var D24 = 0
-	var D25 = 0
-	var D26 = 0
-	var D27 = 0
-	var D28 = 0
-	var D29 = 0
-	var D30 = 0
-	var D31 = 0
-	var D32 = 0
-	var D33 = 0
-	var D34 = 0
-	var D35 = 0
-	var D36 = 0
-	var D37 = 0
-	var D38 = 0
-	var D39 = 0
-	var D40 = 0
-	var D41 = 0
-	var D42 = 0
-	var D43 = 0
-	var D44 = 0
-	var D45 = 0
-	var D46 = 0
-	var D47 = 0
-	var D48 = 0
-	var D49 = 0
+
 	
 	var command = "add_units"
 	var data = {"Dave" : Dave,"D1" : D1 , "D2" : D2, "D3" : D3, "D4" : D4, "D5" : D5, "D6" : D6, "D7" : D7, "D8" : D8, "D9" : D9, "D10" : D10, "D11" : D11, "D12" : D12, "D13" : D13, "D14" : D14, "D15" : D15, "D16" : D16, "D17" : D17, "D18" : D18, "D19" : D19, "D20" : D20, "D21" : D21, "D22" : D22, "D23" : D23, "D24" : D24, "D25" : D25, "D26" : D26, "D27" : D27, "D28" : D28, "D29" : D29, "D30" : D30, "D31" : D31, "D32" : D32, "D33" : D33, "D34" : D34, "D35" : D35, "D36" : D36, "D37" : D37, "D38" : D38, "D39" : D39, "D40" : D40, "D41" : D41, "D42" : D42, "D43" : D43, "D44" : D44, "D45" : D45, "D46" : D46, "D47" : D47, "D48" : D48, "D49" : D49,  "id" : id}

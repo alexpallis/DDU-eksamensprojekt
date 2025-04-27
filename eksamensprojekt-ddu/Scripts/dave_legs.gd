@@ -29,6 +29,8 @@ func _ready():
 	start_position = self.global_position
 	cost.text = str(price) + " coins"
 
+	self.tooltip_text = str(Global.D1) + " Level \n" str(speed) + "speed"
+
 func _on_mouse_entered():
 	unit_highlighted = true
 
