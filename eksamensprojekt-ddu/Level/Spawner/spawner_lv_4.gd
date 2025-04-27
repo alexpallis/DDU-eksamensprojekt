@@ -1,6 +1,7 @@
 extends Control
 
 
+
 # Preload enemy scenes
 var enemy_types = Global.enemy
 
@@ -14,31 +15,14 @@ var lanes = [
 
 # Format: [enemy_type_index, delay_seconds, lane_index, loop (true/false)]
 var spawn_pattern = [
-	[1, 5., 0, true], 
-	[1, 6., 1, true],  
-	[1, 7., 2, true], 
-	[1, 8., 3, true],  
-	[4, 1.0, 3, false],
-	[5, 8.2, 1, false],
-	[2, 30, 1, false],
-	[5, 30, 1, false],
-	[4, 29.7, 1, false],
-	[1, 30, 1, false],
-	[0, 29, 1, false],
-	[0, 29.2, 1, false],
-	[2, 30, 2, false],
-	[5, 30, 2, false],
-	[4, 29.7, 2, false],
-	[1, 30, 2, false],
-	[0, 29, 2, false],
-	[0, 29.2, 2, false],
-	[5, 8.2, 1, true],
-	[3, 20, 0, false],
-	[0, 20.2, 0, false],
-	[1, 21, 0, false],
-	[3, 20, 3, false],
-	[0, 20.2, 3, false],
-	[1, 21, 3, false],
+	[0, 15, 0, true], 
+	[0, 15, 1, true], 
+	[0, 15, 2, true], 
+	[0, 15, 3, true], 
+	[3, 35, 0, true], 
+	[3, 35, 1, true], 
+	[3, 35, 2, true], 
+	[3, 35, 3, true],
 ]
 
 var current_spawn_index := 0
@@ -54,7 +38,7 @@ func spawn_once_enemies():
 	for data in spawn_pattern:
 		if not data[3]:  # If not looped
 			var enemy_type_index = data[0]
-			var delay = 3 * data[1]
+			var delay = data[1]
 			var lane_index = data[2]
 			spawn_with_delay(enemy_type_index, delay, lane_index)
 
