@@ -18,7 +18,7 @@ var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 20  # Default attack damage
 var health = 30  # Unit health
 var can_attack = true
-var price = 10 # how much the unit cost
+var price = 20 # how much the unit cost
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown

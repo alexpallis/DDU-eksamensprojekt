@@ -5,6 +5,8 @@
 
 [node name="Node" type="Node"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
 [node name="Inventoria" type="ItemList" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +16,14 @@ offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1t2tk")
+
+[node name="back_button" type="Button" parent="Inventoria"]
+offset_left = 1000.0
+offset_top = 621.0
+offset_right = 1292.0
+offset_bottom = 762.0
+text = "Back
+"
 
 [node name="DevTool" type="CanvasLayer" parent="."]
 
@@ -29,4 +39,5 @@ script = ExtResource("2_y0w4j")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(716, 436)
 
+[connection signal="pressed" from="Inventoria/back_button" to="Inventoria" method="_on_back_button_pressed"]
 [connection signal="pressed" from="DevTool/Additem" to="DevTool/Additem" method="_on_pressed"]

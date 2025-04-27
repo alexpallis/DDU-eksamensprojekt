@@ -50,6 +50,7 @@ metadata/_edit_use_anchors_ = true
 offset_top = 323.0
 offset_bottom = 323.0
 scale = Vector2(3.76, 3.76)
+health = 100
 
 [node name="UnitLayer1" type="Control" parent="CanvasLayer"]
 layout_mode = 3

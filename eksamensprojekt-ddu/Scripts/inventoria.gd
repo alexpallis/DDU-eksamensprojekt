@@ -18,3 +18,6 @@ func _input(event):
 		if visible == true and item_count > 0:
 			grab_focus()
 			select(0)
+
+func _on_back_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Second_menu.tscn")

@@ -1,7 +1,7 @@
 extends Container
 
 
-var health = 1000
+@export var health = 100
 
 @onready var hitbox = $Hitbox
 

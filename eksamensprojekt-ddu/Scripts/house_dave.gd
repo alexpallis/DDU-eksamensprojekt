@@ -1,7 +1,7 @@
 extends Container
 
 const Maxhealth = 10000
-var health = 1000
+@export var health = 1000
 
 @onready var hitbox = $Hitbox
 @onready var coin_counter = $CanvasLayer/Coin_counter

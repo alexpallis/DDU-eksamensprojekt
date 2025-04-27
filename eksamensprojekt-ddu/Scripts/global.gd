@@ -36,16 +36,16 @@ var money = 0
 var enemy_difficulty = 1
 
 #unit id number
-var handdave1 = 0
-var handdave2 = 1
-var handdave3 = 2
-var handdave4 = 3
-var handdave5 = 4
-var handdave6 = 5
-var handdave7 = 5
-var handdave8 = 5
-var handdave9 = 5
-var handdave10 = 5
+var handdave1 = -1
+var handdave2 = -1
+var handdave3 = -1
+var handdave4 = -1
+var handdave5 = -1
+var handdave6 = -1
+var handdave7 = -1
+var handdave8 = -1
+var handdave9 = -1
+var handdave10 = -1
 
 #unit cooldown in seconds
 var handdave1cd = 4.0
@@ -54,6 +54,11 @@ var handdave3cd = 4.0
 var handdave4cd = 4.0
 var handdave5cd = 4.0
 var handdave6cd = 4.0
+var handdave7cd = 4.0
+var handdave8cd = 4.0
+var handdave9cd = 4.0
+var handdave10cd = 4.0
+
 
 #Cooldown checker slighty messy but idc
 var handdave1cdstart = false
@@ -62,6 +67,10 @@ var handdave3cdstart = false
 var handdave4cdstart = false
 var handdave5cdstart = false
 var handdave6cdstart = false
+var handdave7cdstart = false
+var handdave8cdstart = false
+var handdave9cdstart = false
+var handdave10cdstart = false
 
 #list of enemys
 var enemy = [
