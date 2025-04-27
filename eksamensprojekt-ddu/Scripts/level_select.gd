@@ -18,13 +18,13 @@ func _on_day_2_pressed():
 func _on_day_3_pressed():
 	Global.Coin = 0
 	Global.CoinSpeed = Global.StandardCoinSpeed
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
 
 
 func _on_day_4_pressed():
 	Global.Coin = 0
 	Global.CoinSpeed = Global.StandardCoinSpeed
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Second_menu.tscn")
