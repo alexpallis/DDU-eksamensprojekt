@@ -3,16 +3,12 @@ extends Button
 
 var currdavid
 
-
+var randonumb = currdavid
 
 func _on_pressed():
 	@warning_ignore("shadowed_variable")
 	var currdavid = str(randi() % 11)
 	owner.find_child("Inventoria").add_slot(currdavid)
-
-var randonumb = currdavid
-
-func _process(delta: float):
 	if randonumb == 0:
 			Global.Dave += 1
 	if randonumb == 2:
@@ -95,5 +91,5 @@ func _process(delta: float):
 		#Global.D39 += 1
 	#if randonumb == 41:
 		#Global.D40 += 1
-	print(currdavid , Global.Dave + Global.D1 + Global.D2 + Global.D3 + Global.D4 + Global.D5 + Global.D6 + Global.D7 + Global.D8 + Global.D9 + Global.D10 + Global.D11)
+	#print(currdavid , Global.Dave + Global.D1 + Global.D2 + Global.D3 + Global.D4 + Global.D5 + Global.D6 + Global.D7 + Global.D8 + Global.D9 + Global.D10 + Global.D11)
 	
