@@ -5,7 +5,9 @@ var dave_types = [
 	preload("res://Scenes/dave_legs.tscn"),
 	preload("res://Scenes/dave_arms.tscn"),
 	preload("res://Scenes/dave_thief.tscn"),
-	preload("res://Scenes/dave_bomb.tscn")  
+	preload("res://Scenes/dave_bomb.tscn"),
+	preload("res://Scenes/wizard_dave.tscn"),
+	preload("res://Scenes/dave_grill.tscn")  
 ]
 var positions = [
 	Vector2(200, 550), 

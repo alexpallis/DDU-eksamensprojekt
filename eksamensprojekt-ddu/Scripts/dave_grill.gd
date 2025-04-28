@@ -1,6 +1,5 @@
 extends Container
 
-
 var start_position
 var unit_highlighted = false
 var moveable = false
@@ -10,16 +9,16 @@ var lane3 = false
 var lane4 = false
 var moving = false
 var attacking = false
-var unitid = 3
+var unitid = 6
 
-var speed = 250 * (1 + (Global.D3-1)/10) # Speed of movement to the right
-var steal_value = 100 * (1 + (Global.D3-1)/10) # the amount the unit steals from the hous
+var speed = 0 * (1 + (Global.D4-1)/10) # Speed of movement to the right
+var steal_value = 5 * (1 + (Global.D4-1)/10) # the amount the unit steals from the hous
 var attack_cooldown = 1.0  # Time between attacks
-var attack_damage = 20 * (1 + (Global.D3-1)/10) # Default attack damage
-var health = 30 * (1 + (Global.D3-1)/10) # Unit health
+var attack_damage = 0 * (1 + (Global.D4-1)/10) # Default attack damage
+var health = 50 * (1 + (Global.D4-1)/10) # Unit health
 var can_attack = true
-var price = 20 # how much the unit cost
-
+var price = 30  # how much the unit cost
+var coinspeedadd = 0.5 * (1 + (Global.D4-1)/10)
 var current_hand_slot: int = -1
 var current_lane: int = -1
 
@@ -31,11 +30,12 @@ var previous_hand_slot: int = -1
 
 func _ready():
 
-	self.tooltip_text = (str(Global.D3) + " Level" + 
+	self.tooltip_text = (str(Global.D4) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
-		"\n" + str(price) + " Coins")
+		"\n" + str(price) + " Coins" +
+		"\n" + str(coinspeedadd) + " Coins per sekund")
 
 func _on_mouse_entered():
 	unit_highlighted = true
@@ -65,6 +65,9 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	moving = true
 	Global.Coin -= price
+	
+	Global.CoinSpeed += coinspeedadd
+	
 	match unitid:
 		Global.handdave1: Global.handdave1cdstart = true
 		Global.handdave2: Global.handdave2cdstart = true
@@ -152,16 +155,3 @@ func _on_attack_area_area_entered(body):
 	if body.has_method("have_been_stolen") and moving:
 		body.have_been_stolen(steal_value)
 		die()
-
-	elif body.has_method("take_damage") and moving:
-		attacking = true 
-		await attack_target(body)
-
-func _on_attack_area_area_exited(_area):
-	can_attack = true
-	attacking = false
-
-func attack_target(body):
-	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		body.take_damage(attack_damage)
-		await get_tree().create_timer(attack_cooldown).timeout

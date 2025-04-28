@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cia2c74xjfq7m"]
+
+[ext_resource type="Script" path="res://Scripts/david_bomb.gd" id="1_4ywl8"]
+[ext_resource type="Texture2D" uid="uid://dvgq142ch2uql" path="res://assets/Bomb_dave.png" id="2_ik4py"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_0vb7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg72c"]
+size = Vector2(67, 20)
+
+[node name="DavidBomb" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4ywl8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.5, 0.25, 1, 1)
+position = Vector2(20, 22)
+scale = Vector2(0.096676, 0.10375)
+texture = ExtResource("2_ik4py")
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_0vb7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-58, -13)
+shape = SubResource("RectangleShape2D_hg72c")

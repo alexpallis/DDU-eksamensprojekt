@@ -1,33 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://swdnvhjhnmy2"]
+[gd_scene load_steps=5 format=3 uid="uid://b6io6jhydkhci"]
 
-[ext_resource type="Script" path="res://Scripts/dave_thief.gd" id="1_5g3i2"]
-[ext_resource type="Texture2D" uid="uid://bxvm3uovxbwqg" path="res://assets/Burgledavid.png" id="2_jjgb4"]
-[ext_resource type="Script" path="res://Scripts/test.gd" id="3_ktiug"]
+[ext_resource type="Script" path="res://Scripts/dave_grill.gd" id="1_5y7bv"]
+[ext_resource type="Texture2D" uid="uid://hqcrstppjay2" path="res://assets/Grill.jpg" id="2_1lvtx"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_8x0ks"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ckq"]
-size = Vector2(67, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndi36"]
+size = Vector2(67, 71)
 
-[node name="DaveThief" type="Container"]
+[node name="DaveGrill" type="Container"]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(0.994375, 1)
-script = ExtResource("1_5g3i2")
+script = ExtResource("1_5y7bv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(20, 22)
-scale = Vector2(0.096676, 0.10375)
-texture = ExtResource("2_jjgb4")
+scale = Vector2(0.2, 0.214)
+texture = ExtResource("2_1lvtx")
 flip_h = true
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("3_ktiug")
+script = ExtResource("3_8x0ks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(-25.5, -1)
-shape = SubResource("RectangleShape2D_q8ckq")
+position = Vector2(-40, -3.5)
+shape = SubResource("RectangleShape2D_ndi36")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

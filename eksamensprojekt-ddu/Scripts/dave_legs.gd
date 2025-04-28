@@ -8,13 +8,13 @@ var moving = false
 var attacking = false
 var unitid = 1
 
-var speed = 200
-var steal_value = 10
-var attack_cooldown = 1.0
-var attack_damage = 15
-var health = 200
+var speed = 200 * (1 + (Global.D1-1)/10) # Speed of movement to the right
+var steal_value = 10 * (1 + (Global.D1-1)/10) # the amount the unit steals from the hous
+var attack_cooldown = 1.0  # Time between attacks
+var attack_damage = 15 * (1 + (Global.D1-1)/10) # Default attack damage
+var health = 200 * (1 + (Global.D1-1)/10) # Unit health
 var can_attack = true
-var price = 20
+var price = 20 # how much the unit cost
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
