@@ -10,10 +10,10 @@ var lane4 = false
 var moving = true
 var attacking = false
 
-var speed = 200 * Global.enemy_difficulty  # Speed of movement to the right
-var steal_value = 10 * Global.enemy_difficulty # the amount the unit steals from the hous
-var attack_cooldown = 1.0   # Time between attacks
-var attack_damage = 15 * Global.enemy_difficulty  # Default attack damage
+var speed = 50 * Global.enemy_difficulty  # Speed of movement to the right
+var steal_value = 25 * Global.enemy_difficulty # the amount the unit steals from the hous
+var attack_cooldown = 1.0  # Time between attacks
+var attack_damage = 10 * Global.enemy_difficulty  # Default attack damage
 var health = 200 * Global.enemy_difficulty  # Unit health
 var can_attack = true
 
@@ -111,25 +111,24 @@ func _on_attack_area_area_entered(body):
 		print("stealing:", body.name)
 		body.have_been_stolen(steal_value)
 		die()
-	
-	if body.has_method("take_damage") and moving == true:
-		attacking = true  # Stop movement when attacking
-		await attack_target(body)
 
 
-	else:
-		print("Body does not have 'take_damage' method:", body.name)
-		
-
-
-func _on_attack_area_area_exited(_area):
-	
-	attacking = false
-	print("hi")
-	
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		if can_attack:
-			print("Attacking:", body.name)
-			body.take_damage(attack_damage)
-			await get_tree().create_timer(attack_cooldown).timeout
+		var projectile = Global.Davidfireball.instantiate()
+		self.add_child(projectile)
+
+		await get_tree().create_timer(attack_cooldown).timeout
+
+
+func _on_attack_area_entered(body):
+	if body == self:
+		return
+
+	if body.has_method("take_damage") and moving:
+		attacking = true 
+		await attack_target(body)
+
+func _on_attack_area_exited(body):
+	attacking = false
+	print("hi")

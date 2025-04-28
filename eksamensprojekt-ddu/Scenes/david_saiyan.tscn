@@ -1,33 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://swdnvhjhnmy2"]
+[gd_scene load_steps=5 format=3 uid="uid://bkc4b0u8nrrlg"]
 
-[ext_resource type="Script" path="res://Scripts/dave_thief.gd" id="1_5g3i2"]
-[ext_resource type="Texture2D" uid="uid://bxvm3uovxbwqg" path="res://assets/Burgledavid.png" id="2_jjgb4"]
-[ext_resource type="Script" path="res://Scripts/test.gd" id="3_ktiug"]
+[ext_resource type="Script" path="res://Scripts/david_saiyan.gd" id="1_dq7a8"]
+[ext_resource type="Texture2D" uid="uid://dtnce8ymk0874" path="res://assets/SaiyanDavid.png" id="2_u7c4r"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_6n3ne"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ckq"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqee3"]
 size = Vector2(67, 20)
 
-[node name="DaveThief" type="Container"]
+[node name="DavidSaiyan" type="Container"]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(0.994375, 1)
-script = ExtResource("1_5g3i2")
+script = ExtResource("1_dq7a8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.5, 0.25, 1, 1)
 position = Vector2(20, 22)
 scale = Vector2(0.096676, 0.10375)
-texture = ExtResource("2_jjgb4")
-flip_h = true
+texture = ExtResource("2_u7c4r")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("3_ktiug")
+script = ExtResource("3_6n3ne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(-25.5, -1)
-shape = SubResource("RectangleShape2D_q8ckq")
+position = Vector2(-58, -13)
+shape = SubResource("RectangleShape2D_uqee3")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

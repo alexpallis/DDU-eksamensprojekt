@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://coducrxm054jf"]
 
 [ext_resource type="Script" path="res://Level/Level scripts/level_1.gd" id="1_w7x27"]
-[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://hus3.png" id="2_ummea"]
+[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_ummea"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_3.gd" id="3_fheoi"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="4_un86d"]
 [ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="5_klh40"]
@@ -50,6 +50,7 @@ metadata/_edit_use_anchors_ = true
 offset_top = 323.0
 offset_bottom = 323.0
 scale = Vector2(3.76, 3.76)
+health = 100
 
 [node name="UnitLayer1" type="Control" parent="CanvasLayer"]
 layout_mode = 3

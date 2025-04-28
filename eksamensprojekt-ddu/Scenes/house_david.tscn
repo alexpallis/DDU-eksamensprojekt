@@ -26,14 +26,14 @@ shape = SubResource("RectangleShape2D_jht6k")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -101.0
+offset_left = -165.0
 offset_bottom = 27.0
 grow_horizontal = 0
 value = 100.0
 show_percentage = false
 
 [node name="David_health_Label" type="Label" parent="CanvasLayer"]
-offset_left = 1073.0
+offset_left = 1002.0
 offset_top = 2.0
 offset_right = 1136.0
 offset_bottom = 25.0

@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt3stkjp06w0t"]
+
+[ext_resource type="Script" path="res://Scripts/wizard_dave.gd" id="1_83gge"]
+[ext_resource type="Texture2D" uid="uid://wwyyrnja8fhx" path="res://assets/Wizard_Dave.png" id="2_meqbx"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_d8yv3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npd7m"]
+size = Vector2(67, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qje8p"]
+size = Vector2(246, 20)
+
+[node name="WizardDave" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_83gge")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 22)
+scale = Vector2(0.096676, 0.10375)
+texture = ExtResource("2_meqbx")
+flip_h = true
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_d8yv3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-25.5, -1)
+shape = SubResource("RectangleShape2D_npd7m")
+
+[node name="Attack" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
+position = Vector2(136, 24)
+shape = SubResource("RectangleShape2D_qje8p")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="area_entered" from="Attack" to="." method="_on_attack_area_entered"]
+[connection signal="area_exited" from="Attack" to="." method="_on_attack_area_exited"]

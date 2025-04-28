@@ -28,14 +28,6 @@ script = ExtResource("3_hw764")
 position = Vector2(-25.5, -1)
 shape = SubResource("RectangleShape2D_rc1jr")
 
-[node name="cost hide" type="Area2D" parent="."]
-
-[node name="Cost" type="Label" parent="cost hide"]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-size_flags_vertical = 8
-
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

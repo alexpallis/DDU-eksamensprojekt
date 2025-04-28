@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5i74d3axxyed"]
+
+[ext_resource type="Script" path="res://david_pearl.gd" id="1_qu0jj"]
+[ext_resource type="Texture2D" uid="uid://bsquwf8ljrru3" path="res://assets/Pearl_david.png" id="2_332m0"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_5mpoj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3786l"]
+atlas = ExtResource("2_332m0")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h01c3"]
+atlas = ExtResource("2_332m0")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qyao"]
+atlas = ExtResource("2_332m0")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xn6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3786l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h01c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qyao")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28tns"]
+size = Vector2(67, 20)
+
+[node name="DavidPearl" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qu0jj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.482, 0.26, 1, 1)
+position = Vector2(18, 12)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_5xn6d")
+animation = &"Attack"
+autoplay = "Attack"
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_5mpoj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-58, -13)
+shape = SubResource("RectangleShape2D_28tns")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]

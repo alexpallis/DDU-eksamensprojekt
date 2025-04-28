@@ -13,7 +13,7 @@ offset_bottom = 40.0
 script = ExtResource("1_uccie")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(20, 22)
+position = Vector2(18, 30)
 scale = Vector2(0.096676, 0.10375)
 texture = ExtResource("2_cl8vx")
 flip_h = true
@@ -27,14 +27,6 @@ script = ExtResource("3_88mjl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(-25.5, -1)
 shape = SubResource("RectangleShape2D_yr6iw")
-
-[node name="cost hide" type="Area2D" parent="."]
-
-[node name="Cost" type="Label" parent="cost hide"]
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-size_flags_vertical = 8
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

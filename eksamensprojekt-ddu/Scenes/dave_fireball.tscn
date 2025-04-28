@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://e7ltmw6b3v4f"]
+
+[ext_resource type="Script" path="res://Scripts/dave_fireball.gd" id="1_66ao3"]
+[ext_resource type="Texture2D" uid="uid://eeq4m133kc3x" path="res://assets/torch.png" id="2_ywu4r"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_o3t46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb4rc"]
+size = Vector2(67, 20)
+
+[node name="DaveFireball" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_66ao3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40, 22)
+rotation = 0.829031
+scale = Vector2(4, 4.289)
+texture = ExtResource("2_ywu4r")
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_mask = 2
+script = ExtResource("3_o3t46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-25.5, -1)
+shape = SubResource("RectangleShape2D_kb4rc")
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]

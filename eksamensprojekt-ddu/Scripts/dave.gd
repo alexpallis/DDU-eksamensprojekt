@@ -6,13 +6,13 @@ var moveable = false
 
 var moving = false
 var attacking = false
-var unitid = 1
+var unitid = 0
 
-var speed = 200
-var steal_value = 10
-var attack_cooldown = 1.0
-var attack_damage = 15
-var health = 200
+var speed = 200 * (1 + (Global.Dave-1)/10)
+var steal_value = 10 * (1 + (Global.Dave-1)/10)
+var attack_cooldown = 1.0 
+var attack_damage = 15 * (1 + (Global.Dave-1)/10)
+var health = 200 * (1 + (Global.Dave-1)/10)
 var can_attack = true
 var price = 20
 
@@ -26,8 +26,12 @@ var previous_hand_slot: int = -1
 @onready var cost = $"cost hide/Cost"
 
 func _ready():
-	start_position = self.global_position
-	cost.text = str(price) + " coins"
+
+	self.tooltip_text = (str(Global.Dave) + " Level" + 
+		"\n" + str(steal_value) + " Steal" +
+		"\n" + str(attack_damage) + " Attack" +
+		"\n" + str(health) + " Health" +
+		"\n" + str(price) + " Coins")
 
 func _on_mouse_entered():
 	unit_highlighted = true
@@ -39,10 +43,9 @@ func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if unit_highlighted and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			moveable = true
-			previous_hand_slot = current_hand_slot  # Store the current hand slot when dragging starts
+			previous_hand_slot = current_hand_slot
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
-			# Move unit based on selected lane or hand slot
 			if current_lane != -1:
 				move_to_position(Vector2(200, 100 + (current_lane - 1) * 110))
 			elif current_hand_slot != -1:
@@ -58,8 +61,6 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	moving = true
 	Global.Coin -= price
-	cost.visible = false
-	# Start cooldown timers for the unit based on the unitid
 	match unitid:
 		Global.handdave1: Global.handdave1cdstart = true
 		Global.handdave2: Global.handdave2cdstart = true
@@ -74,10 +75,9 @@ func _process(delta):
 		update_hand_or_lane()
 	elif moving and !attacking:
 		$AttackArea.collision_layer = 1
-		self.global_position.x += speed * delta  # Move unit rightwards when it's placed
+		self.global_position.x += speed * delta 
 
 func update_hand_or_lane():
-	# Reset the current hand slot and lane
 	current_hand_slot = -1
 	current_lane = -1
 
@@ -114,14 +114,10 @@ func select(target_position: Vector2):
 	var tween = create_tween()
 	tween.tween_property(self, "global_position", target_position, 0.2).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
 
-	# Clear the previous hand slot if any, and update the new hand slot
-	if previous_hand_slot != -1 and previous_hand_slot != current_hand_slot:
-		set_hand_slot(previous_hand_slot, -1)  # Clear old slot
+	if previous_hand_slot != -1:
+		set_hand_slot(previous_hand_slot, -1)
 	if current_hand_slot != -1:
-		set_hand_slot(current_hand_slot, unitid)  # Set the new slot
-
-	# Update the previous hand slot for next drag operation
-	previous_hand_slot = current_hand_slot
+		set_hand_slot(current_hand_slot, unitid)
 
 func set_hand_slot(slot: int, value: int):
 	match slot:
@@ -154,7 +150,7 @@ func _on_attack_area_area_entered(body):
 		die()
 
 	elif body.has_method("take_damage") and moving:
-		attacking = true
+		attacking = true 
 		await attack_target(body)
 
 func _on_attack_area_area_exited(_area):
