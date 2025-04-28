@@ -1,20 +1,21 @@
 extends Container
 
+
 var start_position
 var unit_highlighted = false
 var moveable = false
 
 var moving = false
 var attacking = false
-var unitid = 5
+var unitid = 9
 
-var speed = 50 * (1 + (Global.D5-1)/10)
-var steal_value = 25 * (1 + (Global.D5-1)/10)
-var attack_cooldown = 1
-var attack_damage = 10 * (1 + (Global.D5-1)/10)
-var health = 200 * (1 + (Global.D5-1)/10)
+var speed = 150 * (1 + (Global.D9-1)/10)
+var steal_value = 10 * (1 + (Global.D9-1)/10)
+var attack_cooldown = 1.0 
+var attack_damage = 250 * (1 + (Global.D9-1)/10)
+var health = 100 * (1 + (Global.D9-1)/10)
 var can_attack = true
-var price = 20
+var price = 40
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -24,11 +25,10 @@ var previous_hand_slot: int = -1
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
 @onready var cost = $CoinCost/Cost
-@onready var attack = $Attack
 
 func _ready():
 
-	self.tooltip_text = (str(Global.D5) + " Level" + 
+	self.tooltip_text = (str(Global.D9) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
@@ -80,7 +80,6 @@ func _process(delta):
 	elif moving and !attacking:
 		$AttackArea.collision_layer = 1
 		self.global_position.x += speed * delta 
-	
 
 func update_hand_or_lane():
 	current_hand_slot = -1
@@ -154,23 +153,15 @@ func _on_attack_area_area_entered(body):
 		body.have_been_stolen(steal_value)
 		die()
 
-
-func attack_target(body):
-	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		var projectile = Global.Davefireball.instantiate()
-		self.add_child(projectile)
-
-		await get_tree().create_timer(attack_cooldown).timeout
-
-
-func _on_attack_area_entered(body):
-	if body == self:
-		return
-
-	if body.has_method("take_damage") and moving:
+	elif body.has_method("take_damage") and moving:
 		attacking = true 
 		await attack_target(body)
 
-func _on_attack_area_exited(body):
+func _on_attack_area_area_exited(_area):
 	can_attack = true
 	attacking = false
+
+func attack_target(body):
+	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
+		body.take_damage(attack_damage)
+		await get_tree().create_timer(attack_cooldown).timeout

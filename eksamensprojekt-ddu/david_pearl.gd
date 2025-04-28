@@ -14,7 +14,7 @@ var speed = 75 * Global.enemy_difficulty # Speed of movement to the right
 var steal_value = 100 * Global.enemy_difficulty # the amount the unit steals from the hous
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 75 * Global.enemy_difficulty  # Default attack damage
-var health = 250 * Global.enemy_difficulty # Unit health
+var health = 350 * Global.enemy_difficulty # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D

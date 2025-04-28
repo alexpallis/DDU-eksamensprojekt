@@ -27,7 +27,8 @@ var previous_hand_slot: int = -1
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
-@onready var cost = $"cost hide/Cost"
+@onready var cost = $CoinCost/Cost
+
 
 func _ready():
 
@@ -36,6 +37,8 @@ func _ready():
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
 		"\n" + str(price) + " Coins")
+
+	cost.text = str(price) + " Coins"
 
 func _on_mouse_entered():
 	unit_highlighted = true
@@ -65,6 +68,7 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	moving = true
 	Global.Coin -= price
+	cost.hide()
 	match unitid:
 		Global.handdave1: Global.handdave1cdstart = true
 		Global.handdave2: Global.handdave2cdstart = true

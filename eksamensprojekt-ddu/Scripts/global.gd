@@ -80,6 +80,8 @@ var enemy = [
 	preload("res://Scenes/david_thief.tscn"),
 	preload("res://Scenes/david_bomb.tscn"),
 	preload("res://Scenes/wizard_david.tscn"),
+	
+	
 	preload("res://Scenes/david_saiyan.tscn"),
 	preload("res://Scenes/david_pearl.tscn")
 ]

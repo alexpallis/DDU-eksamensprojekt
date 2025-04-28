@@ -1,8 +1,7 @@
 extends Container
 
 
-@export var health = 100
-@export var Level = 1
+@export var health = 100 * Global.enemy_difficulty
 @onready var hitbox = $Hitbox
 
 func _ready():
@@ -15,15 +14,13 @@ func have_been_stolen(amount):
 	print("Daves house took damage! Remaining health:", health)
 	update_health_bar()
 	if health <= 0:
+		print("YOU WIN")
+		get_parent().get_parent().levelcomplete()
+		get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 		die()
 
 func die():
-	print("YOU WIN")
-	if Level - 1 == Global.level:
-		Global.level +1
-	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
-	queue_free()
-	
+	self.queue_free()
 
 
 
