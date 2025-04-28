@@ -13,6 +13,7 @@ var dave_types = [
 	preload("res://Scenes/dave_saiyan.tscn"),
 	preload("res://Scenes/dave_pearl.tscn"),
 	preload("res://Scenes/dave_ninja_thief.tscn"),
+	preload("res://Scenes/dave_charge.tscn"),
 ]
 var positions = [
 	Vector2(200, 550), 

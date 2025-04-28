@@ -14,7 +14,7 @@ var attack_cooldown = 1.0
 var attack_damage = 0 * (1 + (Global.D11-1)/10)
 var health = 30 * (1 + (Global.D11-1)/10)
 var can_attack = true
-var price = 30
+var price = 40
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -49,7 +49,7 @@ func _on_gui_input(event):
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if current_lane != -1:
-				move_to_position(Vector2(200, 100 + (current_lane - 1) * 110))
+				move_to_position(Vector2(100, 100 + (current_lane - 1) * 110))
 			elif current_hand_slot != -1:
 				select(Vector2(91 + (current_hand_slot - 1) * 102, 84))
 

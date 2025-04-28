@@ -1,21 +1,20 @@
 extends Container
 
-
 var start_position
 var unit_highlighted = false
 var moveable = false
 
 var moving = false
 var attacking = false
-var unitid = 9
+var unitid = 12
 
-var speed = 150 * (1 + (Global.D9-1)/10)
-var steal_value = 10 * (1 + (Global.D9-1)/10)
+var speed = 200 * (1 + (Global.D12-1)/10)
+var steal_value = 10 * (1 + (Global.D12-1)/10)
 var attack_cooldown = 1.0 
-var attack_damage = 250 * (1 + (Global.D9-1)/10)
-var health = 100 * (1 + (Global.D9-1)/10)
+var attack_damage = 15 * (1 + (Global.D12-1)/10)
+var health = 200 * (1 + (Global.D12-1)/10)
 var can_attack = true
-var price = 40
+var price = 20
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -28,7 +27,7 @@ var previous_hand_slot: int = -1
 
 func _ready():
 
-	self.tooltip_text = (str(Global.D9) + " Level" + 
+	self.tooltip_text = (str(Global.D12) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +

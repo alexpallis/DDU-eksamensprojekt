@@ -53,7 +53,7 @@ func _on_gui_input(event):
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if current_lane != -1:
-				move_to_position(Vector2(200, 100 + (current_lane - 1) * 110))
+				move_to_position(Vector2(100, 100 + (current_lane - 1) * 110))
 			elif current_hand_slot != -1:
 				select(Vector2(91 + (current_hand_slot - 1) * 102, 84))
 
