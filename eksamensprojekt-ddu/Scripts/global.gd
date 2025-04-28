@@ -256,11 +256,18 @@ func _submit_coins():
 func _submit_units():
 	
 	var id = ""
-
 	
 	var command = "add_units"
 	var data = {"Dave" : Dave,"D1" : D1 , "D2" : D2, "D3" : D3, "D4" : D4, "D5" : D5, "D6" : D6, "D7" : D7, "D8" : D8, "D9" : D9, "D10" : D10, "D11" : D11, "D12" : D12, "D13" : D13, "D14" : D14, "D15" : D15, "D16" : D16, "D17" : D17, "D18" : D18, "D19" : D19, "D20" : D20, "D21" : D21, "D22" : D22, "D23" : D23, "D24" : D24, "D25" : D25, "D26" : D26, "D27" : D27, "D28" : D28, "D29" : D29, "D30" : D30, "D31" : D31, "D32" : D32, "D33" : D33, "D34" : D34, "D35" : D35, "D36" : D36, "D37" : D37, "D38" : D38, "D39" : D39, "D40" : D40, "D41" : D41, "D42" : D42, "D43" : D43, "D44" : D44, "D45" : D45, "D46" : D46, "D47" : D47, "D48" : D48, "D49" : D49,  "id" : id}
 	request_que.push_back({"command" : command, "data" : data})
+
+func _submit_deck():
+	var id = ""
+	var coins = 0
+	var command = "add_deck"
+	var data = {"handdave1" : handdave1, "handdave2" : handdave2, "handdave3" : handdave3, "handdave4" : handdave4, "handdave5" : handdave5, "handdave6" : handdave6, "handdave7" : handdave7, "handdave8" : handdave8, "handdave9" : handdave9, "handdave10" : handdave10, "id" : id}
+	request_que.push_back({"command" : command, "data" : data})
+
 
 func get_unit():
 	var command = "get_unit"
@@ -270,4 +277,9 @@ func get_unit():
 func get_level():
 	var command = "get_level"
 	var data = {"level_offset" : 0, "level_number" : 10}
+	request_que.push_back({"command" : command, "data" : data})
+
+func get_deck():
+	var command = "get_deck"
+	var data = {"deck_offset" : 0, "deck_number" : 10}
 	request_que.push_back({"command" : command, "data" : data})
