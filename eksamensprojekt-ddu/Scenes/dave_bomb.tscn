@@ -13,7 +13,7 @@ offset_bottom = 40.0
 script = ExtResource("1_uccie")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(20, 22)
+position = Vector2(18, 30)
 scale = Vector2(0.096676, 0.10375)
 texture = ExtResource("2_cl8vx")
 flip_h = true

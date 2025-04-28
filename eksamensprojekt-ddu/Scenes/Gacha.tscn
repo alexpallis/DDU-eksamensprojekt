@@ -33,9 +33,23 @@ offset_left = 413.0
 offset_top = 277.0
 offset_right = 667.0
 offset_bottom = 467.0
-text = "Roll
+text = "Roll (100 Money)
 "
 script = ExtResource("2_y0w4j")
+
+[node name="Label" type="Label" parent="DevTool/Additem"]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 44.0
+offset_right = 601.0
+offset_bottom = 154.0
+
+[node name="MoneyLabel" type="Label" parent="DevTool/Additem"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 260.0
+offset_right = 873.0
+offset_bottom = 357.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(716, 436)

@@ -1,6 +1,7 @@
 extends ItemList
 
 
+
 func add_slot(ID = "0"):
 	var image = Image.load_from_file("res://assets/" + ItemD.get_texture_name(ID))
 	image.resize(image.get_width() / 2, image.get_height() / 2, Image.INTERPOLATE_LANCZOS)

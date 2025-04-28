@@ -13,7 +13,7 @@ var attacking = false
 var unitid = 3
 
 var speed = 250 * (1 + (Global.D3-1)/10) # Speed of movement to the right
-var steal_value = 100 * (1 + (Global.D3-1)/10) # the amount the unit steals from the hous
+var steal_value = 30 * (1 + (Global.D3-1)/10) # the amount the unit steals from the hous
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 20 * (1 + (Global.D3-1)/10) # Default attack damage
 var health = 30 * (1 + (Global.D3-1)/10) # Unit health

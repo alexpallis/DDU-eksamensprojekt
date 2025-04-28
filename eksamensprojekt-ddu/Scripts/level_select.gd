@@ -30,4 +30,8 @@ func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Second_menu.tscn")
 
 func _ready():
-	money.text ="You have " + str(Global.money) + " Yudos"
+	if Global.money == 0:
+		money.text = "You are broke"
+	else:
+		money.text ="You have " + str(Global.money) + " Yudos"
+	
