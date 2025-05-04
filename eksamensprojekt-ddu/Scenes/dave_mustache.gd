@@ -1,18 +1,19 @@
 extends Container
 
+
 var start_position
 var unit_highlighted = false
 var moveable = false
 
 var moving = false
 var attacking = false
-var unitid = 12
+var unitid = 13
 
-var speed = 500 * (1 + (Global.D12-1)/10)
-var steal_value = 10 * (1 + (Global.D12-1)/10)
-var attack_cooldown = 5 
-var attack_damage = 250 * (1 + (Global.D12-1)/10)
-var health = 200 * (1 + (Global.D12-1)/10)
+var speed = 200 * (1 + (Global.D13-1)/10)
+var steal_value = 10 * (1 + (Global.D13-1)/10)
+var attack_cooldown = 0.75 
+var attack_damage = 15 * (1 + (Global.D13-1)/10)
+var health = 75 * (1 + (Global.D13-1)/10)
 var can_attack = true
 var price = 20
 
@@ -27,12 +28,13 @@ var previous_hand_slot: int = -1
 
 func _ready():
 
-	self.tooltip_text = ("Charge Dave" +
-		"\n" + str(Global.D12) + " Level" + 
+	self.tooltip_text = ("Mustache Dave" +
+		"\n" + str(Global.Dave) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
-		"\n" + str(price) + " Coins")
+		"\n" + str(price) + " Coins" +
+		"\n He moves around the map")
 
 	cost.text = str(price) + " Coins"
 
@@ -93,6 +95,7 @@ func update_hand_or_lane():
 		current_lane = 3
 	elif Global.Lane4MouseOn:
 		current_lane = 4
+
 	elif Global.Hand1MouseOn:
 		current_hand_slot = 1
 	elif Global.Hand2MouseOn:
@@ -139,6 +142,10 @@ func set_hand_slot(slot: int, value: int):
 func take_damage(amount):
 	if moving:
 		health -= amount
+	if current_lane == 1 or current_lane == 2 and health >= 100 or current_lane == 3 and health >= 100:
+		self.position.y = 100 + (current_lane) * 110
+	if current_lane == 2 and health <= 100 or current_lane == 3 and health <= 100 or current_lane == 4:
+		self.position.y = 100 + (current_lane - 2) * 110
 		if health <= 0:
 			die()
 
@@ -164,9 +171,4 @@ func _on_attack_area_area_exited(_area):
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
 		body.take_damage(attack_damage)
-		speed = 0
-		attack_damage = 0
 		await get_tree().create_timer(attack_cooldown).timeout
-		speed = 0
-		attack_damage = 250
-		

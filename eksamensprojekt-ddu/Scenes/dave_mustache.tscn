@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjfqve6ljrn6e"]
+
+[ext_resource type="Script" path="res://Scenes/dave_mustache.gd" id="1_c6d67"]
+[ext_resource type="Texture2D" uid="uid://dqfcd7gdpq343" path="res://assets/skægdave.png" id="1_k6d8g"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="2_788sn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e38hl"]
+size = Vector2(67, 20)
+
+[node name="DaveMustache" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_c6d67")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 22)
+scale = Vector2(0.096676, 0.10375)
+texture = ExtResource("1_k6d8g")
+flip_h = true
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_788sn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-25.5, -1)
+shape = SubResource("RectangleShape2D_e38hl")
+
+[node name="CoinCost" type="Area2D" parent="."]
+
+[node name="Cost" type="Label" parent="CoinCost"]
+offset_left = 6.0
+offset_top = 35.0
+offset_right = 46.0
+offset_bottom = 58.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]

@@ -1,20 +1,8 @@
 extends Control
 
-var dave_types = [
-	preload("res://Scenes/dave.tscn"),
-	preload("res://Scenes/dave_legs.tscn"),
-	preload("res://Scenes/dave_arms.tscn"),
-	preload("res://Scenes/dave_thief.tscn"),
-	preload("res://Scenes/dave_bomb.tscn"),
-	preload("res://Scenes/wizard_dave.tscn"),
-	preload("res://Scenes/dave_grill.tscn"),
-	preload("res://Scenes/dave_ninja.tscn"),
-	preload("res://Scenes/dave_gun.tscn"),  
-	preload("res://Scenes/dave_saiyan.tscn"),
-	preload("res://Scenes/dave_pearl.tscn"),
-	preload("res://Scenes/dave_ninja_thief.tscn"),
-	preload("res://Scenes/dave_charge.tscn"),
-]
+
+var dave_types = Global.daves 
+
 var positions = [
 	Vector2(200, 550), 
 	Vector2(285, 550),  

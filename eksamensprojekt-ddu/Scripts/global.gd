@@ -39,7 +39,7 @@ var enemy_difficulty = 1
 var handdave1 = 0
 var handdave2 = 1
 var handdave3 = 2
-var handdave4 = 12
+var handdave4 = 13
 var handdave5 = 1
 var handdave6 = 1
 var handdave7 = 1
@@ -71,6 +71,25 @@ var handdave7cdstart = false
 var handdave8cdstart = false
 var handdave9cdstart = false
 var handdave10cdstart = false
+
+
+#list of Daves
+var daves = [
+	preload("res://Scenes/dave.tscn"),
+	preload("res://Scenes/dave_legs.tscn"),
+	preload("res://Scenes/dave_arms.tscn"),
+	preload("res://Scenes/dave_thief.tscn"),
+	preload("res://Scenes/dave_bomb.tscn"),
+	preload("res://Scenes/wizard_dave.tscn"),
+	preload("res://Scenes/dave_grill.tscn"),
+	preload("res://Scenes/dave_ninja.tscn"),
+	preload("res://Scenes/dave_gun.tscn"),  
+	preload("res://Scenes/dave_saiyan.tscn"),
+	preload("res://Scenes/dave_pearl.tscn"),
+	preload("res://Scenes/dave_ninja_thief.tscn"),
+	preload("res://Scenes/dave_charge.tscn"),
+	preload("res://Scenes/dave_mustache.tscn")
+]
 
 #list of enemys
 var enemy = [

@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746381440
+::res://::1746386122
 inventory.gd::GDScript::-1::1744048999::0::1::::<>Control<>::
 Second_menu.gd::GDScript::-1::1746364405::0::1::::<>Control<>::
 Settings.gd::GDScript::-1::1746364410::0::1::::<>Control<>::
-::res://assets/::1746381440
+::res://assets/::1746386122
 8-B5zO3arsAxMgek6.png::CompressedTexture2D::1704520480138409951::1746379761::1746379764::1::::<><>::
 360_F_178862398_8wcRql8YWCt5Vta4Xf5FUEzXDgiuHOmG.jpg::CompressedTexture2D::9193197667594939562::1746378414::1746378414::1::::<><>::
 anden menu.png::CompressedTexture2D::2362693219949977068::1746363692::1746363692::1::::<><>::
@@ -14,6 +14,7 @@ Burgledavid.png::CompressedTexture2D::4044895699424845462::1744305304::174634530
 cartoon-night-sky-summer-evening-scene-with-stars-and-moon-summer-night-panoramic-view-with-clouds-and-fog-banner-illustration-of-nature-vector.jpg::CompressedTexture2D::6298860920330550640::1746378722::1746378722::1::::<><>::
 damin1-Sheet.png::CompressedTexture2D::1878716440911342793::1743105042::1746345306::1::::<><>::
 davidbeefcake-Sheet.png::CompressedTexture2D::8331752914260343742::1743105042::1746345306::1::::<><>::
+davidlegwalk-Sheet.png::CompressedTexture2D::6198117031682043503::1746386044::1746386123::1::::<><>::
 Davidlonglegs-Sheet.png::CompressedTexture2D::1737567461119014249::1743105042::1746345306::1::::<><>::
 depositphotos_466579632-stock-illustration-garden-backyard-with-wooden-fence.jpg::CompressedTexture2D::1609106679307217504::1746378364::1746378341::0::::<><>::
 fireball.jpg::CompressedTexture2D::4023587767449181276::1745791816::1746345306::1::::<><>::
@@ -51,32 +52,35 @@ data.json::JSON::-1::1746377366::0::1::::<><>::
 level_1.gd::GDScript::-1::1744305304::0::1::::<>Node<>::
 level_2.gd::GDScript::-1::1744305304::0::1::::<>Node<>::
 level_4.gd::GDScript::-1::1745758198::0::1::::<>Node<>::
-::res://Level/Levels/::1746380788
-level_1.tscn::PackedScene::8158778806805853524::1746380788::0::1::::<><>::res://Level/Level scripts/level_1.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>res://Level/Spawner/spawner_lv_1.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
-level_2.tscn::PackedScene::7604449436799712349::1745624414::0::1::::<><>::res://Level/Level scripts/level_2.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>uid://cjbh7msoylast::::res://Scenes/fences.tscn<>res://Level/Spawner/spawner_lv_2.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
-level_3.tscn::PackedScene::5762897152031274347::1746119111::0::1::::<><>::res://Scripts/level_3.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>res://Level/Spawner/spawner_lv_3.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
-level_4.tscn::PackedScene::6936808875195031953::1745758198::0::1::::<><>::res://Level/Level scripts/level_4.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>uid://cjbh7msoylast::::res://Scenes/fences.tscn<>res://Level/Spawner/spawner_lv_4.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
+::res://Level/Levels/::1746385666
+level_1.tscn::PackedScene::8158778806805853524::1746385666::0::1::::<><>::res://Level/Level scripts/level_1.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>res://Level/Spawner/spawner_lv_1.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
+level_2.tscn::PackedScene::7604449436799712349::1746385666::0::1::::<><>::res://Level/Level scripts/level_2.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>uid://cjbh7msoylast::::res://Scenes/fences.tscn<>res://Level/Spawner/spawner_lv_2.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
+level_3.tscn::PackedScene::5762897152031274347::1746385666::0::1::::<><>::res://Scripts/level_3.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>res://Level/Spawner/spawner_lv_3.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
+level_4.tscn::PackedScene::6936808875195031953::1746385666::0::1::::<><>::res://Level/Level scripts/level_4.gd<>uid://tbiuwvi6qw5s::::res://assets/hus3.png<>uid://cjbh7msoylast::::res://Scenes/fences.tscn<>res://Level/Spawner/spawner_lv_4.gd<>uid://ikx80jmdxv27::::res://Scenes/house_david.tscn<>uid://bsieoyi3d0kwl::::res://Scenes/house_dave.tscn<>res://Scripts/unit_layer_1.gd<>uid://p4m5cmvoi0gn::::res://Scenes/dave_spawner.tscn<>res://Scripts/unit_container.gd<>res://Scripts/lane_1.gd<>res://Scripts/lane_2.gd<>res://Scripts/lane_3.gd<>res://Scripts/lane_4.gd
 ::res://Level/Spawner/::1745758198
 spawner_lv_1.gd::GDScript::-1::1744305304::0::1::::<>Control<>::
 spawner_lv_2.gd::GDScript::-1::1745758198::0::1::::<>Control<>::
 spawner_lv_3.gd::GDScript::-1::1745758198::0::1::::<>Control<>::
 spawner_lv_4.gd::GDScript::-1::1745758198::0::1::::<>Control<>::
-::res://Scenes/::1746381427
+::res://Scenes/::1746386122
 abstract_item.tscn::PackedScene::9195995551504211771::1745794674::0::1::::<><>::res://Scripts/abstract_item.gd
-dace_spawner.tscn::PackedScene::6304357876664649355::1745794674::0::1::::<><>::res://Scripts/DaveSpawner.gd
-dave.tscn::PackedScene::3276828586504388946::1746380789::0::1::::<><>::res://Scripts/dave.gd<>uid://11cgkg7i1i38::::res://assets/damin1-Sheet.png<>res://Scripts/test.gd
+dace_spawner.tscn::PackedScene::6304357876664649355::1746385667::0::1::::<><>::res://Scripts/DaveSpawner.gd
+dave.tscn::PackedScene::3276828586504388946::1746385668::0::1::::<><>::res://Scripts/dave.gd<>uid://11cgkg7i1i38::::res://assets/damin1-Sheet.png<>res://Scripts/test.gd<>uid://dsqtwqn736rxn::::res://assets/Minidavemove-Sheet.png
 dave_arms.tscn::PackedScene::8637242934432604261::1746380789::0::1::::<><>::res://Scripts/dave_arms.gd<>uid://dqx70uykmhu27::::res://assets/davidbeefcake-Sheet.png<>res://Scripts/test.gd
 dave_bomb.tscn::PackedScene::8628980529984801593::1746119111::0::1::::<><>::res://Scripts/dave_bomb.gd<>uid://dvgq142ch2uql::::res://assets/Bomb_dave.png<>res://Scripts/test.gd
-dave_charge.tscn::PackedScene::8269341390949293844::1746119111::0::1::::<><>::res://Scripts/dave_charge.gd<>uid://11cgkg7i1i38::::res://assets/damin1-Sheet.png<>res://Scripts/test.gd
-dave_fireball.tscn::PackedScene::347517945363525635::1746119111::0::1::::<><>::res://Scripts/dave_fireball.gd<>uid://eeq4m133kc3x::::res://assets/torch.png<>res://Scripts/test.gd
+dave_bullet.tscn::PackedScene::5231137825548405582::1746385666::0::1::::<><>::res://Scripts/dave_bullet.gd<>uid://0qswl51log2o::::res://assets/bullet.png<>res://Scripts/test.gd
+dave_charge.tscn::PackedScene::8269341390949293844::1746385667::0::1::::<><>::res://Scripts/dave_charge.gd<>uid://dqx70uykmhu27::::res://assets/davidbeefcake-Sheet.png<>res://Scripts/test.gd
+dave_fireball.tscn::PackedScene::347517945363525635::1746385666::0::1::::<><>::res://Scripts/dave_fireball.gd<>uid://eeq4m133kc3x::::res://assets/torch.png<>res://Scripts/test.gd
 dave_grill.tscn::PackedScene::4579695740633008040::1746119111::0::1::::<><>::res://Scripts/dave_grill.gd<>uid://hqcrstppjay2::::res://assets/Grill.jpg<>res://Scripts/test.gd
-dave_gun.tscn::PackedScene::8700388334978793372::1746119111::0::1::::<><>::res://Scripts/dave_gun.gd<>uid://u3tpyrc8jmq0::::res://assets/Gun_dave.png<>res://Scripts/test.gd
+dave_gun.tscn::PackedScene::8700388334978793372::1746385666::0::1::::<><>::res://Scripts/dave_gun.gd<>uid://u3tpyrc8jmq0::::res://assets/Gun_dave.png<>res://Scripts/test.gd
 dave_legs.tscn::PackedScene::4828649276507758524::1746380789::0::1::::<><>::res://Scripts/dave_legs.gd<>uid://y0xqnpj0rte4::::res://assets/Davidlonglegs-Sheet.png<>res://Scripts/test.gd
+dave_mustache.gd::GDScript::-1::1746385399::0::1::::<>Container<>::
+dave_mustache.tscn::PackedScene::5415872080949897102::1746385667::0::1::::<><>::res://Scenes/dave_mustache.gd<>uid://dqfcd7gdpq343::::res://assets/skægdave.png<>res://Scripts/test.gd
 dave_ninja.tscn::PackedScene::309275435311548935::1746380789::0::1::::<><>::res://Scripts/dave_ninja.gd<>uid://11cgkg7i1i38::::res://assets/damin1-Sheet.png<>res://Scripts/test.gd
 dave_ninja_thief.tscn::PackedScene::6634096615314124172::1746380789::0::1::::<><>::res://Scripts/dave_ninja_thief.gd<>uid://bxvm3uovxbwqg::::res://assets/Burgledavid.png<>res://Scripts/test.gd
 dave_pearl.tscn::PackedScene::8885348813655076791::1746380789::0::1::::<><>::res://Scripts/dave_pearl.gd<>uid://bsquwf8ljrru3::::res://assets/Pearl_david.png<>res://Scripts/test.gd
 dave_saiyan.tscn::PackedScene::4173925758492442106::1746119111::0::1::::<><>::res://Scripts/dave_saiyan.gd<>uid://dtnce8ymk0874::::res://assets/SaiyanDavid.png<>res://Scripts/test.gd
-dave_spawner.tscn::PackedScene::1113481911726113149::1745798113::0::1::::<><>::res://Scripts/DaveSpawner.gd
+dave_spawner.tscn::PackedScene::1113481911726113149::1746385667::0::1::::<><>::res://Scripts/DaveSpawner.gd
 dave_thief.tscn::PackedScene::1309021976595743795::1746380789::0::1::::<><>::res://Scripts/dave_thief.gd<>uid://bxvm3uovxbwqg::::res://assets/Burgledavid.png<>res://Scripts/test.gd
 david_arms.tscn::PackedScene::5968467708523535576::1745794672::0::1::::<><>::res://Scripts/david_arms.gd<>uid://dqx70uykmhu27::::res://assets/davidbeefcake-Sheet.png<>res://Scripts/test.gd
 david_bomb.tscn::PackedScene::5335996773486756068::1745798112::0::1::::<><>::res://Scripts/david_bomb.gd<>uid://dvgq142ch2uql::::res://assets/Bomb_dave.png<>res://Scripts/test.gd
@@ -99,26 +103,27 @@ main_menu.tscn::PackedScene::571447506337302802::1746380789::0::1::::<><>::res:/
 Second_menu.tscn::PackedScene::6079074661086825934::1746380789::0::1::::<><>::res://Scripts/Second_menu.gd<>uid://8wrhhh5xi4yy::::res://assets/anden menu.png<>uid://gwj4uh6jh1t2::::res://assets/Fonts/PixelOperator8-Bold.ttf
 Settings.tscn::PackedScene::9129220376223909484::1746356853::0::1::::<><>::res://Scripts/Settings.gd
 spawning2.tscn::PackedScene::7207375152710900660::1744056772::0::1::::<><>::
-spawning.tscn::PackedScene::530797416269223513::1745794672::0::1::::<><>::res://Scripts/spawning.gd
+spawning.tscn::PackedScene::530797416269223513::1746385667::0::1::::<><>::res://Scripts/spawning.gd
 test_scene.tscn::PackedScene::6276691730296823994::1744056771::0::1::::<><>::res://Scripts/inventoria.gd<>res://Scripts/additem.gd<>uid://d4aux5431bqxf::::res://Scenes/abstract_item.tscn
 the_camera.tscn::PackedScene::2617562367448704944::1744060649::0::1::::<><>::res://the_camera.gd
 unit.tscn::PackedScene::1390616984289649707::1745794672::0::1::::<><>::res://Scripts/unit.gd<>uid://11cgkg7i1i38::::res://assets/damin1-Sheet.png<>res://Scripts/test.gd
 win_scenes.tscn::PackedScene::660975156271062376::1746381076::0::1::::<><>::res://Scripts/win_scenes.gd<>uid://gwj4uh6jh1t2::::res://assets/Fonts/PixelOperator8-Bold.ttf<>uid://d38ivfsqb2ygw::::res://assets/360_F_178862398_8wcRql8YWCt5Vta4Xf5FUEzXDgiuHOmG.jpg
-wizard_dave.tscn::PackedScene::3778938665736305125::1746119111::0::1::::<><>::res://Scripts/wizard_dave.gd<>uid://wwyyrnja8fhx::::res://assets/Wizard_Dave.png<>res://Scripts/test.gd
+wizard_dave.tscn::PackedScene::3778938665736305125::1746385666::0::1::::<><>::res://Scripts/wizard_dave.gd<>uid://wwyyrnja8fhx::::res://assets/Wizard_Dave.png<>res://Scripts/test.gd
 wizard_david.tscn::PackedScene::2984141741031338224::1745798113::0::1::::<><>::uid://wwyyrnja8fhx::::res://assets/Wizard_Dave.png<>res://Scripts/wizard_david.gd<>res://Scripts/test.gd
 You_lose.tscn::PackedScene::3932545014363353361::1744060649::0::1::::<><>::res://You_lose.gd
-::res://Scripts/::1746380292
+::res://Scripts/::1746385666
 abstract_item.gd::GDScript::-1::1743105042::0::1::::<>Sprite2D<>::
 additem.gd::GDScript::-1::1746366305::0::1::::<>Button<>::
 data.gd::GDScript::-1::1744305304::0::1::::<>Node<>::
-dave.gd::GDScript::-1::1746376340::0::1::::<>Container<>::
-DaveSpawner.gd::GDScript::-1::1746355500::0::1::::<>Control<>::
+dave.gd::GDScript::-1::1746385666::0::1::::<>Container<>::
+DaveSpawner.gd::GDScript::-1::1746384386::0::1::::<>Control<>::
 dave_arms.gd::GDScript::-1::1746377366::0::1::::<>Container<>::
 dave_bomb.gd::GDScript::-1::1746356509::0::1::::<>Container<>::
-dave_charge.gd::GDScript::-1::1746356510::0::1::::<>Container<>::
+dave_bullet.gd::GDScript::-1::1746382165::0::1::::<>Container<>::
+dave_charge.gd::GDScript::-1::1746384783::0::1::::<>Container<>::
 dave_fireball.gd::GDScript::-1::1746119111::0::1::::<>Container<>::
 dave_grill.gd::GDScript::-1::1746356510::0::1::::<>Container<>::
-dave_gun.gd::GDScript::-1::1746356510::0::1::::<>Container<>::
+dave_gun.gd::GDScript::-1::1746382046::0::1::::<>Container<>::
 dave_legs.gd::GDScript::-1::1746377366::0::1::::<>Container<>::
 dave_ninja.gd::GDScript::-1::1746356510::0::1::::<>Container<>::
 dave_ninja_thief.gd::GDScript::-1::1746356510::0::1::::<>Container<>::
@@ -134,14 +139,14 @@ david_saiyan.gd::GDScript::-1::1745797755::0::1::::<>Container<>::
 david_thief.gd::GDScript::-1::1745795141::0::1::::<>Container<>::
 enemy_unit.gd::GDScript::-1::1744060577::0::1::::<>Container<>::
 fences.gd::GDScript::-1::1744305304::0::1::::<>Container<>::
-global.gd::GDScript::-1::1746377699::0::1::::<>Node<>::
+global.gd::GDScript::-1::1746384427::0::1::::<>Node<>::
 hitbox.gd::GDScript::-1::1744009991::0::1::::<>Area2D<>::
 house_dave.gd::GDScript::-1::1746378147::0::1::::<>Container<>::
 house_david.gd::GDScript::-1::1746119111::0::1::::<>Container<>::
 icon.svg::CompressedTexture2D::144362226221464357::1744305304::1746345306::1::::<><>::
 inventoria.gd::GDScript::-1::1746119111::0::1::::<>ItemList<>::
 inventory.gd::GDScript::-1::1746350175::0::1::::<>Control<>::
-inventory_spawner.gd::GDScript::-1::1746355895::0::1::::<>Control<>::
+inventory_spawner.gd::GDScript::-1::1746384386::0::1::::<>Control<>::
 lane_1.gd::GDScript::-1::1742159992::0::1::::<>Control<>::
 lane_2.gd::GDScript::-1::1742159992::0::1::::<>Control<>::
 lane_3.gd::GDScript::-1::1742159992::0::1::::<>Control<>::
@@ -161,5 +166,5 @@ unit.gd::GDScript::-1::1745790570::0::1::::<>Container<>::
 unit_container.gd::GDScript::-1::1745767118::0::1::::<>HBoxContainer<>::
 unit_layer_1.gd::GDScript::-1::1742159992::0::1::::<>Control<>::
 win_scenes.gd::GDScript::-1::1746378147::0::1::::<>Node<>::
-wizard_dave.gd::GDScript::-1::1746356511::0::1::::<>Container<>::
+wizard_dave.gd::GDScript::-1::1746381987::0::1::::<>Container<>::
 wizard_david.gd::GDScript::-1::1745798045::0::1::::<>Container<>::
