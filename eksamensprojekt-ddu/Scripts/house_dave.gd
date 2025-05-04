@@ -17,13 +17,12 @@ func have_been_stolen(amount):
 
 	print("Daves house took damage! Remaining health:", health)
 	if health <= 0:
-		die()
 		get_tree().change_scene_to_file("res://Scenes/lose_scenes.tscn")
+		die()
 
 func die():
 	print("YOU LOOS")
 	queue_free()
-	get_tree().change_scene_to_file("res://Scenes/You_lose.tscn")
 
 func update_health_bar():
 	set_healthbar()

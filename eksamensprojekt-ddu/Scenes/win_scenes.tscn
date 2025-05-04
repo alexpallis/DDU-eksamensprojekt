@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://jogft43w6rtg"]
+[gd_scene load_steps=5 format=3 uid="uid://jogft43w6rtg"]
 
 [ext_resource type="Script" path="res://Scripts/win_scenes.gd" id="1_uu8do"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="2_65sdr"]
+[ext_resource type="Texture2D" uid="uid://d38ivfsqb2ygw" path="res://assets/360_F_178862398_8wcRql8YWCt5Vta4Xf5FUEzXDgiuHOmG.jpg" id="2_msoel"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfrqg"]
+texture = ExtResource("2_msoel")
 
 [node name="WinScenes" type="Node"]
 script = ExtResource("1_uu8do")
@@ -28,6 +31,7 @@ offset_right = 22.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_65sdr")
 text = "Next"
 
 [node name="Label" type="Label" parent="Panel"]
@@ -40,7 +44,15 @@ offset_top = 152.0
 offset_right = 99.0
 offset_bottom = 221.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.823529, 0.180392, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_65sdr")
 theme_override_font_sizes/font_size = 50
 text = "You Win"
+
+[node name="money" type="Label" parent="Panel"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

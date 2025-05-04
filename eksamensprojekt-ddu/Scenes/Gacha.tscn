@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://0mnb1n3noh6a"]
+[gd_scene load_steps=6 format=3 uid="uid://0mnb1n3noh6a"]
 
 [ext_resource type="Script" path="res://Scripts/inventoria.gd" id="1_1t2tk"]
 [ext_resource type="Texture2D" uid="uid://pimelqnaogyt" path="res://assets/gotyou.png" id="1_xwwfl"]
 [ext_resource type="Script" path="res://Scripts/additem.gd" id="2_y0w4j"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="4_ipvm7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqwva"]
 texture = ExtResource("1_xwwfl")
@@ -19,12 +20,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_xqwva")
 
-[node name="Inventoria" type="ItemList" parent="."]
+[node name="Inventoria" type="ItemList" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 381.0
-offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1t2tk")
@@ -32,36 +31,35 @@ script = ExtResource("1_1t2tk")
 [node name="DevTool" type="CanvasLayer" parent="."]
 
 [node name="Additem" type="Button" parent="DevTool"]
-offset_left = 476.0
-offset_top = 379.0
-offset_right = 730.0
-offset_bottom = 569.0
+offset_left = 418.0
+offset_top = 324.0
+offset_right = 971.0
+offset_bottom = 514.0
 scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("4_ipvm7")
+theme_override_font_sizes/font_size = 40
 text = "Roll (50 Money)
 "
 script = ExtResource("2_y0w4j")
 
-[node name="Label" type="Label" parent="DevTool/Additem"]
-layout_mode = 0
-offset_left = 300.0
-offset_top = 56.0
-offset_right = 588.0
-offset_bottom = 166.0
-
 [node name="MoneyLabel" type="Label" parent="DevTool/Additem"]
 layout_mode = 0
-offset_left = 594.0
-offset_top = 260.0
-offset_right = 873.0
-offset_bottom = 357.0
+offset_left = 456.0
+offset_top = -442.0
+offset_right = 735.0
+offset_bottom = -345.0
+theme_override_fonts/font = ExtResource("4_ipvm7")
+theme_override_font_sizes/font_size = 40
 
 [node name="back_button" type="Button" parent="DevTool"]
 offset_left = 851.0
 offset_top = 501.0
 offset_right = 1143.0
 offset_bottom = 642.0
+theme_override_fonts/font = ExtResource("4_ipvm7")
+theme_override_font_sizes/font_size = 42
 text = "Back
 "
 
 [connection signal="pressed" from="DevTool/Additem" to="DevTool/Additem" method="_on_pressed"]
-[connection signal="pressed" from="DevTool/back_button" to="Inventoria" method="_on_back_button_pressed"]
+[connection signal="pressed" from="DevTool/back_button" to="CanvasLayer/Inventoria" method="_on_back_button_pressed"]

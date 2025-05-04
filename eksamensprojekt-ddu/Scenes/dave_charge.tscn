@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dp2y3yj6i80w3"]
 
 [ext_resource type="Script" path="res://Scripts/dave_charge.gd" id="1_gnqtd"]
-[ext_resource type="Texture2D" uid="uid://11cgkg7i1i38" path="res://assets/damin1-Sheet.png" id="2_mihqa"]
+[ext_resource type="Texture2D" uid="uid://dqx70uykmhu27" path="res://assets/davidbeefcake-Sheet.png" id="2_asq8g"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_ir01k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5u8hb"]
@@ -13,9 +13,10 @@ offset_bottom = 40.0
 script = ExtResource("1_gnqtd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.6, 0.288, 0.288, 1)
 position = Vector2(20, 22)
 scale = Vector2(0.096676, 0.10375)
-texture = ExtResource("2_mihqa")
+texture = ExtResource("2_asq8g")
 flip_h = true
 
 [node name="AttackArea" type="Area2D" parent="."]

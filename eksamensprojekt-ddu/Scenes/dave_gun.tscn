@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv7seigte6ovc"]
+[gd_scene load_steps=6 format=3 uid="uid://dv7seigte6ovc"]
 
 [ext_resource type="Script" path="res://Scripts/dave_gun.gd" id="1_ghs27"]
 [ext_resource type="Texture2D" uid="uid://u3tpyrc8jmq0" path="res://assets/Gun_dave.png" id="2_2qkcf"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77c74"]
 size = Vector2(67, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_luds7"]
+size = Vector2(246, 20)
 
 [node name="DaveGun" type="Container"]
 offset_right = 40.0
@@ -28,6 +31,14 @@ script = ExtResource("3_dstsi")
 position = Vector2(-25.5, -1)
 shape = SubResource("RectangleShape2D_77c74")
 
+[node name="Attack" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
+position = Vector2(136, 24)
+shape = SubResource("RectangleShape2D_luds7")
+
 [node name="CoinCost" type="Area2D" parent="."]
 
 [node name="Cost" type="Label" parent="CoinCost"]
@@ -42,3 +53,5 @@ metadata/_edit_use_anchors_ = true
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="area_entered" from="Attack" to="." method="_on_attack_area_entered"]
+[connection signal="area_exited" from="Attack" to="." method="_on_attack_area_exited"]

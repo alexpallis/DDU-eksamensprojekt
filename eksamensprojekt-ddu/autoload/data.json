@@ -20,38 +20,53 @@
 	"Description": "What's mine is mine and what's yours is also mine"
   },
   "4": {
-	"Name": "Saiyan Dave",
-	"Texture": "SaiyanDavid.png",
-	"Description": "IT'S OVER 9000!"
+	"Name": "Bomb Dave",
+	"Texture": "Bomb_dave.png",
+	"Description": "*tsssst"
   },
   "5": {
+	"Name": "Wizard Dave",
+	"Texture": "Wizard_Dave.png",
+	"Description": "A dave never arrives too early nor too late"
+  },
+  "6": {
+	"Name": "Dave's Grill",
+	"Texture": "Grill.png",
+	"Description": ""
+  },
+  "7": {
+	"Name": "Ninja Dave",
+	"Texture": "damin1-Sheet.png",
+	"Description": ""
+  },
+  "8": {
 	"Name": "Dave with a gun",
 	"Texture": "Gun_dave.png",
 	"Description": "he has a gun"
   },
-  "6": {
-	"Name": "Wizard Dave",
-	"Texture": "Wizard_Dave.png",
-	"Description": "A dave never arrives too early nor too late"
-  },  
-  "7": {
+  "9": {
+	"Name": "Saiyan Dave",
+	"Texture": "SaiyanDavid.png",
+	"Description": "IT'S OVER 9000!"
+  }, 
+  "10": {
 	"Name": "Pearl Dave",
 	"Texture": "Pearl_david.png",
 	"Description": "Fire Pearl Daitokuten"
-  },
-  "8": {
-	"Name": "Dynamite explosion murder Dave",
-	"Texture": "Bomb_dave.png",
-	"Description": "*tsssst"
-  },
-  "9": {
-	"Name": "Wizard Dave",
-	"Texture": "Wizard_Dave.png",
-	"Description": "A dave never arrives too early nor too late"
-  },
-  "10": {
-	"Name": "Wizard Dave",
-	"Texture": "Wizard_Dave.png",
-	"Description": "A dave never arrives too early nor too late"
-  },
+ }, 
+  "11": {
+	"Name": "Ninja Thief Dave",
+	"Texture": "Burgledavid.png",
+	"Description": ""
+ }, 
+  "12": {
+	"Name": "Ninja Thief Dave",
+	"Texture": "Burgledavid.png",
+	"Description": ""
+	}, 
+  "13": {
+	"Name": "Chargeing Dave",
+	"Texture": "davidbeefcake-Sheet.png",
+	"Description": ""
+	},
 }

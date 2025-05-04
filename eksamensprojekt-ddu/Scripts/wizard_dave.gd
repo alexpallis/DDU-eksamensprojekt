@@ -10,7 +10,7 @@ var unitid = 5
 
 var speed = 50 * (1 + (Global.D5-1)/10)
 var steal_value = 25 * (1 + (Global.D5-1)/10)
-var attack_cooldown = 1
+var attack_cooldown = 0.5
 var attack_damage = 10 * (1 + (Global.D5-1)/10)
 var health = 200 * (1 + (Global.D5-1)/10)
 var can_attack = true

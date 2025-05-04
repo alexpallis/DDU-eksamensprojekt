@@ -26,35 +26,40 @@ script = ExtResource("1_1b7bb")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 116.0
+offset_left = -57.0
+offset_right = 59.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_h0joh")
 metadata/_edit_use_anchors_ = true
 
 [node name="Fences" parent="CanvasLayer" instance=ExtResource("3_ov5w3")]
-offset_left = 592.0
+offset_left = 535.0
 offset_top = 305.0
-offset_right = 632.0
+offset_right = 575.0
 offset_bottom = 345.0
+metadata/_edit_use_anchors_ = true
 
 [node name="spawnerLV2" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = -57.0
+offset_right = -17.0
 offset_bottom = 40.0
 script = ExtResource("3_x5byw")
 
 [node name="House_David" parent="CanvasLayer" instance=ExtResource("4_bwfns")]
-offset_left = 1248.0
+offset_left = 1191.0
 offset_top = 324.0
-offset_right = 1288.0
+offset_right = 1231.0
 offset_bottom = 364.0
 scale = Vector2(-2.26287, 3.69943)
 metadata/_edit_use_anchors_ = true
 
 [node name="House_Dave" parent="CanvasLayer" instance=ExtResource("5_wrn7o")]
+offset_left = -57.0
 offset_top = 323.0
+offset_right = -57.0
 offset_bottom = 323.0
 scale = Vector2(3.76, 3.76)
 
@@ -63,27 +68,31 @@ layout_mode = 3
 anchor_top = -0.01
 anchor_right = 0.042
 anchor_bottom = 0.103
+offset_left = -57.0
 offset_top = 6.48
-offset_right = -48.384
+offset_right = -105.384
 offset_bottom = 197.256
 script = ExtResource("6_1icnc")
 
 [node name="DaveSpawner" parent="CanvasLayer" instance=ExtResource("7_p8cvg")]
+offset_left = -57.0
+offset_right = -57.0
 
 [node name="UnitContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_right = 0.576
 anchor_bottom = 0.407
-offset_right = -663.552
+offset_left = -57.0
+offset_right = -720.552
 offset_bottom = -263.736
 script = ExtResource("8_ffjpr")
 
 [node name="Lane1" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -1.0
+offset_left = -58.0
 offset_top = 0.999996
-offset_right = 1152.0
+offset_right = 1095.0
 offset_bottom = 100.0
 scale = Vector2(1.29995, 1.78596)
 script = ExtResource("9_ssdsq")
@@ -91,9 +100,9 @@ script = ExtResource("9_ssdsq")
 [node name="Lane2" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -1.0
+offset_left = -58.0
 offset_top = 168.0
-offset_right = 1152.0
+offset_right = 1095.0
 offset_bottom = 268.0
 scale = Vector2(1.08, 1.24)
 script = ExtResource("10_tyjni")
@@ -101,9 +110,9 @@ script = ExtResource("10_tyjni")
 [node name="Lane3" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 8.0
+offset_left = -49.0
 offset_top = 278.0
-offset_right = 1159.0
+offset_right = 1102.0
 offset_bottom = 379.0
 scale = Vector2(1, 1.28)
 script = ExtResource("11_kowhg")
@@ -111,9 +120,9 @@ script = ExtResource("11_kowhg")
 [node name="Lane4" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 10.0
+offset_left = -47.0
 offset_top = 390.0
-offset_right = 1163.0
+offset_right = 1106.0
 offset_bottom = 490.0
 scale = Vector2(1, 1.04)
 script = ExtResource("12_esy2m")

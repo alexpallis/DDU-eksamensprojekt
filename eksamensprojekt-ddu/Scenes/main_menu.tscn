@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ie2wlommvce1"]
+[gd_scene load_steps=6 format=3 uid="uid://ie2wlommvce1"]
 
 [ext_resource type="Script" path="res://Scripts/Main_manu.gd" id="1_m5lkf"]
 [ext_resource type="Texture2D" uid="uid://cv72kv0ec4kpp" path="res://assets/menu.png" id="2_rj5pk"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_ygao1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8atme"]
 texture = ExtResource("2_rj5pk")
@@ -54,17 +55,20 @@ layout_mode = 2
 modulate = Color(0.972549, 1, 1, 1)
 layout_mode = 2
 theme = SubResource("Theme_yoygw")
+theme_override_fonts/font = ExtResource("3_ygao1")
 theme_override_font_sizes/font_size = 0
 text = "Start game
 "
 
 [node name="Button_Settings" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ygao1")
 text = "Settings
 "
 
 [node name="Button_Exit" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ygao1")
 text = "Exit"
 
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Button_Start_game" to="." method="_on_Start_game_pressed"]

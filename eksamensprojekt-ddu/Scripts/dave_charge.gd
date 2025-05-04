@@ -8,10 +8,10 @@ var moving = false
 var attacking = false
 var unitid = 12
 
-var speed = 200 * (1 + (Global.D12-1)/10)
+var speed = 500 * (1 + (Global.D12-1)/10)
 var steal_value = 10 * (1 + (Global.D12-1)/10)
-var attack_cooldown = 1.0 
-var attack_damage = 15 * (1 + (Global.D12-1)/10)
+var attack_cooldown = 5 
+var attack_damage = 250 * (1 + (Global.D12-1)/10)
 var health = 200 * (1 + (Global.D12-1)/10)
 var can_attack = true
 var price = 20
@@ -164,4 +164,9 @@ func _on_attack_area_area_exited(_area):
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
 		body.take_damage(attack_damage)
+		moving = false
+		attack_damage = 0
 		await get_tree().create_timer(attack_cooldown).timeout
+		moving = true
+		attack_damage = 250
+		

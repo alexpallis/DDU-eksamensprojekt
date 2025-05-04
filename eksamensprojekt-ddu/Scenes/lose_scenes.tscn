@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6v7cf6gh1u4u"]
+[gd_scene load_steps=5 format=3 uid="uid://c6v7cf6gh1u4u"]
 
 [ext_resource type="Script" path="res://Scripts/lose_scenes.gd" id="1_ur21c"]
+[ext_resource type="Texture2D" uid="uid://cv0hk34h042ky" path="res://assets/cartoon-night-sky-summer-evening-scene-with-stars-and-moon-summer-night-panoramic-view-with-clouds-and-fog-banner-illustration-of-nature-vector.jpg" id="2_j8l8f"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_25m4e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brp6r"]
+texture = ExtResource("2_j8l8f")
 
 [node name="LoseScenes" type="Node"]
 script = ExtResource("1_ur21c")
@@ -28,6 +31,7 @@ offset_right = 22.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_25m4e")
 text = "Next"
 
 [node name="Label" type="Label" parent="Panel"]
@@ -40,7 +44,10 @@ offset_top = 152.0
 offset_right = 99.0
 offset_bottom = 221.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.823529, 0.180392, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_25m4e")
 theme_override_font_sizes/font_size = 50
-text = "You Lose"
+text = "You Lost"
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

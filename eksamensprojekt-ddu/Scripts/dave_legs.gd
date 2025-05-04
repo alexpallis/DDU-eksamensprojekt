@@ -28,12 +28,13 @@ var previous_hand_slot: int = -1
 
 func _ready():
 
-	self.tooltip_text = ("Legs Dave" +
+	self.tooltip_text = ("Dave Long Legs" +
 		"\n" + str(Global.D1) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
-		"\n" + str(price) + " Coins")
+		"\n" + str(price) + " Coins" +
+		"\n Didn't skip leg day")
 
 	cost.text = str(price) + " Coins"
 

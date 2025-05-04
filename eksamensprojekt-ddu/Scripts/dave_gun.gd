@@ -153,15 +153,23 @@ func _on_attack_area_area_entered(body):
 		body.have_been_stolen(steal_value)
 		die()
 
-	elif body.has_method("take_damage") and moving:
-		attacking = true 
-		await attack_target(body)
-
-func _on_attack_area_area_exited(_area):
-	can_attack = true
-	attacking = false
 
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:
-		body.take_damage(attack_damage)
+		var projectile = Global.DaveBullet.instantiate()
+		self.add_child(projectile)
+
 		await get_tree().create_timer(attack_cooldown).timeout
+
+
+func _on_attack_area_entered(body):
+	if body == self:
+		return
+
+	if body.has_method("take_damage") and moving:
+		attacking = true 
+		await attack_target(body)
+
+func _on_attack_area_exited(body):
+	can_attack = true
+	attacking = false

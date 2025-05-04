@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://csu0qbcaagjhm"]
+[gd_scene load_steps=12 format=3 uid="uid://csu0qbcaagjhm"]
 
 [ext_resource type="Script" path="res://Scripts/Second_menu.gd" id="1_dudou"]
 [ext_resource type="Texture2D" uid="uid://8wrhhh5xi4yy" path="res://assets/anden menu.png" id="2_8n5vl"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_qkcvd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbhxa"]
 texture = ExtResource("2_8n5vl")
@@ -143,6 +144,15 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gk3nv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xv21u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_aejkd")
 text = "Back"
+
+[node name="Money" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 138.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("3_qkcvd")
+theme_override_font_sizes/font_size = 24
 
 [connection signal="pressed" from="Panel/Button_Select_level" to="." method="_on_button_select_level_pressed"]
 [connection signal="pressed" from="Panel/Button_Inventory" to="." method="_on_button_inventory_pressed"]

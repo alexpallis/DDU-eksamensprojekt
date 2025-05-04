@@ -14,65 +14,69 @@ var randonumb = currdavid
 
 func _on_pressed():
 	if Global.money >= 50:
-		Global.money -50
+		Global.money -= 50
 		@warning_ignore("shadowed_variable")
 		var currdavid = str(randi() % 11)
+		randonumb = int(currdavid)
+		print(currdavid)
+		
 		owner.find_child("Inventoria").add_slot(currdavid)
+
 		if Global.money == 0:
 			money_label.text = "You are broke"
 		else:
 			money_label.text ="You have " + str(Global.money) + " Yudos"
 		if randonumb == 0:
-				Global.Dave += 1
+			Global.Dave += 1
+		if randonumb == 1:
+			Global.D1 += 1
 		if randonumb == 2:
-				Global.D1 += 1
+			Global.D2 += 1
 		if randonumb == 3:
-				Global.D2 += 1
+			Global.D3 += 1
 		if randonumb == 4:
-				Global.D3 += 1
-		if randonumb == 5:
 			Global.D4 += 1
-		if randonumb == 6:
+		if randonumb == 5:
 			Global.D5 += 1
-		if randonumb == 7:
+		if randonumb == 6:
 			Global.D6 += 1
-		if randonumb == 8:
+		if randonumb == 7:
 			Global.D7 += 1
-		if randonumb == 9:
+		if randonumb == 8:
 			Global.D8 += 1
-		if randonumb == 10:
+		if randonumb == 9:
 			Global.D9 += 1
-		if randonumb == 11:
+		if randonumb == 10:
 			Global.D10 += 1
-		if randonumb == 12:
+		if randonumb == 11:
 			Global.D11 += 1
-		if randonumb == 13:
+		if randonumb == 12:
 			Global.D12 += 1
-		if randonumb == 14:
+		if randonumb == 13:
 			Global.D13 += 1
-		if randonumb == 15:
+		if randonumb == 14:
 			Global.D14 += 1
-		if randonumb == 16:
+		if randonumb == 15:
 			Global.D15 += 1
-		if randonumb == 17:
+		if randonumb == 16:
 			Global.D16 += 1
-		if randonumb == 18:
+		if randonumb == 17:
 			Global.D17 += 1
-		if randonumb == 19:
+		if randonumb == 18:
 			Global.D18 += 1
-		if randonumb == 20:
+		if randonumb == 19:
 			Global.D19 += 1
-		if randonumb == 21:
+		if randonumb == 20:
 			Global.D20 += 1
-		if randonumb == 22:
+		if randonumb == 21:
 			Global.D21 += 1
-		if randonumb == 23:
+		if randonumb == 22:
 			Global.D22 += 1
-		if randonumb == 24:
+		if randonumb == 23:
 			Global.D23 += 1
-		if randonumb == 25:
+		if randonumb == 24:
 			Global.D24 += 1
-		if randonumb == 26:
+		if randonumb == 25:
 			Global.D25 += 1
 	#if randonumb == 27:
 		#Global.D26 += 1

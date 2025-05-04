@@ -32,7 +32,8 @@ func _ready():
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
-		"\n" + str(price) + " Coins")
+		"\n" + str(price) + " Coins" +
+		"\n It's dave")
 
 	cost.text = str(price) + " Coins"
 

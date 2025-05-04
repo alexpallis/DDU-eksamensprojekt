@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpmcw0u6i3cnu"]
+[gd_scene load_steps=15 format=3 uid="uid://cpmcw0u6i3cnu"]
 
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="1_sdley"]
+[ext_resource type="Texture2D" uid="uid://yjxg58q17pb8" path="res://assets/8-B5zO3arsAxMgek6.png" id="2_n8e5y"]
 [ext_resource type="PackedScene" uid="uid://c8bsah74xj8yt" path="res://Scenes/inventory_spawner.tscn" id="2_ua3qm"]
+[ext_resource type="FontFile" uid="uid://c1xvqi5ybiuye" path="res://assets/Fonts/m6x11.ttf" id="3_5ysp3"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="5_vlh0f"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_2ox6v"]
 
@@ -27,6 +30,9 @@ VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_kld6k")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_6v7s3")
 VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_8735t")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_yheom")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcxh3"]
+texture = ExtResource("2_n8e5y")
 
 [sub_resource type="Theme" id="Theme_bvskq"]
 
@@ -69,6 +75,16 @@ columns = 22
 [node name="Control" type="Control" parent="ColorRect/ScrollContainer"]
 layout_mode = 2
 
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.533333)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vcxh3")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 325)
 
@@ -77,7 +93,140 @@ offset_left = -538.0
 offset_top = -324.0
 offset_right = 520.0
 offset_bottom = -148.0
+tooltip_text = "Drag Daves up here"
 theme = SubResource("Theme_bvskq")
+color = Color(1, 1, 1, 0.733333)
+
+[node name="Label" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 0
+offset_left = 9.0
+offset_top = 19.0
+offset_right = 111.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 110.0
+offset_top = 19.0
+offset_right = 212.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 219.0
+offset_top = 19.0
+offset_right = 321.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 321.0
+offset_top = 19.0
+offset_right = 423.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 427.0
+offset_top = 19.0
+offset_right = 529.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 529.0
+offset_top = 19.0
+offset_right = 631.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 638.0
+offset_top = 19.0
+offset_right = 740.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 740.0
+offset_top = 19.0
+offset_right = 842.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 848.0
+offset_top = 19.0
+offset_right = 950.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="Camera2D/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = 950.0
+offset_top = 19.0
+offset_right = 1052.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ysp3")
+theme_override_font_sizes/font_size = 72
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/ColorRect"]
 layout_mode = 0
@@ -131,12 +280,13 @@ offset_top = 177.0
 
 [node name="back_Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1091.0
+offset_left = 1070.0
 offset_top = 598.0
-offset_right = 1136.0
+offset_right = 1142.0
 offset_bottom = 629.0
 size_flags_horizontal = 10
 size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("5_vlh0f")
 text = "Back"
 
 [connection signal="mouse_entered" from="Camera2D/ColorRect/HBoxContainer/Hand1" to="." method="_on_hand_1_mouse_entered"]
@@ -179,5 +329,5 @@ text = "Back"
 [connection signal="mouse_entered" from="Camera2D/ColorRect/HBoxContainer/Hand10" to="Camera2D/ColorRect/HBoxContainer/Hand10" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/ColorRect/HBoxContainer/Hand10" to="." method="_on_hand_10_mouse_exited"]
 [connection signal="mouse_exited" from="Camera2D/ColorRect/HBoxContainer/Hand10" to="Camera2D/ColorRect/HBoxContainer/Hand10" method="_on_mouse_exited"]
-[connection signal="pressed" from="back_Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="back_Button" to="." method="_on_back_pressed"]
