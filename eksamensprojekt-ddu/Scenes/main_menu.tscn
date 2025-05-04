@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ie2wlommvce1"]
+[gd_scene load_steps=5 format=3 uid="uid://ie2wlommvce1"]
 
-[ext_resource type="Script" path="res://Main_manu.gd" id="1_m5lkf"]
+[ext_resource type="Script" path="res://Scripts/Main_manu.gd" id="1_m5lkf"]
+[ext_resource type="Texture2D" uid="uid://cv72kv0ec4kpp" path="res://assets/menu.png" id="2_rj5pk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8atme"]
+texture = ExtResource("2_rj5pk")
 
 [sub_resource type="Theme" id="Theme_yoygw"]
 
@@ -22,13 +26,26 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.156734, 0.177662, 0.213966, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+[node name="Panel" type="Panel" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8atme")
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 215.0
+offset_right = -575.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
 layout_mode = 2
@@ -37,6 +54,7 @@ layout_mode = 2
 modulate = Color(0.972549, 1, 1, 1)
 layout_mode = 2
 theme = SubResource("Theme_yoygw")
+theme_override_font_sizes/font_size = 0
 text = "Start game
 "
 

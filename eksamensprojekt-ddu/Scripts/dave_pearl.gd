@@ -28,7 +28,8 @@ var previous_hand_slot: int = -1
 
 func _ready():
 
-	self.tooltip_text = (str(Global.D10) + " Level" + 
+	self.tooltip_text = ("Pearl Dave" +
+		"\n" + str(Global.D10) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +

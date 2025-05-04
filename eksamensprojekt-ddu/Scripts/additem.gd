@@ -13,8 +13,8 @@ func _ready():
 var randonumb = currdavid
 
 func _on_pressed():
-	if Global.money >= 100:
-		Global.money -100
+	if Global.money >= 50:
+		Global.money -50
 		@warning_ignore("shadowed_variable")
 		var currdavid = str(randi() % 11)
 		owner.find_child("Inventoria").add_slot(currdavid)

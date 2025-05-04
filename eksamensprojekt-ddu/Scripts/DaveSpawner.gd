@@ -34,10 +34,10 @@ var handplacement = [
 	[Global.handdave4,Global.handdave4cd,3],
 	[Global.handdave5,Global.handdave5cd,4],
 	[Global.handdave6,Global.handdave6cd,5],
-	[Global.handdave7,Global.handdave6cd,6],
-	[Global.handdave8,Global.handdave6cd,7],
-	[Global.handdave9,Global.handdave6cd,8],
-	[Global.handdave10,Global.handdave6cd,9],
+	[Global.handdave7,Global.handdave7cd,6],
+	[Global.handdave8,Global.handdave8cd,7],
+	[Global.handdave9,Global.handdave9cd,8],
+	[Global.handdave10,Global.handdave10cd,9],
 ]
 func _ready():
 	spawnonboard()

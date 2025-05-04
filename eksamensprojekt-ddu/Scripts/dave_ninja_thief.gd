@@ -27,12 +27,12 @@ var previous_hand_slot: int = -1
 
 func _ready():
 
-	self.tooltip_text = (str(Global.D11) + " Level" + 
+	self.tooltip_text = ("Ninja Thief Dave" +
+		"\n" + str(Global.D11) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
-		"\n" + str(attack_damage) + " Attack" +
+		"\n" + str(attack_damage) + " Attack (can move past enemys)" +
 		"\n" + str(health) + " Health" +
 		"\n" + str(price) + " Coins")
-
 	cost.text = str(price) + " Coins"
 
 func _on_mouse_entered():

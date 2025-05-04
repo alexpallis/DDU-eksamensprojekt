@@ -19,31 +19,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_xqwva")
 
-[node name="DevTool" type="CanvasLayer" parent="."]
-
-[node name="Additem" type="Button" parent="DevTool"]
-offset_left = 413.0
-offset_top = 277.0
-offset_right = 667.0
-offset_bottom = 467.0
-text = "Roll (100 Money)
-"
-script = ExtResource("2_y0w4j")
-
-[node name="Label" type="Label" parent="DevTool/Additem"]
-layout_mode = 0
-offset_left = 313.0
-offset_top = 44.0
-offset_right = 601.0
-offset_bottom = 154.0
-
-[node name="MoneyLabel" type="Label" parent="DevTool/Additem"]
-layout_mode = 0
-offset_left = 594.0
-offset_top = 260.0
-offset_right = 873.0
-offset_bottom = 357.0
-
 [node name="Inventoria" type="ItemList" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,14 +29,39 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1t2tk")
 
-[node name="back_button" type="Button" parent="Inventoria"]
+[node name="DevTool" type="CanvasLayer" parent="."]
+
+[node name="Additem" type="Button" parent="DevTool"]
+offset_left = 476.0
+offset_top = 379.0
+offset_right = 730.0
+offset_bottom = 569.0
+scale = Vector2(0.5, 0.5)
+text = "Roll (50 Money)
+"
+script = ExtResource("2_y0w4j")
+
+[node name="Label" type="Label" parent="DevTool/Additem"]
 layout_mode = 0
-offset_left = 858.0
-offset_top = 511.0
-offset_right = 1150.0
-offset_bottom = 652.0
+offset_left = 300.0
+offset_top = 56.0
+offset_right = 588.0
+offset_bottom = 166.0
+
+[node name="MoneyLabel" type="Label" parent="DevTool/Additem"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 260.0
+offset_right = 873.0
+offset_bottom = 357.0
+
+[node name="back_button" type="Button" parent="DevTool"]
+offset_left = 851.0
+offset_top = 501.0
+offset_right = 1143.0
+offset_bottom = 642.0
 text = "Back
 "
 
 [connection signal="pressed" from="DevTool/Additem" to="DevTool/Additem" method="_on_pressed"]
-[connection signal="pressed" from="Inventoria/back_button" to="Inventoria" method="_on_back_button_pressed"]
+[connection signal="pressed" from="DevTool/back_button" to="Inventoria" method="_on_back_button_pressed"]

@@ -1,6 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://csu0qbcaagjhm"]
+[gd_scene load_steps=11 format=3 uid="uid://csu0qbcaagjhm"]
 
-[ext_resource type="Script" path="res://Second_menu.gd" id="1_dudou"]
+[ext_resource type="Script" path="res://Scripts/Second_menu.gd" id="1_dudou"]
+[ext_resource type="Texture2D" uid="uid://8wrhhh5xi4yy" path="res://assets/anden menu.png" id="2_8n5vl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbhxa"]
+texture = ExtResource("2_8n5vl")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px10d"]
 bg_color = Color(0.729412, 0, 0.298039, 0.741176)
@@ -80,46 +84,59 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dudou")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.00336266, 0.123243, 0.208639, 1)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jbhxa")
 
-[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer"]
+[node name="Button_Select_level" type="Button" parent="Panel"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-
-[node name="Button_Select_level" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
-layout_mode = 2
+offset_left = 480.0
+offset_top = 136.0
+offset_right = 657.0
+offset_bottom = 198.0
+scale = Vector2(1.1, 1.1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_px10d")
 text = "Level select"
 
-[node name="Button_Inventory" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+[node name="Button_Inventory" type="Button" parent="Panel"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_left = 488.0
+offset_top = 224.0
+offset_right = 648.0
+offset_bottom = 286.0
+scale = Vector2(1.1, 1.1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rrldd")
 text = "Inventory"
 
-[node name="Button_Gacha" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+[node name="Button_Gacha" type="Button" parent="Panel"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_left = 448.0
+offset_top = 312.0
+offset_right = 686.0
+offset_bottom = 374.0
+scale = Vector2(1.1, 1.1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ok47y")
 text = "Cloning station"
 
-[node name="Button_Back" type="Button" parent="ColorRect/CenterContainer/HBoxContainer"]
+[node name="Button_Back" type="Button" parent="Panel"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_left = 525.0
+offset_top = 395.0
+offset_right = 614.0
+offset_bottom = 457.0
+scale = Vector2(1.1, 1.1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_a5v7u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gk3nv")
@@ -127,7 +144,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_xv21u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_aejkd")
 text = "Back"
 
-[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Select_level" to="." method="_on_button_select_level_pressed"]
-[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Inventory" to="." method="_on_button_inventory_pressed"]
-[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Gacha" to="." method="_on_button_gacha_pressed"]
-[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/Button_Back" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="Panel/Button_Select_level" to="." method="_on_button_select_level_pressed"]
+[connection signal="pressed" from="Panel/Button_Inventory" to="." method="_on_button_inventory_pressed"]
+[connection signal="pressed" from="Panel/Button_Gacha" to="." method="_on_button_gacha_pressed"]
+[connection signal="pressed" from="Panel/Button_Back" to="." method="_on_button_back_pressed"]

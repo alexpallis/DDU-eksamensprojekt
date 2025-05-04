@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cpmcw0u6i3cnu"]
 
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="1_sdley"]
-[ext_resource type="PackedScene" uid="uid://ca2bfbhkght7y" path="res://Scenes/dave_legs.tscn" id="2_nfrs2"]
+[ext_resource type="PackedScene" uid="uid://c8bsah74xj8yt" path="res://Scenes/inventory_spawner.tscn" id="2_ua3qm"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_2ox6v"]
 
@@ -72,15 +72,6 @@ layout_mode = 2
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 325)
 
-[node name="back_Button" type="Button" parent="Camera2D"]
-offset_left = 530.0
-offset_top = 284.0
-offset_right = 575.0
-offset_bottom = 315.0
-size_flags_horizontal = 10
-size_flags_vertical = 10
-text = "Back"
-
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 offset_left = -538.0
 offset_top = -324.0
@@ -134,20 +125,20 @@ layout_mode = 2
 custom_minimum_size = Vector2(102, 0)
 layout_mode = 2
 
-[node name="DaveLegs" parent="." instance=ExtResource("2_nfrs2")]
+[node name="InventorySpawner" parent="." instance=ExtResource("2_ua3qm")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.107
-anchor_top = 1.358
-anchor_right = 0.152
-anchor_bottom = 1.812
-offset_left = 32.736
-offset_top = -633.984
-offset_right = 32.896
-offset_bottom = -854.176
+offset_top = 177.0
 
-[connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Camera2D/back_Button" to="." method="_on_back_pressed"]
+[node name="back_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1091.0
+offset_top = 598.0
+offset_right = 1136.0
+offset_bottom = 629.0
+size_flags_horizontal = 10
+size_flags_vertical = 10
+text = "Back"
+
 [connection signal="mouse_entered" from="Camera2D/ColorRect/HBoxContainer/Hand1" to="." method="_on_hand_1_mouse_entered"]
 [connection signal="mouse_entered" from="Camera2D/ColorRect/HBoxContainer/Hand1" to="Camera2D/ColorRect/HBoxContainer/Hand1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/ColorRect/HBoxContainer/Hand1" to="." method="_on_hand_1_mouse_exited"]
@@ -188,3 +179,5 @@ offset_bottom = -854.176
 [connection signal="mouse_entered" from="Camera2D/ColorRect/HBoxContainer/Hand10" to="Camera2D/ColorRect/HBoxContainer/Hand10" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/ColorRect/HBoxContainer/Hand10" to="." method="_on_hand_10_mouse_exited"]
 [connection signal="mouse_exited" from="Camera2D/ColorRect/HBoxContainer/Hand10" to="Camera2D/ColorRect/HBoxContainer/Hand10" method="_on_mouse_exited"]
+[connection signal="pressed" from="back_Button" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="back_Button" to="." method="_on_back_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b5i74d3axxyed"]
 
-[ext_resource type="Script" path="res://david_pearl.gd" id="1_qu0jj"]
+[ext_resource type="Script" path="res://Scripts/david_pearl.gd" id="1_qu0jj"]
 [ext_resource type="Texture2D" uid="uid://bsquwf8ljrru3" path="res://assets/Pearl_david.png" id="2_332m0"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_5mpoj"]
 

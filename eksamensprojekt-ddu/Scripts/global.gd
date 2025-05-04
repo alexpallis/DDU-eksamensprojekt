@@ -32,17 +32,17 @@ var is_requesting : bool = false
 var StandardCoinSpeed = 5
 var CoinSpeed = 1
 var Coin = 0
-var money = 0
+var money = 50
 var enemy_difficulty = 1
 
 #unit id number
-var handdave1 = 0
-var handdave2 = 1
-var handdave3 = 2
-var handdave4 = 3
-var handdave5 = 4
-var handdave6 = 5
-var handdave7 = 6
+var handdave1 = -1
+var handdave2 = -1
+var handdave3 = -1
+var handdave4 = -1
+var handdave5 = -1
+var handdave6 = -1
+var handdave7 = -1
 var handdave8 = -1
 var handdave9 = -1
 var handdave10 = -1
@@ -93,9 +93,9 @@ var Davidfireball = preload("res://Scenes/david_fireball.tscn")
 var level = 0
 
 #Unit amount 
-var Dave = 0
-var D1 = 0
-var D2 = 0
+var Dave = 1
+var D1 = 1
+var D2 = 1
 var D3 = 0
 var D4 = 0
 var D5 = 0
