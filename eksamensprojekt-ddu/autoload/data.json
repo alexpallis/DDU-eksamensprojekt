@@ -60,10 +60,10 @@
 	"Description": ""
  }, 
   "12": {
-	"Name": "Ninja Thief Dave",
-	"Texture": "Burgledavid.png",
+	"Name": "Chargeing Dave",
+	"Texture": "davidbeefcake-Sheet.png",
 	"Description": ""
-	}, 
+	},
   "13": {
 	"Name": "Chargeing Dave",
 	"Texture": "davidbeefcake-Sheet.png",

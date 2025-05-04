@@ -95,7 +95,7 @@ scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_h3lvg")
 animation = &"Walk"
 autoplay = "Idl"
-frame_progress = 0.418582
+frame_progress = 0.767364
 flip_h = true
 
 [node name="AttackArea" type="Area2D" parent="."]

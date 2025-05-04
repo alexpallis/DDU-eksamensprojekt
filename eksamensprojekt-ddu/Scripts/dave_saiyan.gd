@@ -73,6 +73,10 @@ func start_moving():
 		Global.handdave4: Global.handdave4cdstart = true
 		Global.handdave5: Global.handdave5cdstart = true
 		Global.handdave6: Global.handdave6cdstart = true
+		Global.handdave7: Global.handdave7cdstart = true
+		Global.handdave8: Global.handdave8cdstart = true
+		Global.handdave9: Global.handdave9cdstart = true
+		Global.handdave10: Global.handdave10cdstart = true
 
 func _process(delta):
 	if moveable and Global.Coin >= price:

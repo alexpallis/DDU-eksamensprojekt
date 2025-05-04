@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjbh7msoylast"]
 
 [ext_resource type="Script" path="res://Scripts/fences.gd" id="1_8xxqp"]
-[ext_resource type="Texture2D" uid="uid://cb6viiemokrl" path="res://Scripts/icon.svg" id="2_qwcoi"]
+[ext_resource type="Texture2D" uid="uid://dbbdn66gv1c8f" path="res://pngimg.com - stone_PNG13606.png" id="2_nv35j"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_i8tx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78kyc"]
@@ -14,8 +14,8 @@ script = ExtResource("1_8xxqp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(20, 22)
-scale = Vector2(0.5, 0.536)
-texture = ExtResource("2_qwcoi")
+scale = Vector2(0.1, 0.107)
+texture = ExtResource("2_nv35j")
 flip_h = true
 
 [node name="AttackArea" type="Area2D" parent="."]

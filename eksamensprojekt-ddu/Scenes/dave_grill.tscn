@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6io6jhydkhci"]
 
 [ext_resource type="Script" path="res://Scripts/dave_grill.gd" id="1_5y7bv"]
-[ext_resource type="Texture2D" uid="uid://hqcrstppjay2" path="res://assets/Grill.jpg" id="2_1lvtx"]
+[ext_resource type="Texture2D" uid="uid://dpnhk64wfcbok" path="res://pngtree-a-modern-gas-grill-png-image_14702741.png" id="2_ffpry"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_8x0ks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndi36"]
@@ -15,7 +15,7 @@ script = ExtResource("1_5y7bv")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(20, 22)
 scale = Vector2(0.2, 0.214)
-texture = ExtResource("2_1lvtx")
+texture = ExtResource("2_ffpry")
 flip_h = true
 
 [node name="AttackArea" type="Area2D" parent="."]
