@@ -4,21 +4,18 @@ extends Container
 var start_position
 var unit_highlighted = false
 var moveable = false
-var lane1 = false
-var lane2 = false
-var lane3 = false
-var lane4 = false
+
 var moving = false
 var attacking = false
-var unitid = 3
+var unitid = 10
 
-var speed = 250 * (1 + (Global.D3-1)/10) # Speed of movement to the right
-var steal_value = 30 * (1 + (Global.D3-1)/10) # the amount the unit steals from the hous
-var attack_cooldown = 1.0  # Time between attacks
-var attack_damage = 20 * (1 + (Global.D3-1)/10) # Default attack damage
-var health = 30 * (1 + (Global.D3-1)/10) # Unit health
+var speed = 75 * (1 + (Global.D10-1)/10)
+var steal_value = 100 * (1 + (Global.D10-1)/10)
+var attack_cooldown = 1.0 
+var attack_damage = 75 * (1 + (Global.D10-1)/10)
+var health = 350 * (1 + (Global.D10-1)/10)
 var can_attack = true
-var price = 20 # how much the unit cost
+var price = 40
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -29,10 +26,9 @@ var previous_hand_slot: int = -1
 @onready var cooldown = $cooldown
 @onready var cost = $CoinCost/Cost
 
-
 func _ready():
 
-	self.tooltip_text = (str(Global.D3) + " Level" + 
+	self.tooltip_text = (str(Global.D10) + " Level" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +

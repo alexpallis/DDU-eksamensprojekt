@@ -20,6 +20,7 @@ texture = ExtResource("2_ywu4r")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("3_o3t46")
 

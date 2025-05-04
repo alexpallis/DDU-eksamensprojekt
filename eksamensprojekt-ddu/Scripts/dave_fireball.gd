@@ -38,12 +38,6 @@ func _process(delta):
 	if moving and !attacking:
 		self.global_position.x += speed * delta  # Moves right
 
-func take_damage(amount):
-	if moving:
-		health -= amount
-		print("Unit took damage! Remaining health:", health)
-		if health <= 0:
-			die()
 
 func die():
 	print("Unit has been defeated.")
@@ -81,4 +75,5 @@ func attack_target(body):
 		if can_attack:
 			print("Attacking:", body.name)
 			body.take_damage(attack_damage)
+			die()
 			await get_tree().create_timer(attack_cooldown).timeout

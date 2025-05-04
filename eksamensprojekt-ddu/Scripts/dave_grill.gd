@@ -26,7 +26,8 @@ var previous_hand_slot: int = -1
 
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
-@onready var cost = $"cost hide/Cost"
+@onready var cost = $CoinCost/Cost
+
 
 func _ready():
 
@@ -35,7 +36,9 @@ func _ready():
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
 		"\n" + str(price) + " Coins" +
-		"\n" + str(coinspeedadd) + " Coins per sekund")
+		"\n +" + str(coinspeedadd) + " Coins per sekund")
+
+	cost.text = str(price) + " Coins"
 
 func _on_mouse_entered():
 	unit_highlighted = true
@@ -51,7 +54,7 @@ func _on_gui_input(event):
 		elif event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 			moveable = false
 			if current_lane != -1:
-				move_to_position(Vector2(200, 100 + (current_lane - 1) * 110))
+				move_to_position(Vector2(150, 100 + (current_lane - 1) * 110))
 			elif current_hand_slot != -1:
 				select(Vector2(91 + (current_hand_slot - 1) * 102, 84))
 
@@ -65,7 +68,7 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	moving = true
 	Global.Coin -= price
-	
+	cost.hide()
 	Global.CoinSpeed += coinspeedadd
 	
 	match unitid:

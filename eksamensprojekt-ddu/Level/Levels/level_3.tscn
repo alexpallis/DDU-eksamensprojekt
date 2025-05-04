@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://coducrxm054jf"]
 
-[ext_resource type="Script" path="res://Level/Level scripts/level_1.gd" id="1_w7x27"]
+[ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_dwq3a"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_ummea"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_3.gd" id="3_fheoi"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="4_un86d"]
@@ -17,7 +17,7 @@
 texture = ExtResource("2_ummea")
 
 [node name="Level 3" type="Node"]
-script = ExtResource("1_w7x27")
+script = ExtResource("1_dwq3a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

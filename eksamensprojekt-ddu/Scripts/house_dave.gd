@@ -18,7 +18,7 @@ func have_been_stolen(amount):
 	print("Daves house took damage! Remaining health:", health)
 	if health <= 0:
 		die()
-		get_tree().change_scene_to_file("res://Scenes/You_lose.tscn")
+		get_tree().change_scene_to_file("res://Scenes/lose_scenes.tscn")
 
 func die():
 	print("YOU LOOS")
