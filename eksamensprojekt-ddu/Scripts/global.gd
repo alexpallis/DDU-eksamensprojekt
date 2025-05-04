@@ -22,7 +22,7 @@ var Layer1hovering = false
 # Level sending to the DB
 
 var http_request : HTTPRequest = HTTPRequest.new()
-const SERVER_URL = "http://localhost/EksamensDB.php"
+const SERVER_URL = "http://localhost/eksamensproject_skripts/EksamensDB.php"
 const SERVER_HEADERS = ["Content-Type: application/x-www-form-urlencoded", "Cache-Control: max-age=0"]
 const SECRET_KEY = "1234567890"
 var nonce = null
@@ -179,16 +179,19 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 	var json_conv = JSON.new()
 	json_conv.parse(response_body)
 	var response = json_conv.get_data()
+	print(response)
+	nonce = "0"
 	#var response = parse_json(response_body) forhenværende kode rigtige ovenfor.
-	if response['error'] != "none":
-		printerr("We returned error: " + response['error'])
-		return
+	
+	#if response['error'] != "none":
+		#printerr("We returned error: " + response['error'])
+		#return
 	
 	#Check if nonce were requested:
-	if response['command'] == 'get_nonce':
-		nonce = response['result']['nonce']
-		print("Got nonce: " + response['result']['nonce'])
-		return
+	#if response['command'] == 'get_nonce':
+		#nonce = response['result']['nonce']
+		#print("Got nonce: " + response['result']['nonce'])
+		#return
 	
 	#if not nonce request but else:
 	print("Response Body:\n" + response_body)
@@ -270,7 +273,6 @@ func _submit_units():
 
 func _submit_deck():
 	var id = ""
-	var coins = 0
 	var command = "add_deck"
 	var data = {"handdave1" : handdave1, "handdave2" : handdave2, "handdave3" : handdave3, "handdave4" : handdave4, "handdave5" : handdave5, "handdave6" : handdave6, "handdave7" : handdave7, "handdave8" : handdave8, "handdave9" : handdave9, "handdave10" : handdave10, "id" : id}
 	request_que.push_back({"command" : command, "data" : data})
