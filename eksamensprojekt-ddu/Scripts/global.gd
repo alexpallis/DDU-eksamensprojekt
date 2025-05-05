@@ -32,7 +32,7 @@ var is_requesting : bool = false
 var StandardCoinSpeed = 5
 var CoinSpeed = 5
 var Coin = 0
-var money = 50
+var money = 5000
 var enemy_difficulty = 1
 
 #unit id number
@@ -112,7 +112,13 @@ var enemy = [
 	preload("res://Scenes/david_pearl.tscn"),
 	preload("res://Scenes/david_ninja_thief.tscn"),
 	preload("res://Scenes/david_charge.tscn"),
-	preload("res://Scenes/david_mustache.tscn")
+	preload("res://Scenes/david_mustache.tscn"),
+	preload("res://Scenes/random_david.tscn"),
+	preload("res://Scenes/mini_david.tscn"),
+	preload("res://Scenes/agenr_00_david.tscn"),
+	preload("res://Scenes/david_tank.tscn"),
+	preload("res://Scenes/luxury_david.tscn"),
+	preload("res://Scenes/burning_david.tscn"),
 ]
 
 #list of projectile
@@ -138,7 +144,7 @@ var D10 = 0
 var D11 = 0
 var D12 = 0
 var D13 = 0
-var D14 = 1
+var D14 = 0
 var D15 = 0
 var D16 = 0
 var D17 = 0

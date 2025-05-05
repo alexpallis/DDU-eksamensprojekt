@@ -31,7 +31,7 @@
   },
   "6": {
 	"Name": "Dave's Grill",
-	"Texture": "Grill.png",
+	"Texture": "grill2.png",
 	"Description": ""
   },
   "7": {
@@ -51,7 +51,7 @@
   }, 
   "10": {
 	"Name": "Pearl Dave",
-	"Texture": "Pearl_david.png",
+	"Texture": "pille.png",
 	"Description": "Fire Pearl Daitokuten"
  }, 
   "11": {
@@ -66,7 +66,7 @@
 	},
   "13": {
 	"Name": "Mustache Dave",
-	"Texture": "muStache-Sheet.png",
+	"Texture": "skægdave.png",
 	"Description": ""
 	},
  "14": {
@@ -96,7 +96,7 @@
 	},
  "19": {
 	"Name": "Burning Dave",
-	"Texture": "muStache-Sheet.png",
+	"Texture": "skægdave.png",
 	"Description": ""
 	},
 }

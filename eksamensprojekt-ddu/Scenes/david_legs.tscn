@@ -6,60 +6,32 @@
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_plybb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v7nug"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("2_2hwvc")
 region = Rect2(0, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r02e3"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_c3nq3")
 region = Rect2(0, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttkcl"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_c3nq3")
 region = Rect2(1000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2nfeh"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_c3nq3")
 region = Rect2(2000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbt3e"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_c3nq3")
 region = Rect2(3000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10lms"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_c3nq3")
 region = Rect2(4000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oi7yf"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_c3nq3")
 region = Rect2(5000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjtn7"]
 animations = [{

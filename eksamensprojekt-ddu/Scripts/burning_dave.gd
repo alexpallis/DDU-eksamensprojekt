@@ -89,6 +89,7 @@ func _process(delta):
 	elif moving and !attacking:
 		$AttackArea.collision_layer = 1
 		self.global_position.x += speed * delta 
+
 	elif moving:
 		health -= 10 * delta
 
