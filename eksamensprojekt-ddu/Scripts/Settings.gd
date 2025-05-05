@@ -28,3 +28,7 @@ func _on_turorial_pressed():
 	Global.handdave9 = -1
 	Global.handdave10 = -1
 	get_tree().change_scene_to_file("res://Level/Levels/tutorial_level.tscn")
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/credits.tscn")

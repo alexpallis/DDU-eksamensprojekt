@@ -127,7 +127,7 @@ var Davidfireball = preload("res://Scenes/david_fireball.tscn")
 var DaveBullet = preload("res://Scenes/dave_bullet.tscn")
 var DavidBullet = preload("res://Scenes/david_bullet.tscn")
 #current level
-var level = 0
+var level = 99
 var Tutor = false
 
 #Unit amount 
