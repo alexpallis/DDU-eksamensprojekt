@@ -62,21 +62,21 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -239.0
-offset_top = -35.0
+offset_top = -42.0
 offset_right = -159.0
-offset_bottom = -27.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -6.28319
-scale = Vector2(6, 6)
+scale = Vector2(6.01066, 5.33066)
 localize_numeral_system = false
 columns = 7
 
-[node name="Day-2" type="Button" parent="Panel/GridContainer"]
+[node name="DayMinus2" type="Button" parent="Panel/GridContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="Day-1" type="Button" parent="Panel/GridContainer"]
+[node name="DayMinus1" type="Button" parent="Panel/GridContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
@@ -97,6 +97,118 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="Day4" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day5" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day6" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day7" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day8" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day9" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day10" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day11" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day12" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day13" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day14" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day15" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day16" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day17" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day18" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day19" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day20" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day21" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day22" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day23" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day24" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day25" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day26" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day27" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day28" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day29" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day30" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Day31" type="Button" parent="Panel/GridContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Dayplus1" type="Button" parent="Panel/GridContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
@@ -137,11 +249,44 @@ vertical_alignment = 1
 position = Vector2(534, 136)
 stream = ExtResource("4_a60m2")
 autoplay = true
-stream_paused = true
 parameters/looping = true
 
+[connection signal="pressed" from="Panel/GridContainer/DayMinus2" to="." method="_on_day_minus_2_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus2" to="." method="_on_day_2_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_day_minus_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_day_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_dayminus_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day0" to="." method="_on_day_0_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day1" to="." method="_on_day_1_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day2" to="." method="_on_day_2_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day3" to="." method="_on_day_3_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day4" to="." method="_on_day_4_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day5" to="." method="_on_day_5_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day6" to="." method="_on_day_6_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day7" to="." method="_on_day_7_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day8" to="." method="_on_day_8_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day9" to="." method="_on_day_9_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day10" to="." method="_on_day_10_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day11" to="." method="_on_day_11_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day12" to="." method="_on_day_12_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day13" to="." method="_on_day_13_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day14" to="." method="_on_day_14_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day15" to="." method="_on_day_15_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day16" to="." method="_on_day_16_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day17" to="." method="_on_day_17_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day18" to="." method="_on_day_18_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day19" to="." method="_on_day_19_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day20" to="." method="_on_day_20_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day21" to="." method="_on_day_21_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day22" to="." method="_on_day_22_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day23" to="." method="_on_day_23_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day24" to="." method="_on_day_24_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day25" to="." method="_on_day_25_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day26" to="." method="_on_day_26_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day27" to="." method="_on_day_27_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day28" to="." method="_on_day_28_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day29" to="." method="_on_day_29_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day30" to="." method="_on_day_30_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Day31" to="." method="_on_day_31_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/Dayplus1" to="." method="_on_dayplus_1_pressed"]
 [connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
