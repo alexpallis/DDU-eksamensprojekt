@@ -1,41 +1,35 @@
 extends Control
 
-
-var dave_types = Global.daves 
+var dave_types = Global.daves
 
 var positions = [
-	Vector2(200, 550), 
-	Vector2(285, 550),  
-	Vector2(370, 550),  
-	Vector2(455, 550), 
-	Vector2(520, 550),  
-	Vector2(625, 550),
-	Vector2(710, 550),
-	Vector2(795, 550),
-	Vector2(880, 550),
+	Vector2(200, 550), Vector2(285, 550), Vector2(370, 550),
+	Vector2(455, 550), Vector2(520, 550), Vector2(625, 550),
+	Vector2(710, 550), Vector2(795, 550), Vector2(880, 550),
 	Vector2(965, 550),
 ]
-var handplacement = [ 
-	[Global.handdave1,Global.handdave1cd,0],
-	[Global.handdave2,Global.handdave2cd,1],
-	[Global.handdave3,Global.handdave3cd,2],
-	[Global.handdave4,Global.handdave4cd,3],
-	[Global.handdave5,Global.handdave5cd,4],
-	[Global.handdave6,Global.handdave6cd,5],
-	[Global.handdave7,Global.handdave7cd,6],
-	[Global.handdave8,Global.handdave8cd,7],
-	[Global.handdave9,Global.handdave9cd,8],
-	[Global.handdave10,Global.handdave10cd,9],
+
+# Store hand info as dictionaries for clarity
+var handplacement = [
+	{"type": Global.handdave1, "cd": Global.handdave1cd, "cd_start": "handdave1cdstart", "index": 0},
+	{"type": Global.handdave2, "cd": Global.handdave2cd, "cd_start": "handdave2cdstart", "index": 1},
+	{"type": Global.handdave3, "cd": Global.handdave3cd, "cd_start": "handdave3cdstart", "index": 2},
+	{"type": Global.handdave4, "cd": Global.handdave4cd, "cd_start": "handdave4cdstart", "index": 3},
+	{"type": Global.handdave5, "cd": Global.handdave5cd, "cd_start": "handdave5cdstart", "index": 4},
+	{"type": Global.handdave6, "cd": Global.handdave6cd, "cd_start": "handdave6cdstart", "index": 5},
+	{"type": Global.handdave7, "cd": Global.handdave7cd, "cd_start": "handdave7cdstart", "index": 6},
+	{"type": Global.handdave8, "cd": Global.handdave8cd, "cd_start": "handdave8cdstart", "index": 7},
+	{"type": Global.handdave9, "cd": Global.handdave9cd, "cd_start": "handdave9cdstart", "index": 8},
+	{"type": Global.handdave10, "cd": Global.handdave10cd, "cd_start": "handdave10cdstart", "index": 9},
 ]
+
 func _ready():
 	spawnonboard()
 
 func spawnonboard():
 	for data in handplacement:
-			var type_index = data[0]
-			var position_index = data[2]
-			spawn_dave(type_index, position_index)
-	
+		spawn_dave(data["type"], data["index"])
+
 func spawn_dave(type_index: int, position_index: int):
 	if type_index < 0 or type_index >= dave_types.size():
 		push_error("Invalid enemy type index: %d" % type_index)
@@ -47,46 +41,12 @@ func spawn_dave(type_index: int, position_index: int):
 	var dave_scene = dave_types[type_index]
 	var dave_instance = dave_scene.instantiate()
 	add_child(dave_instance)
-
 	dave_instance.position = positions[position_index]
+
 func _physics_process(delta):
-	if Global.handdave1cdstart == true:
-		Global.handdave1cdstart = false
-		await get_tree().create_timer(Global.handdave1cd).timeout
-		spawn_dave(Global.handdave1,0)
-	if Global.handdave2cdstart == true:
-		Global.handdave2cdstart = false
-		await get_tree().create_timer(Global.handdave2cd).timeout
-		spawn_dave(Global.handdave2,1)
-	if Global.handdave3cdstart == true:
-		Global.handdave3cdstart = false
-		await get_tree().create_timer(Global.handdave3cd).timeout
-		spawn_dave(Global.handdave3,2)
-	if Global.handdave4cdstart == true:
-		Global.handdave4cdstart = false
-		await get_tree().create_timer(Global.handdave4cd).timeout
-		spawn_dave(Global.handdave4,3)
-	if Global.handdave5cdstart == true:
-		Global.handdave5cdstart = false
-		await get_tree().create_timer(Global.handdave5cd).timeout
-		spawn_dave(Global.handdave5,4)
-	if Global.handdave6cdstart == true:
-		Global.handdave6cdstart = false
-		await get_tree().create_timer(Global.handdave6cd).timeout
-		spawn_dave(Global.handdave6,5)
-	if Global.handdave7cdstart == true:
-		Global.handdave7cdstart = false
-		await get_tree().create_timer(Global.handdave7cd).timeout
-		spawn_dave(Global.handdave7,6)
-	if Global.handdave8cdstart == true:
-		Global.handdave8cdstart = false
-		await get_tree().create_timer(Global.handdave8cd).timeout
-		spawn_dave(Global.handdave8,7)
-	if Global.handdave9cdstart == true:
-		Global.handdave9cdstart = false
-		await get_tree().create_timer(Global.handdave9cd).timeout
-		spawn_dave(Global.handdave9,8)
-	if Global.handdave10cdstart == true:
-		Global.handdave10cdstart = false
-		await get_tree().create_timer(Global.handdave10cd).timeout
-		spawn_dave(Global.handdave10,9)
+	for data in handplacement:
+		var cd_start_prop = data["cd_start"]
+		if Global.get(cd_start_prop):
+			Global.set(cd_start_prop, false)
+			await get_tree().create_timer(data["cd"]).timeout
+			spawn_dave(data["type"], data["index"])

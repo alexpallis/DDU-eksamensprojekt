@@ -17,7 +17,7 @@ var attack_cooldown = 1.0   # Time between attacks
 var attack_damage = 20 * (1 + (Global.D2-1)/10) # Default attack damage
 var health = 200 * (1 + (Global.D2-1)/10) # Unit health
 var can_attack = true
-var price = 10 # how much the unit cost
+var price = 30 # how much the unit cost
 var current_hand_slot: int = -1
 var current_lane: int = -1
 

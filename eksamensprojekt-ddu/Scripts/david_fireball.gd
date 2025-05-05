@@ -11,7 +11,7 @@ var moving = true
 var attacking = false
 
 var speed = 200 * Global.enemy_difficulty
-var steal_value = 25 * Global.enemy_difficulty
+var steal_value = 0 * Global.enemy_difficulty
 var attack_cooldown = 1.0
 var attack_damage = 10 * Global.enemy_difficulty
 var health = 1
@@ -64,7 +64,7 @@ func _on_attack_area_area_entered(body):
 		
 
 
-func _on_attack_area_area_exited(_area):
+func _on_attack_area_area_exited(body):
 	attacking = false
 	print("hi")
 	

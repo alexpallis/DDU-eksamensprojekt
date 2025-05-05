@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://0mnb1n3noh6a"]
+[gd_scene load_steps=7 format=3 uid="uid://0mnb1n3noh6a"]
 
 [ext_resource type="Script" path="res://Scripts/inventoria.gd" id="1_1t2tk"]
 [ext_resource type="Texture2D" uid="uid://pimelqnaogyt" path="res://assets/gotyou.png" id="1_xwwfl"]
 [ext_resource type="Script" path="res://Scripts/additem.gd" id="2_y0w4j"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="4_ipvm7"]
+[ext_resource type="AudioStream" uid="uid://br16saeieayp2" path="res://assets/Fonts/Beachvibes2 (1).mp3" id="5_khman"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqwva"]
 texture = ExtResource("1_xwwfl")
@@ -60,6 +61,13 @@ theme_override_fonts/font = ExtResource("4_ipvm7")
 theme_override_font_sizes/font_size = 42
 text = "Back
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_khman")
+pitch_scale = 0.8
+autoplay = true
+stream_paused = true
+parameters/looping = true
 
 [connection signal="pressed" from="DevTool/Additem" to="DevTool/Additem" method="_on_pressed"]
 [connection signal="pressed" from="DevTool/back_button" to="CanvasLayer/Inventoria" method="_on_back_button_pressed"]

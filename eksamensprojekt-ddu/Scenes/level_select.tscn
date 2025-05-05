@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://7i081076hyvh"]
+[gd_scene load_steps=6 format=3 uid="uid://7i081076hyvh"]
 
 [ext_resource type="Texture2D" uid="uid://dgxlhedwmo4kn" path="res://assets/garden.png" id="1_8xl8g"]
 [ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_nrl1x"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_rgphx"]
+[ext_resource type="AudioStream" uid="uid://br16saeieayp2" path="res://assets/Fonts/Beachvibes2 (1).mp3" id="4_a60m2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db7t0"]
 resource_local_to_scene = true
@@ -113,6 +114,31 @@ offset_bottom = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Back"
+
+[node name="Stage guid" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_top = 136.0
+offset_right = 42.0
+offset_bottom = 162.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rgphx")
+theme_override_font_sizes/font_size = 16
+text = " "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(534, 136)
+stream = ExtResource("4_a60m2")
+autoplay = true
+stream_paused = true
+parameters/looping = true
 
 [connection signal="pressed" from="Panel/GridContainer/Day1" to="." method="_on_day_1_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day2" to="." method="_on_day_2_pressed"]

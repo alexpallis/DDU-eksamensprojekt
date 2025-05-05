@@ -12,12 +12,13 @@ var attacking = false
 
 var speed = 50 * Global.enemy_difficulty # Speed of movement to the right
 var steal_value = 100 * Global.enemy_difficulty # the amount the unit steals from the hous
-var attack_cooldown = 3.0  # Time between attacks
-var attack_damage = 100 * Global.enemy_difficulty  # Default attack damage
+var attack_cooldown = 5.0  # Time between attacks
+var attack_damage = 200 * Global.enemy_difficulty  # Default attack damage
 var health = 1 * Global.enemy_difficulty # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _ready():
 	start_position = self.global_position
@@ -64,6 +65,7 @@ func move_to_position(target_position: Vector2):
 
 func start_moving():
 	print("Unit has reached its position and is now moving.")  # Debugging
+	animated_sprite_2d.play("Walk")
 	moving = true
 
 func _process(delta):
@@ -114,6 +116,7 @@ func _on_attack_area_area_entered(body):
 	
 	if body.has_method("take_damage") and moving == true:
 		attacking = true  # Stop movement when attacking
+		animated_sprite_2d.play("Idl")
 		await attack_target(body)
 
 
@@ -122,10 +125,9 @@ func _on_attack_area_area_entered(body):
 		
 
 
-func _on_attack_area_area_exited(_area):
-	
+func _on_attack_area_area_exited(body):
+	animated_sprite_2d.play("Walk")
 	attacking = false
-	print("hi")
 	
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c53ih1mua65ir"]
+[gd_scene load_steps=16 format=3 uid="uid://c53ih1mua65ir"]
 
 [ext_resource type="Script" path="res://Level/Level scripts/level_4.gd" id="1_h06gq"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_a255j"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Scripts/lane_2.gd" id="11_tgo3s"]
 [ext_resource type="Script" path="res://Scripts/lane_3.gd" id="12_8mnr5"]
 [ext_resource type="Script" path="res://Scripts/lane_4.gd" id="13_0gkbu"]
+[ext_resource type="AudioStream" uid="uid://cb5ghxebfw2jg" path="res://assets/Fonts/boogiemaninstrumental.mp3" id="14_0tijl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0joh"]
 texture = ExtResource("2_a255j")
@@ -135,6 +136,11 @@ offset_bottom = 490.0
 scale = Vector2(1, 1.04)
 script = ExtResource("13_0gkbu")
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_0tijl")
+autoplay = true
+parameters/looping = true
 
 [connection signal="mouse_entered" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_exited"]

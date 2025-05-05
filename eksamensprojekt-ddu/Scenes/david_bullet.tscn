@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://rav7btogonax"]
+
+[ext_resource type="Script" path="res://Scripts/david_bullet.gd" id="1_jk8oj"]
+[ext_resource type="Texture2D" uid="uid://0qswl51log2o" path="res://assets/bullet.png" id="2_njw21"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="3_38d3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2wdi"]
+size = Vector2(67, 20)
+
+[node name="DavidBullet" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jk8oj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 38)
+scale = Vector2(0.1, 0.107)
+texture = ExtResource("2_njw21")
+flip_h = true
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+collision_layer = 0
+script = ExtResource("3_38d3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-25.5, -1)
+shape = SubResource("RectangleShape2D_a2wdi")
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

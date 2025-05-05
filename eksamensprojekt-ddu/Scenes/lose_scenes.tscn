@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6v7cf6gh1u4u"]
+[gd_scene load_steps=6 format=3 uid="uid://c6v7cf6gh1u4u"]
 
 [ext_resource type="Script" path="res://Scripts/lose_scenes.gd" id="1_ur21c"]
 [ext_resource type="Texture2D" uid="uid://cv0hk34h042ky" path="res://assets/cartoon-night-sky-summer-evening-scene-with-stars-and-moon-summer-night-panoramic-view-with-clouds-and-fog-banner-illustration-of-nature-vector.jpg" id="2_j8l8f"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_25m4e"]
+[ext_resource type="AudioStream" uid="uid://bu2fvgw00b4m5" path="res://assets/Fonts/game-over-38511 (2).mp3" id="4_vchak"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brp6r"]
 texture = ExtResource("2_j8l8f")
@@ -49,5 +50,10 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_25m4e")
 theme_override_font_sizes/font_size = 50
 text = "You Lost"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vchak")
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

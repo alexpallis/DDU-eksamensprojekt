@@ -13,7 +13,7 @@ var attacking = false
 var speed = 50 * Global.enemy_difficulty  # Speed of movement to the right
 var steal_value = 25 * Global.enemy_difficulty # the amount the unit steals from the hous
 var attack_cooldown = 1.0  # Time between attacks
-var attack_damage = 10 * Global.enemy_difficulty  # Default attack damage
+var attack_damage = 0 * Global.enemy_difficulty  # Default attack damage
 var health = 200 * Global.enemy_difficulty  # Unit health
 var can_attack = true
 

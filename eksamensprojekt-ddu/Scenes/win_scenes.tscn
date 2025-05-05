@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://jogft43w6rtg"]
+[gd_scene load_steps=6 format=3 uid="uid://jogft43w6rtg"]
 
 [ext_resource type="Script" path="res://Scripts/win_scenes.gd" id="1_uu8do"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="2_65sdr"]
 [ext_resource type="Texture2D" uid="uid://d38ivfsqb2ygw" path="res://assets/360_F_178862398_8wcRql8YWCt5Vta4Xf5FUEzXDgiuHOmG.jpg" id="2_msoel"]
+[ext_resource type="AudioStream" uid="uid://cjwcauianbrip" path="res://assets/Fonts/Davestheme.mp3" id="4_7377c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfrqg"]
 texture = ExtResource("2_msoel")
@@ -52,7 +53,13 @@ theme_override_font_sizes/font_size = 50
 text = "You Win"
 
 [node name="money" type="Label" parent="Panel"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7377c")
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

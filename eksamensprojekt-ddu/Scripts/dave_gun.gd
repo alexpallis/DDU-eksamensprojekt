@@ -8,13 +8,13 @@ var moving = false
 var attacking = false
 var unitid = 8
 
-var speed = 200 * (1 + (Global.D8-1)/10)
+var speed = 100 * (1 + (Global.D8-1)/10)
 var steal_value = 10 * (1 + (Global.D8-1)/10)
 var attack_cooldown = 1.0 
-var attack_damage = 15 * (1 + (Global.D8-1)/10)
+var attack_damage = 0 * (1 + (Global.D8-1)/10)
 var health = 200 * (1 + (Global.D8-1)/10)
 var can_attack = true
-var price = 20
+var price = 30
 
 var current_hand_slot: int = -1
 var current_lane: int = -1

@@ -37,15 +37,15 @@ var enemy_difficulty = 1
 
 #unit id number
 var handdave1 = 0
-var handdave2 = 0
-var handdave3 = 0
-var handdave4 = 0
-var handdave5 = 0
-var handdave6 = 0
-var handdave7 = 0
-var handdave8 = 0
-var handdave9 = 0
-var handdave10 = 0
+var handdave2 = 1
+var handdave3 = 2
+var handdave4 = -1
+var handdave5 = -1
+var handdave6 = -1
+var handdave7 = -1
+var handdave8 = -1
+var handdave9 = -1
+var handdave10 = -1
 
 #unit cooldown in seconds
 var handdave1cd = 4.0
@@ -99,16 +99,21 @@ var enemy = [
 	preload("res://Scenes/david_thief.tscn"),
 	preload("res://Scenes/david_bomb.tscn"),
 	preload("res://Scenes/wizard_david.tscn"),
-	
-	
+	preload("res://Scenes/david_fireball.tscn"),
+	preload("res://Scenes/david_ninja.tscn"),
+	preload("res://Scenes/david_gun.tscn"),
 	preload("res://Scenes/david_saiyan.tscn"),
-	preload("res://Scenes/david_pearl.tscn")
+	preload("res://Scenes/david_pearl.tscn"),
+	preload("res://Scenes/david_ninja_thief.tscn"),
+	preload("res://Scenes/david_charge.tscn"),
+	preload("res://Scenes/david_mustache.tscn")
 ]
 
 #list of projectile
 var Davefireball = preload("res://Scenes/dave_fireball.tscn")
 var Davidfireball = preload("res://Scenes/david_fireball.tscn")
 var DaveBullet = preload("res://Scenes/dave_bullet.tscn")
+var DavidBullet = preload("res://Scenes/david_bullet.tscn")
 #current level
 var level = 0
 

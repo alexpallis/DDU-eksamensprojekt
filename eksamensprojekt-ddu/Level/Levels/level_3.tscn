@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://coducrxm054jf"]
+[gd_scene load_steps=15 format=3 uid="uid://coducrxm054jf"]
 
-[ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_dwq3a"]
+[ext_resource type="Script" path="res://Level/Level scripts/level_3.gd" id="1_dwq3a"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_ummea"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_3.gd" id="3_fheoi"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="4_un86d"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/lane_2.gd" id="10_leal2"]
 [ext_resource type="Script" path="res://Scripts/lane_3.gd" id="11_pn8kv"]
 [ext_resource type="Script" path="res://Scripts/lane_4.gd" id="12_1y5jh"]
+[ext_resource type="AudioStream" uid="uid://cb5ghxebfw2jg" path="res://assets/Fonts/boogiemaninstrumental.mp3" id="13_rn114"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sggnj"]
 texture = ExtResource("2_ummea")
@@ -128,6 +129,11 @@ offset_bottom = 490.0
 scale = Vector2(1, 1.04)
 script = ExtResource("12_1y5jh")
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_rn114")
+autoplay = true
+parameters/looping = true
 
 [connection signal="mouse_entered" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_exited"]

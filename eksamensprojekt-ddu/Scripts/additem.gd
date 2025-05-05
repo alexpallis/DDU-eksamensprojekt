@@ -112,4 +112,4 @@ func _on_pressed():
 	
 	
 	else:
-		label.text = "Not Enough Yudos"
+		pass

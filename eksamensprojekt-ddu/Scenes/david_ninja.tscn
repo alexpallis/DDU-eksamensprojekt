@@ -1,0 +1,152 @@
+[gd_scene load_steps=16 format=3 uid="uid://bockponnkjv0j"]
+
+[ext_resource type="Script" path="res://Scripts/david_ninja.gd" id="1_ffmyk"]
+[ext_resource type="Texture2D" uid="uid://11cgkg7i1i38" path="res://assets/damin1-Sheet.png" id="2_si6c0"]
+[ext_resource type="Texture2D" uid="uid://dsqtwqn736rxn" path="res://assets/Minidavemove-Sheet.png" id="3_v0iu7"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="4_67qpy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwf8g"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("2_si6c0")
+region = Rect2(0, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fne3f"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(0, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4ksj"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(7000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmg7o"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(6000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nknfs"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(5000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii2gq"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(4000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ngbv"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(3000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2attt"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(2000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsksm"]
+resource_local_to_scene = false
+resource_name = ""
+atlas = ExtResource("3_v0iu7")
+region = Rect2(1000, 0, 1000, 1000)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uibve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwf8g")
+}],
+"loop": true,
+"name": &"Idl",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fne3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4ksj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmg7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nknfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii2gq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ngbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2attt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsksm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftnbe"]
+size = Vector2(59.25, 20)
+
+[node name="DavidNinja" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ffmyk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.117, 0, 0.26, 1)
+position = Vector2(20, 22)
+scale = Vector2(0.1, 0.107)
+sprite_frames = SubResource("SpriteFrames_uibve")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="AttackArea" type="Area2D" parent="."]
+self_modulate = Color(0.447417, 0.2925, 0.65, 1)
+position = Vector2(60, 25)
+collision_layer = 2
+script = ExtResource("4_67qpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-50.625, -3)
+shape = SubResource("RectangleShape2D_ftnbe")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

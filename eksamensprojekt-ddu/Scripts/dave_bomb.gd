@@ -13,12 +13,12 @@ var attacking = false
 var unitid = 4
 
 var speed = 50 * (1 + (Global.D4-1)/10) # Speed of movement to the right
-var steal_value = 100 * (1 + (Global.D4-1)/10) # the amount the unit steals from the hous
-var attack_cooldown = 3.0  # Time between attacks
-var attack_damage = 100 * (1 + (Global.D4-1)/10) # Default attack damage
+var steal_value = 5 * (1 + (Global.D4-1)/10) # the amount the unit steals from the hous
+var attack_cooldown = 5.0  # Time between attacks
+var attack_damage = 200 * (1 + (Global.D4-1)/10) # Default attack damage
 var health = 1 * (1 + (Global.D4-1)/10) # Unit health
 var can_attack = true
-var price = 10  # how much the unit cost
+var price = 25  # how much the unit cost
 var current_hand_slot: int = -1
 var current_lane: int = -1
 
@@ -27,6 +27,7 @@ var previous_hand_slot: int = -1
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
 @onready var cost = $CoinCost/Cost
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 
 func _ready():
@@ -68,6 +69,7 @@ func move_to_position(target_position: Vector2):
 func start_moving():
 	moving = true
 	Global.Coin -= price
+	animated_sprite_2d.play("Walk")
 	cost.hide()
 	match unitid:
 		Global.handdave1: Global.handdave1cdstart = true
@@ -163,11 +165,13 @@ func _on_attack_area_area_entered(body):
 
 	elif body.has_method("take_damage") and moving:
 		attacking = true 
+		animated_sprite_2d.play("Idl")
 		await attack_target(body)
 
 func _on_attack_area_area_exited(_area):
 	can_attack = true
 	attacking = false
+	animated_sprite_2d.play("Idl")
 
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:

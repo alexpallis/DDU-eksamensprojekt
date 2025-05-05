@@ -12,7 +12,7 @@ var moving = true
 var attacking = false
 
 var speed = 200 * (1 + (Global.D5-1)/10)
-var steal_value = 25 * (1 + (Global.D5-1)/10)
+var steal_value = 0 * (1 + (Global.D5-1)/10)
 var attack_cooldown = 1.0
 var attack_damage = 10 * (1 + (Global.D5-1)/10)
 var health = 1

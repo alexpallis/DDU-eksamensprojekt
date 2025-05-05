@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbfbvu7un6xv7"]
+
+[ext_resource type="Texture2D" uid="uid://dqx70uykmhu27" path="res://assets/davidbeefcake-Sheet.png" id="1_fudp7"]
+[ext_resource type="Script" path="res://Scripts/david_charge.gd" id="1_vkqoq"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="2_30y7x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wik"]
+size = Vector2(78, 20)
+
+[node name="DavidCharge" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vkqoq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.19, 0.8785, 1)
+position = Vector2(27, 21)
+scale = Vector2(0.0608394, 0.0608394)
+texture = ExtResource("1_fudp7")
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(60, 25)
+scale = Vector2(1, 1.01147)
+collision_layer = 2
+script = ExtResource("2_30y7x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-60, -3)
+shape = SubResource("RectangleShape2D_y2wik")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]

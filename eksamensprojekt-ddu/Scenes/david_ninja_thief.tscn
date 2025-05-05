@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8uoj1hmbhh3q"]
+
+[ext_resource type="Script" path="res://Scripts/david_ninja_thief.gd" id="1_a7mgr"]
+[ext_resource type="Texture2D" uid="uid://bxvm3uovxbwqg" path="res://assets/Burgledavid.png" id="1_m7nig"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="2_cp4be"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqq1f"]
+size = Vector2(59.25, 20)
+
+[node name="DavidNinjaThief" type="Container"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_a7mgr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.117, 0, 0.26, 1)
+position = Vector2(20, 22)
+scale = Vector2(0.096676, 0.10375)
+texture = ExtResource("1_m7nig")
+
+[node name="AttackArea" type="Area2D" parent="."]
+self_modulate = Color(0.447417, 0.2925, 0.65, 1)
+position = Vector2(60, 25)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_cp4be")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-50.625, -3)
+shape = SubResource("RectangleShape2D_hqq1f")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

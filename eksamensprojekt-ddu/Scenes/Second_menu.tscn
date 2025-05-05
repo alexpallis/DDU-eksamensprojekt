@@ -1,14 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://csu0qbcaagjhm"]
+[gd_scene load_steps=13 format=3 uid="uid://csu0qbcaagjhm"]
 
 [ext_resource type="Script" path="res://Scripts/Second_menu.gd" id="1_dudou"]
 [ext_resource type="Texture2D" uid="uid://8wrhhh5xi4yy" path="res://assets/anden menu.png" id="2_8n5vl"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_qkcvd"]
+[ext_resource type="AudioStream" uid="uid://bbcmsqdgs73pf" path="res://assets/Fonts/endmuse (1).mp3" id="4_i1pgl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbhxa"]
 texture = ExtResource("2_8n5vl")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px10d"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
 bg_color = Color(0.729412, 0, 0.298039, 0.741176)
+draw_center = true
+skew = Vector2(0, 0)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -19,12 +28,27 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_top = 0.0
+expand_margin_right = 0.0
+expand_margin_bottom = 0.0
 shadow_color = Color(0, 0, 0, 0.670588)
 shadow_size = 5
 shadow_offset = Vector2(0, 10)
+anti_aliasing = true
+anti_aliasing_size = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrldd"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
 bg_color = Color(0.980392, 0, 0.352941, 0.65098)
+draw_center = true
+skew = Vector2(0, 0)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
@@ -35,11 +59,27 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_top = 0.0
+expand_margin_right = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color(0, 0, 0, 0.6)
 shadow_size = 10
 shadow_offset = Vector2(0, 10)
+anti_aliasing = true
+anti_aliasing_size = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok47y"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
 bg_color = Color(0, 0.301961, 0.301961, 0.72549)
+draw_center = true
+skew = Vector2(0, 0)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
@@ -50,19 +90,91 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_top = 0.0
+expand_margin_right = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color(0, 0, 0, 0.6)
 shadow_size = 10
 shadow_offset = Vector2(0, 10)
+anti_aliasing = true
+anti_aliasing_size = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5v7u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gk3nv"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
 bg_color = Color(0.121569, 0.121569, 0.121569, 0.639216)
+draw_center = true
+skew = Vector2(0, 0)
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color(0.8, 0.8, 0.8, 1)
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_top = 0.0
+expand_margin_right = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+anti_aliasing = true
+anti_aliasing_size = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv21u"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
 bg_color = Color(0.686275, 0.686275, 0.686275, 0.611765)
+draw_center = true
+skew = Vector2(0, 0)
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color(0.8, 0.8, 0.8, 1)
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_top = 0.0
+expand_margin_right = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+anti_aliasing = true
+anti_aliasing_size = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aejkd"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
 bg_color = Color(0.109804, 0.388235, 0, 0.717647)
+draw_center = true
+skew = Vector2(0, 0)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
@@ -73,8 +185,16 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_top = 0.0
+expand_margin_right = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color(0, 0, 0, 0.6)
 shadow_size = 10
 shadow_offset = Vector2(0, 10)
+anti_aliasing = true
+anti_aliasing_size = 1.0
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -153,6 +273,13 @@ offset_right = 138.0
 offset_bottom = 55.0
 theme_override_fonts/font = ExtResource("3_qkcvd")
 theme_override_font_sizes/font_size = 24
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_i1pgl")
+pitch_scale = 1.25
+autoplay = true
+stream_paused = true
+parameters/looping = false
 
 [connection signal="pressed" from="Panel/Button_Select_level" to="." method="_on_button_select_level_pressed"]
 [connection signal="pressed" from="Panel/Button_Inventory" to="." method="_on_button_inventory_pressed"]

@@ -10,8 +10,8 @@ var lane4 = false
 var moving = true
 var attacking = false
 
-var speed = 250 * Global.enemy_difficulty  # Speed of movement to the right
-var steal_value = 100 * Global.enemy_difficulty # the amount the unit steals from the hous
+var speed = 200 * Global.enemy_difficulty  # Speed of movement to the right
+var steal_value = 30 * Global.enemy_difficulty # the amount the unit steals from the hous
 var attack_cooldown = 1.0  # Time between attacks
 var attack_damage = 10 * Global.enemy_difficulty # Default attack damage
 var health = 30 * Global.enemy_difficulty # Unit health
@@ -122,7 +122,7 @@ func _on_attack_area_area_entered(body):
 		
 
 
-func _on_attack_area_area_exited(_area):
+func _on_attack_area_area_exited(body):
 	
 	attacking = false
 	print("hi")

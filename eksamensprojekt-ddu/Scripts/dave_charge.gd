@@ -14,7 +14,7 @@ var attack_cooldown = 5
 var attack_damage = 250 * (1 + (Global.D12-1)/10)
 var health = 200 * (1 + (Global.D12-1)/10)
 var can_attack = true
-var price = 20
+var price = 65
 
 var current_hand_slot: int = -1
 var current_lane: int = -1

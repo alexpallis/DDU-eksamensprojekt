@@ -122,7 +122,7 @@ func _on_attack_area_area_entered(body):
 		
 
 
-func _on_attack_area_area_exited(_area):
+func _on_attack_area_area_exited(body):
 	
 	attacking = false
 	print("hi")
