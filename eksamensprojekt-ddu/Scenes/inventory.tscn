@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpmcw0u6i3cnu"]
+[gd_scene load_steps=18 format=3 uid="uid://cpmcw0u6i3cnu"]
 
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="1_sdley"]
 [ext_resource type="Texture2D" uid="uid://yjxg58q17pb8" path="res://assets/8-B5zO3arsAxMgek6.png" id="2_n8e5y"]
 [ext_resource type="PackedScene" uid="uid://c8bsah74xj8yt" path="res://Scenes/inventory_spawner.tscn" id="2_ua3qm"]
 [ext_resource type="FontFile" uid="uid://c1xvqi5ybiuye" path="res://assets/Fonts/m6x11.ttf" id="3_5ysp3"]
+[ext_resource type="Texture2D" uid="uid://b2jcr2hdu4tft" path="res://assets/hand3.png" id="3_ohk20"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="5_vlh0f"]
 [ext_resource type="AudioStream" uid="uid://bbcmsqdgs73pf" path="res://assets/Fonts/endmuse (1).mp3" id="6_1wmkg"]
 
@@ -36,6 +37,9 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_yheom")
 texture = ExtResource("2_n8e5y")
 
 [sub_resource type="Theme" id="Theme_bvskq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vkfmg"]
+texture = ExtResource("3_ohk20")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -238,6 +242,16 @@ text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Panel" type="Panel" parent="Camera2D/ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vkfmg")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/ColorRect"]
 layout_mode = 0
 offset_right = 1058.0
@@ -312,6 +326,7 @@ offset_right = 216.0
 offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_vlh0f")
 text = "
 Drag the Dave's to the numbers
@@ -323,7 +338,6 @@ vertical_alignment = 1
 position = Vector2(360, 581)
 stream = ExtResource("6_1wmkg")
 autoplay = true
-stream_paused = true
 parameters/looping = true
 
 [connection signal="mouse_entered" from="Camera2D/ColorRect/HBoxContainer/Hand1" to="." method="_on_hand_1_mouse_entered"]

@@ -13,13 +13,15 @@ var rng = RandomNumberGenerator.new()
 func round_to_decimal(value: float, decimals: int) -> float:
 	return round(value * pow(10, decimals)) / pow(10, decimals)
 
-var speed = round_to_decimal(rng.randf_range(10, 250) * (1 + (Global.D14 - 1) / 10), 0)
-var steal_value = round_to_decimal(rng.randf_range(0, 35) * (1 + (Global.D14 - 1) / 10), 0)
-var attack_cooldown = round_to_decimal(rng.randf_range(0.5, 2), 2)
-var attack_damage = round_to_decimal(rng.randf_range(5, 20) * (1 + (Global.D14 - 1) / 10), 0)
-var health = round_to_decimal(rng.randf_range(30, 150) * (1 + (Global.D14 - 1) / 10), 0)
+var sf = 1 + (Global.D14 - 1) / 10.0
+
+@export var speed = round_to_decimal(rng.randf_range(10, 250) * sf, 0)
+@export var steal_value = round_to_decimal(rng.randf_range(0, 35) * sf, 0)
+@export var attack_cooldown = round_to_decimal(rng.randf_range(0.5, 2), 2)
+@export var attack_damage = round_to_decimal(rng.randf_range(5, 20) * sf, 0)
+@export var health = round_to_decimal(rng.randf_range(30, 150) * sf, 0)
 var can_attack = true
-var price = round_to_decimal((speed + (steal_value * 10) + ((attack_damage * 10) / attack_cooldown) + health) * 20 / 400 + 10, 0)
+@export var price = round_to_decimal((speed + (steal_value * 10) + ((attack_damage * 10) / attack_cooldown) + health) * 20 / (400 * sf), 0)
 
 
 var current_hand_slot: int = -1

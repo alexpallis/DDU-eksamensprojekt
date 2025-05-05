@@ -45,10 +45,12 @@ script = ExtResource("2_y0w4j")
 
 [node name="MoneyLabel" type="Label" parent="DevTool/Additem"]
 layout_mode = 0
-offset_left = 456.0
+offset_left = 662.0
 offset_top = -442.0
-offset_right = 735.0
+offset_right = 941.0
 offset_bottom = -345.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ipvm7")
 theme_override_font_sizes/font_size = 40
 

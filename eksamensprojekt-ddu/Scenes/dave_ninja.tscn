@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://en2yr0m15p80"]
+[gd_scene load_steps=6 format=3 uid="uid://en2yr0m15p80"]
 
 [ext_resource type="Script" path="res://Scripts/dave_ninja.gd" id="1_d5f74"]
 [ext_resource type="Texture2D" uid="uid://11cgkg7i1i38" path="res://assets/damin1-Sheet.png" id="2_pfdor"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_wv5x4"]
+[ext_resource type="FontFile" uid="uid://cxejajx6eiwb8" path="res://assets/Fonts/PixelOperator8.ttf" id="4_erhwa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rufvk"]
 size = Vector2(67, 20)
@@ -32,10 +33,15 @@ shape = SubResource("RectangleShape2D_rufvk")
 [node name="CoinCost" type="Area2D" parent="."]
 
 [node name="Cost" type="Label" parent="CoinCost"]
-offset_left = 6.0
+offset_left = -12.0
 offset_top = 35.0
-offset_right = 46.0
+offset_right = 28.0
 offset_bottom = 58.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_erhwa")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -32,7 +32,7 @@ var is_requesting : bool = false
 var StandardCoinSpeed = 5
 var CoinSpeed = 5
 var Coin = 0
-var money = 5000
+var money = 50
 var enemy_difficulty = 1
 
 #unit id number

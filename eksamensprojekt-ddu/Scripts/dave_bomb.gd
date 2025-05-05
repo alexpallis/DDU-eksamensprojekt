@@ -12,13 +12,15 @@ var moving = false
 var attacking = false
 var unitid = 4
 
-var speed = 50 * (1 + (Global.D4-1)/10) # Speed of movement to the right
-var steal_value = 5 * (1 + (Global.D4-1)/10) # the amount the unit steals from the hous
-var attack_cooldown = 5.0  # Time between attacks
-var attack_damage = 200 * (1 + (Global.D4-1)/10) # Default attack damage
-var health = 1 * (1 + (Global.D4-1)/10) # Unit health
+var sf = 1 + (Global.D4 - 1) / 10.0
+
+@export var speed = 50 * sf # Speed of movement to the right
+@export var steal_value = 5 * sf # the amount the unit steals from the hous
+@export var attack_cooldown = 5.0  # Time between attacks
+@export var attack_damage = 200 * sf # Default attack damage
+@export var health = 1 * sf # Unit health
 var can_attack = true
-var price = 25  # how much the unit cost
+@export var price = 25  # how much the unit cost
 var current_hand_slot: int = -1
 var current_lane: int = -1
 

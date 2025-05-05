@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://coducrxm054jf"]
+[gd_scene load_steps=17 format=3 uid="uid://coducrxm054jf"]
 
 [ext_resource type="Script" path="res://Level/Level scripts/level_3.gd" id="1_dwq3a"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_ummea"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_3.gd" id="3_fheoi"]
+[ext_resource type="Texture2D" uid="uid://c76deevekacyb" path="res://assets/hand.png" id="3_l0moa"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="4_un86d"]
 [ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="5_klh40"]
 [ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="6_r3hqx"]
@@ -16,6 +17,9 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sggnj"]
 texture = ExtResource("2_ummea")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dphw0"]
+texture = ExtResource("3_l0moa")
 
 [node name="Level 3" type="Node"]
 script = ExtResource("1_dwq3a")
@@ -32,6 +36,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_sggnj")
 metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_left = 131.0
+offset_top = 498.0
+offset_right = 171.0
+offset_bottom = 538.0
+scale = Vector2(22.3059, 3.7459)
+theme_override_styles/panel = SubResource("StyleBoxTexture_dphw0")
 
 [node name="SpawnerLV3" type="Control" parent="CanvasLayer"]
 layout_mode = 3

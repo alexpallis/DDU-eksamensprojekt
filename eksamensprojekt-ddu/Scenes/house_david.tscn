@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ikx80jmdxv27"]
+[gd_scene load_steps=5 format=3 uid="uid://ikx80jmdxv27"]
 
 [ext_resource type="Script" path="res://Scripts/house_david.gd" id="1_7du2g"]
 [ext_resource type="Script" path="res://Scripts/hitbox.gd" id="2_wvwd6"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_f5el2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jht6k"]
 size = Vector2(20, 176)
@@ -14,7 +15,8 @@ script = ExtResource("1_7du2g")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Hitbox" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 6
+collision_mask = 5
 script = ExtResource("2_wvwd6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
@@ -26,14 +28,21 @@ shape = SubResource("RectangleShape2D_jht6k")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -165.0
-offset_bottom = 27.0
+offset_left = -292.0
+offset_top = 25.0
+offset_right = -42.0
+offset_bottom = 60.0
 grow_horizontal = 0
 value = 100.0
 show_percentage = false
 
 [node name="David_health_Label" type="Label" parent="CanvasLayer"]
-offset_left = 1002.0
-offset_top = 2.0
-offset_right = 1136.0
-offset_bottom = 25.0
+offset_left = 865.0
+offset_top = 30.0
+offset_right = 999.0
+offset_bottom = 55.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f5el2")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
