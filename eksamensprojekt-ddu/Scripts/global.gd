@@ -88,7 +88,13 @@ var daves = [
 	preload("res://Scenes/dave_pearl.tscn"),
 	preload("res://Scenes/dave_ninja_thief.tscn"),
 	preload("res://Scenes/dave_charge.tscn"),
-	preload("res://Scenes/dave_mustache.tscn")
+	preload("res://Scenes/dave_mustache.tscn"),
+	preload("res://Scenes/random_dave.tscn"),
+	preload("res://Scenes/mini_dave.tscn"),
+	preload("res://Scenes/agent_00_dave.tscn"),
+	preload("res://Scenes/dave_tank.tscn"),
+	preload("res://Scenes/luxury_dave.tscn"),
+	preload("res://Scenes/burning_dave.tscn"),
 ]
 
 #list of enemys
@@ -132,7 +138,7 @@ var D10 = 0
 var D11 = 0
 var D12 = 0
 var D13 = 0
-var D14 = 0
+var D14 = 1
 var D15 = 0
 var D16 = 0
 var D17 = 0

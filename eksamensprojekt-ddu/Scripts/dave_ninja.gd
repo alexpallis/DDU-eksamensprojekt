@@ -30,6 +30,8 @@ func _ready():
 
 	self.tooltip_text = ("Ninja Dave" +
 		"\n" + str(Global.D7) + " Level" + 
+		"\n" + str(speed) + " Speed" +
+		"\n" + str(attack_cooldown) + " cooldown" +
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +

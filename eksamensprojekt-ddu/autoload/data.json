@@ -65,8 +65,38 @@
 	"Description": ""
 	},
   "13": {
-	"Name": "Chargeing Dave",
-	"Texture": "davidbeefcake-Sheet.png",
+	"Name": "Mustache Dave",
+	"Texture": "muStache-Sheet.png",
+	"Description": ""
+	},
+ "14": {
+	"Name": "Random Dave",
+	"Texture": "damin1-Sheet.png",
+	"Description": ""
+	},
+ "15": {
+	"Name": "Mini Dave",
+	"Texture": "damin1-Sheet.png",
+	"Description": ""
+	},
+ "16": {
+	"Name": "Agent 00Dave",
+	"Texture": "Gun_dave.png",
+	"Description": ""
+	},
+ "17": {
+	"Name": "Tank Dave",
+	"Texture": "damin1-Sheet.png",
+	"Description": ""
+	},
+ "18": {
+	"Name": "Luxury Dave",
+	"Texture": "damin1-Sheet.png",
+	"Description": ""
+	},
+ "19": {
+	"Name": "Burning Dave",
+	"Texture": "muStache-Sheet.png",
 	"Description": ""
 	},
 }

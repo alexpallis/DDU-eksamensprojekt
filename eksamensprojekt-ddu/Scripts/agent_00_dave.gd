@@ -1,24 +1,20 @@
 extends Container
 
-
 var start_position
 var unit_highlighted = false
 var moveable = false
-var lane1 = false
-var lane2 = false
-var lane3 = false
-var lane4 = false
+
 var moving = false
 var attacking = false
-var unitid = 3
+var unitid = 16
 
-var speed = 200 * (1 + (Global.D3-1)/10) # Speed of movement to the right
-var steal_value = 30 * (1 + (Global.D3-1)/10) # the amount the unit steals from the hous
-var attack_cooldown = 1.0  # Time between attacks
-var attack_damage = 10 * (1 + (Global.D3-1)/10) # Default attack damage
-var health = 30 * (1 + (Global.D3-1)/10) # Unit health
+var speed = 125 * (1 + (Global.D16-1)/10)
+var steal_value = 20 * (1 + (Global.D16-1)/10)
+var attack_cooldown = 0.4
+var attack_damage = 10 * (1 + (Global.D16-1)/10)
+var health = 125 * (1 + (Global.D16-1)/10)
 var can_attack = true
-var price = 30 # how much the unit cost
+var price = 35
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -28,19 +24,19 @@ var previous_hand_slot: int = -1
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
 @onready var cost = $CoinCost/Cost
-
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _ready():
 
-	self.tooltip_text = ("Burgler Dave" +
-		"\n" + str(Global.D3) + " Level" + 
+	self.tooltip_text = ("Agent 00Dave" +
+		"\n" + str(Global.D16) + " Level" + 
 		"\n" + str(speed) + " Speed" +
 		"\n" + str(attack_cooldown) + " cooldown" +
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
 		"\n" + str(price) + " Coins" +
-		"\n What's mine is mine and what's yours is also mine")
+		"\n We think it's dave ")
 
 	cost.text = str(price) + " Coins"
 
@@ -73,6 +69,7 @@ func start_moving():
 	moving = true
 	Global.Coin -= price
 	cost.hide()
+	animated_sprite_2d.play("Walk")
 	match unitid:
 		Global.handdave1: Global.handdave1cdstart = true
 		Global.handdave2: Global.handdave2cdstart = true
@@ -167,11 +164,13 @@ func _on_attack_area_area_entered(body):
 
 	elif body.has_method("take_damage") and moving:
 		attacking = true 
+		animated_sprite_2d.play("Idl")
 		await attack_target(body)
 
 func _on_attack_area_area_exited(_area):
 	can_attack = true
 	attacking = false
+	animated_sprite_2d.play("Walk")
 
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:

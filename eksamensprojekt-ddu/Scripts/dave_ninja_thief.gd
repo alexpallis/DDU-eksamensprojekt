@@ -29,6 +29,8 @@ func _ready():
 
 	self.tooltip_text = ("Ninja Thief Dave" +
 		"\n" + str(Global.D11) + " Level" + 
+		"\n" + str(speed) + " Speed" +
+		"\n" + str(attack_cooldown) + " cooldown" +
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack (can move past enemys)" +
 		"\n" + str(health) + " Health" +

@@ -33,6 +33,8 @@ func _ready():
 
 	self.tooltip_text = ("Dave's Grill" +
 		"\n" + str(Global.D6) + " Level" + 
+		"\n" + str(speed) + " Speed" +
+		"\n" + str(attack_cooldown) + " cooldown" +
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +

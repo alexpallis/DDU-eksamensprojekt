@@ -313,7 +313,16 @@ func _on_day_minus_1_pressed():
 	Global.handdave10 = 6
 
 func _on_day_minus_2_pressed():
-	Global.enemy_difficulty = 2
+	#kan også godt give en random hånd
 	Global.Coin = 0
-	Global.CoinSpeed = 10
-	get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
+	Global.CoinSpeed = Global.StandardCoinSpeed
+	Global.handdave1 = 14
+	Global.handdave2 = 14
+	Global.handdave3 = 14
+	Global.handdave4 = 14
+	Global.handdave5 = 14
+	Global.handdave6 = 14
+	Global.handdave7 = 14
+	Global.handdave8 = 14
+	Global.handdave9 = 14
+	Global.handdave10 = 14

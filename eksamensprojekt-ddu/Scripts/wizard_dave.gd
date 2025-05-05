@@ -9,12 +9,12 @@ var attacking = false
 var unitid = 5
 
 var speed = 50 * (1 + (Global.D5-1)/10)
-var steal_value = 25 * (1 + (Global.D5-1)/10)
+var steal_value = 35 * (1 + (Global.D5-1)/10)
 var attack_cooldown = 0.5
 var attack_damage = 10 * (1 + (Global.D5-1)/10)
 var health = 200 * (1 + (Global.D5-1)/10)
 var can_attack = true
-var price = 40
+var price = 35
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -30,6 +30,8 @@ func _ready():
 
 	self.tooltip_text = ("Wizard Dave" +
 		"\n" + str(Global.D5) + " Level" + 
+		"\n" + str(speed) + " Speed" +
+		"\n" + str(attack_cooldown) + " cooldown" +
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
