@@ -210,7 +210,7 @@ func _process(delta: float):
 func _http_request_completed(_result, _response_code, _headers, _body):
 	is_requesting = false
 	if _result != HTTPRequest.RESULT_SUCCESS:
-		printerr("Error w/ connection: " + String(_result))
+		printerr("Error w/ connection: " + str(_result))
 		return
 	
 	var response_body = _body.get_string_from_utf8()
