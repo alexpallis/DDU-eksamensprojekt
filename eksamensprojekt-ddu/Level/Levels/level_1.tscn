@@ -44,6 +44,7 @@ offset_right = 171.0
 offset_bottom = 538.0
 scale = Vector2(22.3059, 3.7459)
 theme_override_styles/panel = SubResource("StyleBoxTexture_ug53r")
+metadata/_edit_use_anchors_ = true
 
 [node name="SpawnerLV1" type="Control" parent="CanvasLayer"]
 layout_mode = 3

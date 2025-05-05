@@ -16,7 +16,7 @@ func have_been_stolen(amount):
 	update_health_bar()
 
 	print("Daves house took damage! Remaining health:", health)
-	if health <= 0:
+	if health <= 0 and Global.Tutor == false:
 		get_tree().change_scene_to_file("res://Scenes/lose_scenes.tscn")
 		die()
 

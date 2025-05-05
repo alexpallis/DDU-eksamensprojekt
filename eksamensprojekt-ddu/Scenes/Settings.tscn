@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3ci6qhwxvt1u"]
+[gd_scene load_steps=9 format=3 uid="uid://d3ci6qhwxvt1u"]
 
 [ext_resource type="Script" path="res://Scripts/Settings.gd" id="1_grfwr"]
+[ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="2_ng7gi"]
+[ext_resource type="PackedScene" uid="uid://dn2f62qyegclc" path="res://Scenes/volume_slider.tscn" id="3_ertjx"]
+[ext_resource type="FontFile" uid="uid://cxejajx6eiwb8" path="res://assets/Fonts/PixelOperator8.ttf" id="4_p1uog"]
+[ext_resource type="AudioStream" uid="uid://cjwcauianbrip" path="res://assets/Fonts/Davestheme.mp3" id="5_kjwpn"]
+[ext_resource type="Texture2D" uid="uid://c8tuxh5n0fhfj" path="res://assets/drag.png" id="5_s658k"]
+[ext_resource type="Texture2D" uid="uid://c5y81fbiu8rye" path="res://assets/STATS.png" id="5_syr6m"]
+
+[sub_resource type="Theme" id="Theme_uxtjy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,29 +30,162 @@ color = Color(0.165756, 0.474924, 9.62615e-08, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -40.0
+offset_right = 65.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
+[node name="Turorial" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Visual"
-
-[node name="Button2" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Sound"
-
-[node name="Button3" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Controlls"
+theme_override_fonts/font = ExtResource("2_ng7gi")
+text = "Tutorial"
 
 [node name="Button_back" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ng7gi")
 text = "Back"
 
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -135.0
+offset_top = 101.0
+offset_right = 135.0
+offset_bottom = 138.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ng7gi")
+theme_override_font_sizes/font_size = 36
+text = "Settings"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 147.0
+offset_top = -42.5
+offset_right = 353.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uxtjy")
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ng7gi")
+text = "Master Volume 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeSlider" parent="ColorRect/VBoxContainer" instance=ExtResource("3_ertjx")]
+layout_mode = 2
+BusName = "Master"
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+
+[node name="test sound" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_p1uog")
+text = "Test Sound"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -383.0
+offset_top = -149.0
+offset_right = -117.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ng7gi")
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "
+
+
+
+
+
+"
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/VBoxContainer2/Label2"]
+position = Vector2(133, 63)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("5_s658k")
+
+[node name="Label4" type="Label" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_p1uog")
+theme_override_font_sizes/font_size = 12
+text = "Hold/Clik your finger/cursor
+on a unit to drag it around"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "
+
+
+
+
+"
+
+[node name="Sprite2D2" type="Sprite2D" parent="ColorRect/VBoxContainer2/Label5"]
+position = Vector2(133, 58)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_syr6m")
+
+[node name="Label3" type="Label" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_p1uog")
+theme_override_font_sizes/font_size = 12
+text = "Hold your cursor/finger
+on a unit to
+see its stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_kjwpn")
+parameters/looping = false
+
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Turorial" to="." method="_on_turorial_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Button_back" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/test sound" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/test sound" to="." method="_on_test_sound_pressed"]

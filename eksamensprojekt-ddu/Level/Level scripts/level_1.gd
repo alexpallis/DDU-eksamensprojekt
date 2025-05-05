@@ -18,3 +18,4 @@ func levelcomplete():
 		Global.level = 1 + 7*8
 	else:
 		Global.money += 5
+	get_tree().change_scene_to_file("res://Scenes/win_scenes.tscn")

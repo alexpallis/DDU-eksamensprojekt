@@ -128,6 +128,7 @@ var DaveBullet = preload("res://Scenes/dave_bullet.tscn")
 var DavidBullet = preload("res://Scenes/david_bullet.tscn")
 #current level
 var level = 0
+var Tutor = false
 
 #Unit amount 
 var Dave = 1
