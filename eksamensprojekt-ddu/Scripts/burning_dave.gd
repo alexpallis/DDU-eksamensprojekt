@@ -15,8 +15,9 @@ var steal_value = 10 * sf
 var attack_cooldown = 0.75 
 var attack_damage = 25 * sf
 var health = 200 * sf
-var can_attack = true
 var price = 40
+
+var can_attack = true
 
 var current_hand_slot: int = -1
 var current_lane: int = -1

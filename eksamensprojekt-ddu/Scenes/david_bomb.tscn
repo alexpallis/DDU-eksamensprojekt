@@ -93,10 +93,12 @@ frame_progress = 0.782889
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
-collision_layer = 0
-collision_mask = 2
+collision_layer = 2
 script = ExtResource("3_0vb7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(-58, -13)
 shape = SubResource("RectangleShape2D_hg72c")
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]

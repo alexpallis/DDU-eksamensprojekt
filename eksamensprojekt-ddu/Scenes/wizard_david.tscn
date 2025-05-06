@@ -23,8 +23,7 @@ texture = ExtResource("1_64h5b")
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
-collision_layer = 0
-collision_mask = 2
+collision_layer = 2
 script = ExtResource("2_gh3ky")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
@@ -33,7 +32,6 @@ shape = SubResource("RectangleShape2D_xxh5w")
 
 [node name="Attack" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
 position = Vector2(-99, 24)

@@ -208,5 +208,4 @@ parameters/looping = false
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Turorial" to="." method="_on_turorial_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Credits" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Button_back" to="." method="_on_button_back_pressed"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/test sound" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/test sound" to="." method="_on_test_sound_pressed"]
