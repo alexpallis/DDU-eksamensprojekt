@@ -14,23 +14,22 @@ func _ready():
 		money.text ="You have " + str(Global.money) + " Yudos"
 
 func _on_day_1_pressed():
-	Global.Coin = 0
+	Global.Coin = 50
 	Global.CoinSpeed = Global.StandardCoinSpeed
 	get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
 
 
 func _on_day_2_pressed():
 	if Global.level >= 1:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_2.tscn")
 	else:
 		stage_guid.text = "You need to complete day 1 fist"
 
-
 func _on_day_3_pressed():
 	if Global.level >= 2:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
 	else:
@@ -38,7 +37,7 @@ func _on_day_3_pressed():
 
 func _on_day_4_pressed():
 	if Global.level >= 3:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
 	else:
@@ -46,7 +45,7 @@ func _on_day_4_pressed():
 
 func _on_day_5_pressed():
 	if Global.level >= 4:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_5.tscn")
 	else:
@@ -54,7 +53,7 @@ func _on_day_5_pressed():
 
 func _on_day_6_pressed():
 	if Global.level >= 5:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_6.tscn")
 	else:
@@ -62,7 +61,7 @@ func _on_day_6_pressed():
 
 func _on_day_7_pressed():
 	if Global.level >= 6:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_7.tscn")
 	else:
@@ -71,7 +70,7 @@ func _on_day_7_pressed():
 func _on_day_8_pressed():
 	if Global.level >= 7:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
 	else:
@@ -80,7 +79,7 @@ func _on_day_8_pressed():
 func _on_day_9_pressed():
 	if Global.level >= 8:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_2.tscn")
 	else:
@@ -89,7 +88,7 @@ func _on_day_9_pressed():
 func _on_day_10_pressed():
 	if Global.level >= 9:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
 	else:
@@ -98,7 +97,7 @@ func _on_day_10_pressed():
 func _on_day_11_pressed():
 	if Global.level >= 10:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
 	else:
@@ -107,7 +106,7 @@ func _on_day_11_pressed():
 func _on_day_12_pressed():
 	if Global.level >= 11:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_5.tscn")
 	else:
@@ -116,7 +115,7 @@ func _on_day_12_pressed():
 func _on_day_13_pressed():
 	if Global.level >= 12:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_6.tscn")
 	else:
@@ -125,7 +124,7 @@ func _on_day_13_pressed():
 func _on_day_14_pressed():
 	if Global.level >= 13:
 		Global.enemy_difficulty = 1.2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_7.tscn")
 	else:
@@ -134,7 +133,7 @@ func _on_day_14_pressed():
 func _on_day_15_pressed():
 	if Global.level >= 14:
 		Global.enemy_difficulty = 1.4
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
 	else:
@@ -143,14 +142,14 @@ func _on_day_15_pressed():
 func _on_day_16_pressed():
 	if Global.level >= 15:
 		Global.enemy_difficulty = 1.4
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_2.tscn")
 	else:
 		stage_guid.text = "You need to complete day 15 fist"
 func _on_day_17_pressed():
 	if Global.level >= 16:
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
 	else:
@@ -159,7 +158,7 @@ func _on_day_17_pressed():
 func _on_day_18_pressed():
 	if Global.level >= 17:
 		Global.enemy_difficulty = 1.4
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
 	else:
@@ -168,7 +167,7 @@ func _on_day_18_pressed():
 func _on_day_19_pressed():
 	if Global.level >= 18:
 		Global.enemy_difficulty = 1.4
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_5.tscn")
 	else:
@@ -177,7 +176,7 @@ func _on_day_19_pressed():
 func _on_day_20_pressed():
 	if Global.level >= 19:
 		Global.enemy_difficulty = 1.4
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_6.tscn")
 	else:
@@ -186,7 +185,7 @@ func _on_day_20_pressed():
 func _on_day_21_pressed():
 	if Global.level >= 20:
 		Global.enemy_difficulty = 1.4
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_7.tscn")
 	else:
@@ -195,7 +194,7 @@ func _on_day_21_pressed():
 func _on_day_22_pressed():
 	if Global.level >= 21:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
 	else:
@@ -204,7 +203,7 @@ func _on_day_22_pressed():
 func _on_day_23_pressed():
 	if Global.level >= 22:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_2.tscn")
 	else:
@@ -213,7 +212,7 @@ func _on_day_23_pressed():
 func _on_day_24_pressed():
 	if Global.level >= 23:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
 	else:
@@ -222,7 +221,7 @@ func _on_day_24_pressed():
 func _on_day_25_pressed():
 	if Global.level >= 24:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
 	else:
@@ -231,7 +230,7 @@ func _on_day_25_pressed():
 func _on_day_26_pressed():
 	if Global.level >= 25:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_5.tscn")
 	else:
@@ -240,7 +239,7 @@ func _on_day_26_pressed():
 func _on_day_27_pressed():
 	if Global.level >= 26:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_6.tscn")
 	else:
@@ -249,7 +248,7 @@ func _on_day_27_pressed():
 func _on_day_28_pressed():
 	if Global.level >= 27:
 		Global.enemy_difficulty = 1.6
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_7.tscn")
 	else:
@@ -258,7 +257,7 @@ func _on_day_28_pressed():
 func _on_day_29_pressed():
 	if Global.level >= 28:
 		Global.enemy_difficulty = 1.8
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
 	else:
@@ -267,7 +266,7 @@ func _on_day_29_pressed():
 func _on_day_30_pressed():
 	if Global.level >= 29:
 		Global.enemy_difficulty = 1.8
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_2tscn")
 	else:
@@ -276,7 +275,7 @@ func _on_day_30_pressed():
 func _on_day_31_pressed():
 	if Global.level >= 30:
 		Global.enemy_difficulty = 1.8
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
 	else:
@@ -285,7 +284,7 @@ func _on_day_31_pressed():
 func _on_dayplus_1_pressed():
 	if Global.level >= 31:
 		Global.enemy_difficulty = 2
-		Global.Coin = 0
+		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
 		get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
 	else:
@@ -293,13 +292,13 @@ func _on_dayplus_1_pressed():
 
 
 func _on_day_0_pressed():
-	Global.Coin = 0
+	Global.Coin = 50
 	Global.CoinSpeed = 25
 	get_tree().change_scene_to_file("res://Level/Levels/level_5.tscn")
 
 func _on_day_minus_1_pressed():
 	#kan også godt give en random hånd
-	Global.Coin = 0
+	Global.Coin = 50
 	Global.CoinSpeed = Global.StandardCoinSpeed
 	Global.handdave1 = 9
 	Global.handdave2 = 10
@@ -314,7 +313,7 @@ func _on_day_minus_1_pressed():
 
 func _on_day_minus_2_pressed():
 	#kan også godt give en random hånd
-	Global.Coin = 0
+	Global.Coin = 50
 	Global.CoinSpeed = Global.StandardCoinSpeed
 	Global.handdave1 = 14
 	Global.handdave2 = 14

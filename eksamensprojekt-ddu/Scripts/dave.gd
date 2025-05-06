@@ -8,13 +8,16 @@ var moving = false
 var attacking = false
 var unitid = 0
 
-var speed = 100 * (1 + (Global.Dave-1)/10)
-var steal_value = 10 * (1 + (Global.Dave-1)/10)
-var attack_cooldown = 1.0 
-var attack_damage = 10 * (1 + (Global.Dave-1)/10)
-var health = 100 * (1 + (Global.Dave-1)/10)
-var can_attack = true
-var price = 20
+# Scaling factor based on Global.D1
+var sf = 1 + (Global.Dave - 1) / 10.0
+
+@export var speed = 100 * sf
+@export var steal_value = 10 * sf
+@export var attack_cooldown = 1.0 
+@export var attack_damage = 10 * sf
+@export var health = 100 * sf
+@export var can_attack = true
+@export var price = 20
 
 var current_hand_slot: int = -1
 var current_lane: int = -1

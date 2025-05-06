@@ -3,10 +3,10 @@ extends Control
 var dave_types = Global.daves
 
 var positions = [
-	Vector2(200, 550), Vector2(285, 550), Vector2(370, 550),
-	Vector2(455, 550), Vector2(520, 550), Vector2(625, 550),
-	Vector2(710, 550), Vector2(795, 550), Vector2(880, 550),
-	Vector2(965, 550),
+	Vector2(205, 550), Vector2(285, 550), Vector2(365, 550),
+	Vector2(445, 550), Vector2(530, 550), Vector2(610, 550),
+	Vector2(690, 550), Vector2(775, 550), Vector2(860, 550),
+	Vector2(940, 550),
 ]
 
 # Store hand info as dictionaries for clarity

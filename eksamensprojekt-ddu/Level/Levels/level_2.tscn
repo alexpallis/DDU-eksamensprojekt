@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dglwf2535hxsf"]
+[gd_scene load_steps=18 format=3 uid="uid://dglwf2535hxsf"]
 
 [ext_resource type="Script" path="res://Level/Level scripts/level_2.gd" id="1_1b7bb"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_meuoe"]
 [ext_resource type="PackedScene" uid="uid://cjbh7msoylast" path="res://Scenes/fences.tscn" id="3_ov5w3"]
+[ext_resource type="Texture2D" uid="uid://c76deevekacyb" path="res://assets/hand.png" id="3_tmk2v"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_2.gd" id="3_x5byw"]
 [ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="4_bwfns"]
 [ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="5_wrn7o"]
@@ -17,6 +18,9 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0joh"]
 texture = ExtResource("2_meuoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dex82"]
+texture = ExtResource("3_tmk2v")
 
 [node name="Level 2" type="Node"]
 script = ExtResource("1_1b7bb")
@@ -33,6 +37,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_h0joh")
 metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_left = 131.0
+offset_top = 498.0
+offset_right = 171.0
+offset_bottom = 538.0
+scale = Vector2(22.3059, 3.7459)
+theme_override_styles/panel = SubResource("StyleBoxTexture_dex82")
 
 [node name="Fences" parent="CanvasLayer" instance=ExtResource("3_ov5w3")]
 offset_left = 535.0

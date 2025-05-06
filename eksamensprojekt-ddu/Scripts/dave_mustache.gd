@@ -9,13 +9,15 @@ var moving = false
 var attacking = false
 var unitid = 13
 
-var speed = 150 * (1 + (Global.D13-1)/10)
-var steal_value = 10 * (1 + (Global.D13-1)/10)
-var attack_cooldown = 0.75 
-var attack_damage = 15 * (1 + (Global.D13-1)/10)
-var health = 75 * (1 + (Global.D13-1)/10)
+var sf = 1 + (Global.D13 - 1) / 10.0
+
+@export var speed = 150 * sf
+@export var steal_value = 10 * sf
+@export var attack_cooldown = 0.75 
+@export var attack_damage = 15 * sf
+@export var health = 75 * sf
 var can_attack = true
-var price = 25
+@export var price = 25
 
 var current_hand_slot: int = -1
 var current_lane: int = -1

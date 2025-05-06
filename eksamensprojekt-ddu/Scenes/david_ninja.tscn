@@ -6,76 +6,40 @@
 [ext_resource type="Script" path="res://Scripts/test.gd" id="4_67qpy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwf8g"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("2_si6c0")
 region = Rect2(0, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fne3f"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(0, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4ksj"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(7000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmg7o"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(6000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nknfs"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(5000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ii2gq"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(4000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ngbv"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(3000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2attt"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(2000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsksm"]
-resource_local_to_scene = false
-resource_name = ""
 atlas = ExtResource("3_v0iu7")
 region = Rect2(1000, 0, 1000, 1000)
-margin = Rect2(0, 0, 0, 0)
-filter_clip = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uibve"]
 animations = [{

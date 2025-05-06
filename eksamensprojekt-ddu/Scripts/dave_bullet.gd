@@ -10,11 +10,13 @@ var lane4 = false
 var moving = true
 var attacking = false
 
-var speed = 200 * (1 + (Global.D5-1)/10)
-var steal_value = 0 * (1 + (Global.D5-1)/10)
-var attack_cooldown = 1.0
-var attack_damage = 15 * (1 + (Global.D5-1)/10)
-var health = 1
+var sf = 1 + (Global.D8 - 1) / 10.0
+
+@export var speed = 200 * sf
+@export var steal_value = 0 * sf
+@export var attack_cooldown = 1.0
+@export var attack_damage = 15 * sf
+@export var health = 1
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D

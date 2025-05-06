@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://doif5osswasg7"]
+[gd_scene load_steps=17 format=3 uid="uid://doif5osswasg7"]
 
 [ext_resource type="Script" path="res://Level/Level scripts/level_1.gd" id="1_bo74x"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="1_vxofx"]
@@ -13,9 +13,13 @@
 [ext_resource type="Script" path="res://Scripts/lane_3.gd" id="10_qtebk"]
 [ext_resource type="Script" path="res://Scripts/lane_4.gd" id="11_pal8x"]
 [ext_resource type="AudioStream" uid="uid://cb5ghxebfw2jg" path="res://assets/Fonts/boogiemaninstrumental.mp3" id="13_giuk7"]
+[ext_resource type="Texture2D" uid="uid://c76deevekacyb" path="res://assets/hand.png" id="13_nvm5t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sggnj"]
 texture = ExtResource("1_vxofx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug53r"]
+texture = ExtResource("13_nvm5t")
 
 [node name="Level 1" type="Node"]
 script = ExtResource("1_bo74x")
@@ -31,6 +35,15 @@ offset_right = 59.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_sggnj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_left = 131.0
+offset_top = 498.0
+offset_right = 171.0
+offset_bottom = 538.0
+scale = Vector2(22.3059, 3.7459)
+theme_override_styles/panel = SubResource("StyleBoxTexture_ug53r")
 metadata/_edit_use_anchors_ = true
 
 [node name="SpawnerLV1" type="Control" parent="CanvasLayer"]
@@ -56,7 +69,6 @@ offset_top = 323.0
 offset_right = -57.0
 offset_bottom = 323.0
 scale = Vector2(3.76, 3.76)
-health = 100
 metadata/_edit_use_anchors_ = true
 
 [node name="UnitLayer1" type="Control" parent="CanvasLayer"]

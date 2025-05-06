@@ -8,11 +8,13 @@ var moving = false
 var attacking = false
 var unitid = 19
 
-var speed = 250 * (1 + (Global.D19-1)/10)
-var steal_value = 10 * (1 + (Global.D19-1)/10)
+var sf = 1 + (Global.D19 - 1) / 10.0
+
+var speed = 250 * sf
+var steal_value = 10 * sf
 var attack_cooldown = 0.75 
-var attack_damage = 25 * (1 + (Global.D19-1)/10)
-var health = 200 * (1 + (Global.D19-1)/10)
+var attack_damage = 25 * sf
+var health = 200 * sf
 var can_attack = true
 var price = 40
 

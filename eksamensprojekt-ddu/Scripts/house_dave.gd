@@ -1,7 +1,7 @@
 extends Container
 
-const Maxhealth = 10000
-@export var health = 1000
+const Maxhealth = 100
+@export var health = 100
 
 @onready var hitbox = $Hitbox
 @onready var coin_counter = $CanvasLayer/Coin_counter
@@ -16,7 +16,7 @@ func have_been_stolen(amount):
 	update_health_bar()
 
 	print("Daves house took damage! Remaining health:", health)
-	if health <= 0:
+	if health <= 0 and Global.Tutor == false:
 		get_tree().change_scene_to_file("res://Scenes/lose_scenes.tscn")
 		die()
 
@@ -35,5 +35,5 @@ func set_health_label():
 	$CanvasLayer/Label.text = "Valuables left: %s " % health
 
 func _process(delta):
-	coin_counter.text = "you have " + str(int(Global.Coin)) + " coins."
+	coin_counter.text = "you have " + str(int(Global.Coin)) + " coins"
 	

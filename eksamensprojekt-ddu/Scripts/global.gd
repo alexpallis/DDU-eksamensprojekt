@@ -32,7 +32,7 @@ var is_requesting : bool = false
 var StandardCoinSpeed = 5
 var CoinSpeed = 5
 var Coin = 0
-var money = 5000
+var money = 50
 var enemy_difficulty = 1
 
 #unit id number
@@ -127,7 +127,8 @@ var Davidfireball = preload("res://Scenes/david_fireball.tscn")
 var DaveBullet = preload("res://Scenes/dave_bullet.tscn")
 var DavidBullet = preload("res://Scenes/david_bullet.tscn")
 #current level
-var level = 0
+var level = 99
+var Tutor = false
 
 #Unit amount 
 var Dave = 1

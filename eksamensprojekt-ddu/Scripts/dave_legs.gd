@@ -8,13 +8,18 @@ var moving = false
 var attacking = false
 var unitid = 1
 
-var speed = 200 * (1 + (Global.D1-1)/10) # Speed of movement to the right
-var steal_value = 10 * (1 + (Global.D1-1)/10) # the amount the unit steals from the hous
-var attack_cooldown = 1.0  # Time between attacks
-var attack_damage = 15 * (1 + (Global.D1-1)/10) # Default attack damage
-var health = 200 * (1 + (Global.D1-1)/10) # Unit health
-var can_attack = true
-var price = 30 # how much the unit cost
+# Scaling factor based on Global.D1
+var sf = 1 + (Global.D1 - 1) / 10.0
+
+@export var speed = 200 * sf # Speed of movement to the right
+@export var steal_value = 10 * sf # The amount the unit steals from the house
+@export var attack_cooldown = 1.0 # Time between attacks
+@export var attack_damage = 15 * sf # Default attack damage
+@export var health = 200 * sf # Unit health
+@export var price = 30 # How much the unit costs
+
+var can_attack := true
+
 
 var current_hand_slot: int = -1
 var current_lane: int = -1
@@ -32,7 +37,7 @@ func _ready():
 	self.tooltip_text = ("Dave Long Legs" +
 		"\n" + str(Global.D1) + " Level" + 
 		"\n" + str(speed) + " Speed" +
-		"\n" + str(attack_cooldown) + " cooldown" +
+		"\n" + str(attack_cooldown) + " cooldown" + 
 		"\n" + str(steal_value) + " Steal" +
 		"\n" + str(attack_damage) + " Attack" +
 		"\n" + str(health) + " Health" +
