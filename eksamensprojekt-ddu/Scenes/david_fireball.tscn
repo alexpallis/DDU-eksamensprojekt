@@ -83,4 +83,3 @@ shape = SubResource("RectangleShape2D_co1v2")
 
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
-[connection signal="area_shape_entered" from="AttackArea" to="." method="_on_attack_area_area_shape_entered"]

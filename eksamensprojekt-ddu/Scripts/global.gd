@@ -32,7 +32,7 @@ var is_requesting : bool = false
 var StandardCoinSpeed = 5
 var CoinSpeed = 5
 var Coin = 0
-var money = 5000
+var money = 50
 var enemy_difficulty = 1
 
 #unit id number
@@ -95,7 +95,7 @@ var daves = [
 	preload("res://Scenes/dave_tank.tscn"),
 	preload("res://Scenes/luxury_dave.tscn"),
 	preload("res://Scenes/burning_dave.tscn"),
-	preload("res://Scenes/dave_long.tscn")
+	preload("res://Scenes/dave_long.tscn"),
 ]
 
 #list of enemys
@@ -120,6 +120,7 @@ var enemy = [
 	preload("res://Scenes/david_tank.tscn"),
 	preload("res://Scenes/luxury_david.tscn"),
 	preload("res://Scenes/burning_david.tscn"),
+	preload("res://Scenes/david_long.tscn"),
 ]
 
 #list of projectile
@@ -128,7 +129,7 @@ var Davidfireball = preload("res://Scenes/david_fireball.tscn")
 var DaveBullet = preload("res://Scenes/dave_bullet.tscn")
 var DavidBullet = preload("res://Scenes/david_bullet.tscn")
 #current level
-var level = 99
+var level = 0
 var Tutor = false
 
 #Unit amount 

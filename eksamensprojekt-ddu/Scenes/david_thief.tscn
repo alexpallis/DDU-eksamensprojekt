@@ -27,7 +27,8 @@ script = ExtResource("3_xs13m")
 position = Vector2(-50.625, -3)
 shape = SubResource("RectangleShape2D_illvs")
 
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
-[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
-[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

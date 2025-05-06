@@ -26,6 +26,7 @@ var previous_hand_slot: int = -1
 @onready var attack_area = $AttackArea2D
 @onready var cooldown = $cooldown
 @onready var cost = $CoinCost/Cost
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _ready():
 
@@ -69,6 +70,7 @@ func start_moving():
 	moving = true
 	Global.Coin -= price
 	cost.hide()
+	animated_sprite_2d.play("Walk")
 	match unitid:
 		Global.handdave1: Global.handdave1cdstart = true
 		Global.handdave2: Global.handdave2cdstart = true
@@ -163,11 +165,13 @@ func _on_attack_area_area_entered(body):
 
 	elif body.has_method("take_damage") and moving:
 		attacking = true 
+		animated_sprite_2d.play("Idl")
 		await attack_target(body)
 
 func _on_attack_area_area_exited(_area):
 	can_attack = true
 	attacking = false
+	animated_sprite_2d.play("Walk")
 
 func attack_target(body):
 	while is_instance_valid(body) and body.has_method("take_damage") and attacking:

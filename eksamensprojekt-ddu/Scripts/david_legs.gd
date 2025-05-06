@@ -10,11 +10,11 @@ var lane4 = false
 var moving = true
 var attacking = false
 
-var speed = 150 * Global.enemy_difficulty  # Speed of movement to the right
+var speed = 250 * Global.enemy_difficulty  # Speed of movement to the right
 var steal_value = 10 * Global.enemy_difficulty # the amount the unit steals from the hous
 var attack_cooldown = 1.0   # Time between attacks
 var attack_damage = 15 * Global.enemy_difficulty  # Default attack damage
-var health = 250 * Global.enemy_difficulty  # Unit health
+var health = 200 * Global.enemy_difficulty  # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D

@@ -18,6 +18,7 @@ var health = 200 * Global.enemy_difficulty # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _ready():
 	start_position = self.global_position
@@ -115,6 +116,7 @@ func _on_attack_area_area_entered(body):
 	if body.has_method("take_damage") and moving == true:
 		attacking = true  # Stop movement when attacking
 		await attack_target(body)
+		animated_sprite_2d.play("Idl")
 
 
 	else:
@@ -123,7 +125,7 @@ func _on_attack_area_area_entered(body):
 
 
 func _on_attack_area_area_exited(body):
-	
+	animated_sprite_2d.play("Walk")
 	attacking = false
 	print("hi")
 	

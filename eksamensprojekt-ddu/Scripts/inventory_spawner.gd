@@ -23,7 +23,7 @@ var positions = [
 	Vector2(800, 150),
 	Vector2(900, 150),
 	Vector2(1000, 150),
-	Vector2(100, 200),
+	Vector2(100, 215),
 	Vector2(200, 200),  
 	Vector2(300, 200),  
 	Vector2(400, 200), 

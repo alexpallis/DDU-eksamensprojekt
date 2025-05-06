@@ -1,51 +1,43 @@
-[gd_scene load_steps=16 format=3 uid="uid://sbmxd476tedo"]
+[gd_scene load_steps=14 format=3 uid="uid://sbmxd476tedo"]
 
 [ext_resource type="Script" path="res://Scripts/david_legs.gd" id="1_0pcfc"]
-[ext_resource type="Texture2D" uid="uid://djvj7jc1qkwcl" path="res://assets/Longdave.png" id="2_dh73t"]
-[ext_resource type="Texture2D" uid="uid://ble1315dc8q07" path="res://assets/Longdavewalk.png" id="3_bd7bf"]
+[ext_resource type="Texture2D" uid="uid://y0xqnpj0rte4" path="res://assets/Davidlonglegs-Sheet.png" id="2_2hwvc"]
+[ext_resource type="Texture2D" uid="uid://cukoc10ggfmqx" path="res://assets/davidlegwalk-Sheet.png" id="3_c3nq3"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_plybb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_26ra4"]
-atlas = ExtResource("2_dh73t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7nug"]
+atlas = ExtResource("2_2hwvc")
 region = Rect2(0, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_te1e8"]
-atlas = ExtResource("3_bd7bf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r02e3"]
+atlas = ExtResource("3_c3nq3")
 region = Rect2(0, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sgv2p"]
-atlas = ExtResource("3_bd7bf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttkcl"]
+atlas = ExtResource("3_c3nq3")
 region = Rect2(1000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hbj7a"]
-atlas = ExtResource("3_bd7bf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nfeh"]
+atlas = ExtResource("3_c3nq3")
 region = Rect2(2000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xeljj"]
-atlas = ExtResource("3_bd7bf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbt3e"]
+atlas = ExtResource("3_c3nq3")
 region = Rect2(3000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1n23w"]
-atlas = ExtResource("3_bd7bf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_10lms"]
+atlas = ExtResource("3_c3nq3")
 region = Rect2(4000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v3otu"]
-atlas = ExtResource("3_bd7bf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi7yf"]
+atlas = ExtResource("3_c3nq3")
 region = Rect2(5000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fqiod"]
-atlas = ExtResource("3_bd7bf")
-region = Rect2(6000, 0, 1000, 1000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_htw0g"]
-atlas = ExtResource("3_bd7bf")
-region = Rect2(7000, 0, 1000, 1000)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hjtn7"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_62nae"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_26ra4")
+"texture": SubResource("AtlasTexture_v7nug")
 }],
 "loop": true,
 "name": &"Idl",
@@ -53,28 +45,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_te1e8")
+"texture": SubResource("AtlasTexture_r02e3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sgv2p")
+"texture": SubResource("AtlasTexture_ttkcl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hbj7a")
+"texture": SubResource("AtlasTexture_2nfeh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xeljj")
+"texture": SubResource("AtlasTexture_lbt3e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1n23w")
+"texture": SubResource("AtlasTexture_10lms")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v3otu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fqiod")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_htw0g")
+"texture": SubResource("AtlasTexture_oi7yf")
 }],
 "loop": true,
 "name": &"Walk",
@@ -93,10 +79,9 @@ script = ExtResource("1_0pcfc")
 self_modulate = Color(0.447417, 0.2925, 0.65, 1)
 position = Vector2(20, 22)
 scale = Vector2(0.1, 0.1)
-sprite_frames = SubResource("SpriteFrames_hjtn7")
-animation = &"Idl"
+sprite_frames = SubResource("SpriteFrames_62nae")
+animation = &"Walk"
 autoplay = "Walk"
-frame_progress = 0.737932
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
