@@ -72,7 +72,7 @@ func _on_day_8_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_1.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_8.tscn")
 	else:
 		stage_guid.text = "You need to complete day 7 fist"
 
@@ -81,7 +81,7 @@ func _on_day_9_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_2.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_9.tscn")
 	else:
 		stage_guid.text = "You need to complete day 8 fist"
 
@@ -90,7 +90,7 @@ func _on_day_10_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_3.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_10.tscn")
 	else:
 		stage_guid.text = "You need to complete day 9 fist"
 
@@ -99,7 +99,7 @@ func _on_day_11_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_4.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_11.tscn")
 	else:
 		stage_guid.text = "You need to complete day 10 fist"
 
@@ -108,7 +108,7 @@ func _on_day_12_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_5.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_12.tscn")
 	else:
 		stage_guid.text = "You need to complete day 11 fist"
 
@@ -117,7 +117,7 @@ func _on_day_13_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_6.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_13.tscn")
 	else:
 		stage_guid.text = "You need to complete day 12 fist"
 
@@ -126,7 +126,7 @@ func _on_day_14_pressed():
 		Global.enemy_difficulty = 1.2
 		Global.Coin = 50
 		Global.CoinSpeed = Global.StandardCoinSpeed
-		get_tree().change_scene_to_file("res://Level/Levels/level_7.tscn")
+		get_tree().change_scene_to_file("res://Level/Levels/level_14.tscn")
 	else:
 		stage_guid.text = "You need to complete day 13 fist"
 

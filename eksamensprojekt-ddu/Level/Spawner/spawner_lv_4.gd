@@ -19,10 +19,10 @@ var spawn_pattern = [
 	[0, 15, 1, true], 
 	[0, 15, 2, true], 
 	[0, 15, 3, true], 
-	[3, 35, 0, true], 
-	[3, 35, 1, true], 
-	[3, 35, 2, true], 
-	[3, 35, 3, true],
+	[4, 35, 0, true], 
+	[4, 35, 1, true], 
+	[4, 35, 2, true], 
+	[4, 35, 3, true],
 ]
 
 var current_spawn_index := 0
