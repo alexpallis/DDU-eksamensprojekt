@@ -251,11 +251,11 @@ stream = ExtResource("4_a60m2")
 autoplay = true
 parameters/looping = true
 
-[connection signal="pressed" from="Panel/GridContainer/DayMinus2" to="." method="_on_day_minus_2_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/DayMinus2" to="." method="_on_day_2_pressed"]
-[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_dayminus_1_pressed"]
-[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_day_minus_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus2" to="." method="_on_day_minus_2_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_day_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_day_minus_1_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/DayMinus1" to="." method="_on_dayminus_1_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day0" to="." method="_on_day_0_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day1" to="." method="_on_day_1_pressed"]
 [connection signal="pressed" from="Panel/GridContainer/Day2" to="." method="_on_day_2_pressed"]

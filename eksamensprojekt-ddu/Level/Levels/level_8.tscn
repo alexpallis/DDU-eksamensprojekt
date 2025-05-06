@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://buo4bvd53panq"]
 
-[ext_resource type="Script" path="res://Level/Level scripts/level_8.gd" id="1_v7qck"]
+[ext_resource type="Script" path="res://Level/Level scripts/level_all-got_lazy.gd" id="1_76p8v"]
 [ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_0scc7"]
 [ext_resource type="Texture2D" uid="uid://c76deevekacyb" path="res://assets/hand.png" id="3_a84up"]
 [ext_resource type="Script" path="res://Level/Spawner/spawner_lv_8.gd" id="4_xi546"]
@@ -22,7 +22,8 @@ texture = ExtResource("2_0scc7")
 texture = ExtResource("3_a84up")
 
 [node name="Level 8" type="Node"]
-script = ExtResource("1_v7qck")
+script = ExtResource("1_76p8v")
+level = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
