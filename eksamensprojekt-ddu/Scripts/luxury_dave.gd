@@ -10,13 +10,13 @@ var unitid = 18
 
 var sf = 1 + (Global.D18 - 1) / 10.0
 
-var speed = 50 * sf
-var steal_value = 75 * sf
-var attack_cooldown = 1.0 
-var attack_damage = 0 * sf
-var health = 20 * sf
-var can_attack = true
-var price = 40
+@export var speed = 50 * sf
+@export var steal_value = 75 * sf
+@export var attack_cooldown = 1.0 
+@export var attack_damage = 0 * sf
+@export var health = 20 * sf
+@export var can_attack = true
+@export var price = 40
 
 var current_hand_slot: int = -1
 var current_lane: int = -1

@@ -20,7 +20,7 @@ var sf = 1 + (Global.D6 - 1) / 10.0
 @export var health = 50 * sf # Unit health
 var can_attack = true
 @export var price = 30  # how much the unit cost
-@export var coinspeedadd = 0.5 * sf
+@export var coinspeedadd = 1 * sf #how much the unit gives coins per second 
 var current_hand_slot: int = -1
 var current_lane: int = -1
 
