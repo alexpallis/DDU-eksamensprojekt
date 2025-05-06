@@ -19,6 +19,7 @@ var spawn_pattern = [
 	[0, 10.0, 2, true],   
 	[0, 1.0, 3, true],
 	[0, 8.2, 1, true],
+	[2, 15, 1, false],
 	
 ]
 
