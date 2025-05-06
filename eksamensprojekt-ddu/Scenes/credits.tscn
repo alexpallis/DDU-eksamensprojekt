@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5u0gv5aprh01"]
+[gd_scene load_steps=7 format=3 uid="uid://c5u0gv5aprh01"]
 
 [ext_resource type="Script" path="res://Scripts/credits.gd" id="1_1fkwl"]
 [ext_resource type="Texture2D" uid="uid://c140r5vw36s48" path="res://assets/Kobalt.jpg" id="2_i6a84"]
 [ext_resource type="FontFile" uid="uid://gwj4uh6jh1t2" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_4d164"]
 [ext_resource type="FontFile" uid="uid://sb0q65ov3s1c" path="res://assets/Fonts/antiquity-print.ttf" id="4_omt8a"]
+[ext_resource type="AudioStream" uid="uid://cjwcauianbrip" path="res://assets/Fonts/Davestheme.mp3" id="5_fux83"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icysu"]
 texture = ExtResource("2_i6a84")
@@ -188,5 +189,9 @@ offset_bottom = -25.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_4d164")
 text = "Back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_fux83")
+autoplay = true
 
 [connection signal="pressed" from="Panel/BackButten" to="." method="_on_back_butten_pressed"]

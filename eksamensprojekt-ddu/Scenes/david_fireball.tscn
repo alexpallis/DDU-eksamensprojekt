@@ -1,8 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0cf7dwgmofqt"]
+[gd_scene load_steps=12 format=3 uid="uid://c0cf7dwgmofqt"]
 
 [ext_resource type="Texture2D" uid="uid://eeq4m133kc3x" path="res://assets/torch.png" id="1_4p0ve"]
 [ext_resource type="Script" path="res://Scripts/david_fireball.gd" id="1_d5j2p"]
+[ext_resource type="Texture2D" uid="uid://sfbxkkthliqj" path="res://assets/Fireballave2.png" id="2_ad4ll"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="2_fme2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn1xb"]
+atlas = ExtResource("2_ad4ll")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juchy"]
+atlas = ExtResource("2_ad4ll")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsrfc"]
+atlas = ExtResource("2_ad4ll")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bor3v"]
+atlas = ExtResource("2_ad4ll")
+region = Rect2(3000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ckvq"]
+atlas = ExtResource("2_ad4ll")
+region = Rect2(4000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fl157"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn1xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juchy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsrfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bor3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ckvq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co1v2"]
 size = Vector2(67, 20)
@@ -12,7 +56,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_d5j2p")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 25)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_fl157")
+animation = &"walk"
+autoplay = "walk"
+flip_h = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(40, 22)
 rotation = 5.52571
 scale = Vector2(4, 4.289)

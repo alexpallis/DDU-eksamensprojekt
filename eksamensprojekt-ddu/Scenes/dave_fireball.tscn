@@ -1,8 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://e7ltmw6b3v4f"]
+[gd_scene load_steps=12 format=3 uid="uid://e7ltmw6b3v4f"]
 
 [ext_resource type="Script" path="res://Scripts/dave_fireball.gd" id="1_66ao3"]
+[ext_resource type="Texture2D" uid="uid://sfbxkkthliqj" path="res://assets/Fireballave2.png" id="2_6da5o"]
 [ext_resource type="Texture2D" uid="uid://eeq4m133kc3x" path="res://assets/torch.png" id="2_ywu4r"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_o3t46"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn1xb"]
+atlas = ExtResource("2_6da5o")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juchy"]
+atlas = ExtResource("2_6da5o")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsrfc"]
+atlas = ExtResource("2_6da5o")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bor3v"]
+atlas = ExtResource("2_6da5o")
+region = Rect2(3000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ckvq"]
+atlas = ExtResource("2_6da5o")
+region = Rect2(4000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vduw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn1xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juchy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsrfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bor3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ckvq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kb4rc"]
 size = Vector2(67, 20)
@@ -12,7 +56,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_66ao3")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(59, 25)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_3vduw")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.622774
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(40, 22)
 rotation = 0.829031
 scale = Vector2(4, 4.289)

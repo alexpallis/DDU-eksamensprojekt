@@ -24,7 +24,6 @@ var current_lane: int = -1
 var previous_hand_slot: int = -1
 
 @onready var attack_area = $AttackArea2D
-@onready var cooldown = $cooldown
 @onready var cost = $CoinCost/Cost
 @onready var attack = $Attack
 
