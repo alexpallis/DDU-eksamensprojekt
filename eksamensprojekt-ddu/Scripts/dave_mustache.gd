@@ -18,7 +18,6 @@ var sf = 1 + (Global.D13 - 1) / 10.0
 @export var health = 75 * sf
 var can_attack = true
 @export var price = 25
-
 var current_hand_slot: int = -1
 var current_lane: int = -1
 

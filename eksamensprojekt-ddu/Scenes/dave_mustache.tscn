@@ -98,7 +98,7 @@ offset_bottom = 40.0
 script = ExtResource("1_c6d67")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(18, 21)
+position = Vector2(268, 84)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_8kt38")
 animation = &"Ild"

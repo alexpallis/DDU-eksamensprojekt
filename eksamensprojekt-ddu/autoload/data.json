@@ -31,12 +31,12 @@
   },
   "6": {
 	"Name": "Dave's Grill",
-	"Texture": "grill2.png",
+	"Texture": "grilll.png",
 	"Description": ""
   },
   "7": {
 	"Name": "Ninja Dave",
-	"Texture": "damin1-Sheet.png",
+	"Texture": "nin.png",
 	"Description": ""
   },
   "8": {
@@ -51,17 +51,17 @@
   }, 
   "10": {
 	"Name": "Pearl Dave",
-	"Texture": "pille.png",
+	"Texture": "pea.png",
 	"Description": "Fire Pearl Daitokuten"
  }, 
   "11": {
 	"Name": "Ninja Thief Dave",
-	"Texture": "Burgledavid.png",
+	"Texture": "nt.png",
 	"Description": ""
  }, 
   "12": {
 	"Name": "Chargeing Dave",
-	"Texture": "davidbeefcake-Sheet.png",
+	"Texture": "cha.png",
 	"Description": ""
 	},
   "13": {
@@ -71,32 +71,32 @@
 	},
  "14": {
 	"Name": "Random Dave",
-	"Texture": "damin1-Sheet.png",
+	"Texture": "ran.png",
 	"Description": ""
 	},
  "15": {
 	"Name": "Mini Dave",
-	"Texture": "damin1-Sheet.png",
+	"Texture": "mini.png",
 	"Description": ""
 	},
  "16": {
 	"Name": "Agent 00Dave",
-	"Texture": "Gun_dave.png",
+	"Texture": "00D.png",
 	"Description": ""
 	},
  "17": {
 	"Name": "Tank Dave",
-	"Texture": "damin1-Sheet.png",
+	"Texture": "tank.png",
 	"Description": ""
 	},
  "18": {
 	"Name": "Luxury Dave",
-	"Texture": "damin1-Sheet.png",
+	"Texture": "lux.png",
 	"Description": ""
 	},
  "19": {
 	"Name": "Burning Dave",
-	"Texture": "skægdave.png",
+	"Texture": "bur.png",
 	"Description": ""
 	},
 }
