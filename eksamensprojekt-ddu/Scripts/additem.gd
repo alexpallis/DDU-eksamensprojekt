@@ -16,7 +16,7 @@ func _on_pressed():
 	if Global.money >= 50:
 		Global.money -= 50
 		@warning_ignore("shadowed_variable")
-		var currdavid = str(randi() % 20)
+		var currdavid = str(randi() % 21)
 		randonumb = int(currdavid)
 		print(currdavid)
 		

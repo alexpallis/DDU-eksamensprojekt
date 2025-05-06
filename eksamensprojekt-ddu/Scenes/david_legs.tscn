@@ -1,43 +1,51 @@
-[gd_scene load_steps=14 format=3 uid="uid://sbmxd476tedo"]
+[gd_scene load_steps=16 format=3 uid="uid://sbmxd476tedo"]
 
 [ext_resource type="Script" path="res://Scripts/david_legs.gd" id="1_0pcfc"]
-[ext_resource type="Texture2D" uid="uid://y0xqnpj0rte4" path="res://assets/Davidlonglegs-Sheet.png" id="2_2hwvc"]
-[ext_resource type="Texture2D" uid="uid://cukoc10ggfmqx" path="res://assets/davidlegwalk-Sheet.png" id="3_c3nq3"]
+[ext_resource type="Texture2D" uid="uid://djvj7jc1qkwcl" path="res://assets/Longdave.png" id="2_dh73t"]
+[ext_resource type="Texture2D" uid="uid://ble1315dc8q07" path="res://assets/Longdavewalk.png" id="3_bd7bf"]
 [ext_resource type="Script" path="res://Scripts/test.gd" id="3_plybb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v7nug"]
-atlas = ExtResource("2_2hwvc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_26ra4"]
+atlas = ExtResource("2_dh73t")
 region = Rect2(0, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r02e3"]
-atlas = ExtResource("3_c3nq3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_te1e8"]
+atlas = ExtResource("3_bd7bf")
 region = Rect2(0, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ttkcl"]
-atlas = ExtResource("3_c3nq3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgv2p"]
+atlas = ExtResource("3_bd7bf")
 region = Rect2(1000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nfeh"]
-atlas = ExtResource("3_c3nq3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbj7a"]
+atlas = ExtResource("3_bd7bf")
 region = Rect2(2000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbt3e"]
-atlas = ExtResource("3_c3nq3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeljj"]
+atlas = ExtResource("3_bd7bf")
 region = Rect2(3000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_10lms"]
-atlas = ExtResource("3_c3nq3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n23w"]
+atlas = ExtResource("3_bd7bf")
 region = Rect2(4000, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oi7yf"]
-atlas = ExtResource("3_c3nq3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3otu"]
+atlas = ExtResource("3_bd7bf")
 region = Rect2(5000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqiod"]
+atlas = ExtResource("3_bd7bf")
+region = Rect2(6000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htw0g"]
+atlas = ExtResource("3_bd7bf")
+region = Rect2(7000, 0, 1000, 1000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjtn7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v7nug")
+"texture": SubResource("AtlasTexture_26ra4")
 }],
 "loop": true,
 "name": &"Idl",
@@ -45,22 +53,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r02e3")
+"texture": SubResource("AtlasTexture_te1e8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ttkcl")
+"texture": SubResource("AtlasTexture_sgv2p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2nfeh")
+"texture": SubResource("AtlasTexture_hbj7a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lbt3e")
+"texture": SubResource("AtlasTexture_xeljj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_10lms")
+"texture": SubResource("AtlasTexture_1n23w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oi7yf")
+"texture": SubResource("AtlasTexture_v3otu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqiod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htw0g")
 }],
 "loop": true,
 "name": &"Walk",
@@ -80,9 +94,9 @@ self_modulate = Color(0.447417, 0.2925, 0.65, 1)
 position = Vector2(20, 22)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_hjtn7")
-animation = &"Walk"
+animation = &"Idl"
 autoplay = "Walk"
-frame_progress = 0.305105
+frame_progress = 0.737932
 
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(60, 25)
@@ -98,5 +112,3 @@ shape = SubResource("RectangleShape2D_tc2vl")
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
-[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
-[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

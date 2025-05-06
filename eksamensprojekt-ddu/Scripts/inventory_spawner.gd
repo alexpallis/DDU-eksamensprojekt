@@ -23,6 +23,16 @@ var positions = [
 	Vector2(800, 150),
 	Vector2(900, 150),
 	Vector2(1000, 150),
+	Vector2(100, 200),
+	Vector2(200, 200),  
+	Vector2(300, 200),  
+	Vector2(400, 200), 
+	Vector2(500, 200),  
+	Vector2(600, 200),
+	Vector2(700, 200),
+	Vector2(800, 200),
+	Vector2(900, 200),
+	Vector2(1000, 200),
 ]
 var handplacement = [ 
 	[0,Global.Dave,0],
@@ -45,6 +55,17 @@ var handplacement = [
 	[17,Global.D17,17],
 	[18,Global.D18,18],
 	[19,Global.D19,19],
+	[20,Global.D20,20],
+	[21,Global.D21,11],
+	[22,Global.D22,12],
+	[23,Global.D23,13],
+	[24,Global.D24,14],
+	[25,Global.D25,15],
+	[26,Global.D26,16],
+	[27,Global.D27,17],
+	[28,Global.D28,18],
+	[29,Global.D29,19],
+	[30,Global.D30,20],
 ]
 func _ready():
 	spawnonboard()

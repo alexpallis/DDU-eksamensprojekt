@@ -99,4 +99,9 @@
 	"Texture": "bur.png",
 	"Description": ""
 	},
+ "20": {
+	"Name": "Long Dave",
+	"Texture": "Longdave.png",
+	"Description": "He is looong"
+	},
 }

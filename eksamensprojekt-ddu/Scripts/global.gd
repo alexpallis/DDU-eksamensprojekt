@@ -95,6 +95,7 @@ var daves = [
 	preload("res://Scenes/dave_tank.tscn"),
 	preload("res://Scenes/luxury_dave.tscn"),
 	preload("res://Scenes/burning_dave.tscn"),
+	preload("res://Scenes/dave_long.tscn")
 ]
 
 #list of enemys
