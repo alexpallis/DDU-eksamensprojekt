@@ -16,7 +16,7 @@ var lanes = [
 var spawn_pattern = [
 	[2, 5.5, 0, true], 
 	[1, 10.0, 2, true],   
-	[1, 1.0, 3, true],
+	[1, 10.0, 3, true],
 	[2, 8.2, 1, true],
 	[0, 20, 0, true], 
 	[0, 25, 2, true],   
