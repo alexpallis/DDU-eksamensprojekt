@@ -14,13 +14,10 @@ var lanes = [
 
 # Format: [enemy_type_index, delay_seconds, lane_index, loop (true/false)]
 var spawn_pattern = [
-		# Looping
-	[2, 10, 0, true],
-	[3, 10, 1, true],
-	[2, 10, 2, true],
-	[3, 10, 3, true],
-
-	# Waves
+	[2, 14, 0, true],
+	[3, 13, 1, true],
+	[2, 14, 2, true],
+	[3, 13, 3, true],
 	[3, 20.0, 0, false],
 	[4, 21.0, 1, false],
 	[4, 21.5, 2, false],

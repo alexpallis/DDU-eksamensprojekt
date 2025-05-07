@@ -1,0 +1,183 @@
+[gd_scene load_steps=18 format=3 uid="uid://my6kypsvn2i6"]
+
+[ext_resource type="Script" path="res://Level/Level scripts/level_all-got_lazy.gd" id="1_5enyy"]
+[ext_resource type="Texture2D" uid="uid://tbiuwvi6qw5s" path="res://assets/hus3.png" id="2_g58fk"]
+[ext_resource type="Texture2D" uid="uid://c76deevekacyb" path="res://assets/hand.png" id="3_h3aah"]
+[ext_resource type="Script" path="res://Level/Spawner/spawner_lv_19.gd" id="4_h1f6n"]
+[ext_resource type="PackedScene" uid="uid://ikx80jmdxv27" path="res://Scenes/house_david.tscn" id="5_ogyot"]
+[ext_resource type="PackedScene" uid="uid://bsieoyi3d0kwl" path="res://Scenes/house_dave.tscn" id="6_mvtrx"]
+[ext_resource type="Script" path="res://Scripts/unit_layer_1.gd" id="7_a36jm"]
+[ext_resource type="PackedScene" uid="uid://p4m5cmvoi0gn" path="res://Scenes/dave_spawner.tscn" id="8_wa2ou"]
+[ext_resource type="Script" path="res://Scripts/unit_container.gd" id="9_odeev"]
+[ext_resource type="Script" path="res://Scripts/lane_1.gd" id="10_nuonn"]
+[ext_resource type="Script" path="res://Scripts/lane_2.gd" id="11_tiduj"]
+[ext_resource type="Script" path="res://Scripts/lane_3.gd" id="12_4x1nn"]
+[ext_resource type="Script" path="res://Scripts/lane_4.gd" id="13_na57t"]
+[ext_resource type="PackedScene" uid="uid://cjbh7msoylast" path="res://Scenes/fences.tscn" id="14_o23tu"]
+[ext_resource type="AudioStream" uid="uid://cb5ghxebfw2jg" path="res://assets/Fonts/boogiemaninstrumental.mp3" id="15_7mpt5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0joh"]
+texture = ExtResource("2_g58fk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdstx"]
+texture = ExtResource("3_h3aah")
+
+[node name="Level 19" type="Node"]
+script = ExtResource("1_5enyy")
+level = 19
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_right = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_h0joh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_left = 131.0
+offset_top = 498.0
+offset_right = 171.0
+offset_bottom = 538.0
+scale = Vector2(22.3059, 3.7459)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mdstx")
+
+[node name="spawnerLV9" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -59.0
+offset_right = -19.0
+offset_bottom = 40.0
+script = ExtResource("4_h1f6n")
+metadata/_edit_use_anchors_ = true
+
+[node name="House_David" parent="CanvasLayer" instance=ExtResource("5_ogyot")]
+offset_left = 1189.0
+offset_top = 324.0
+offset_right = 1229.0
+offset_bottom = 364.0
+scale = Vector2(-2.26287, 3.69943)
+metadata/_edit_use_anchors_ = true
+
+[node name="House_Dave" parent="CanvasLayer" instance=ExtResource("6_mvtrx")]
+offset_left = -59.0
+offset_top = 323.0
+offset_right = -59.0
+offset_bottom = 323.0
+scale = Vector2(3.76, 3.76)
+metadata/_edit_use_anchors_ = true
+
+[node name="UnitLayer1" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_top = -0.01
+anchor_right = 0.042
+anchor_bottom = 0.103
+offset_left = -59.0
+offset_top = 6.48
+offset_right = -107.384
+offset_bottom = 197.256
+script = ExtResource("7_a36jm")
+metadata/_edit_use_anchors_ = true
+
+[node name="DaveSpawner" parent="CanvasLayer" instance=ExtResource("8_wa2ou")]
+offset_left = -59.0
+offset_right = -59.0
+metadata/_edit_use_anchors_ = true
+
+[node name="UnitContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.576
+anchor_bottom = 0.407
+offset_left = -59.0
+offset_right = -722.552
+offset_bottom = -263.736
+script = ExtResource("9_odeev")
+metadata/_edit_use_anchors_ = true
+
+[node name="Lane1" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -60.0
+offset_top = 0.999996
+offset_right = 1093.0
+offset_bottom = 100.0
+scale = Vector2(1.29995, 1.78596)
+script = ExtResource("10_nuonn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Lane2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -60.0
+offset_top = 168.0
+offset_right = 1093.0
+offset_bottom = 268.0
+scale = Vector2(1.08, 1.24)
+script = ExtResource("11_tiduj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Lane3" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -51.0
+offset_top = 278.0
+offset_right = 1100.0
+offset_bottom = 379.0
+scale = Vector2(1, 1.28)
+script = ExtResource("12_4x1nn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Lane4" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -49.0
+offset_top = 390.0
+offset_right = 1104.0
+offset_bottom = 490.0
+scale = Vector2(1, 1.04)
+script = ExtResource("13_na57t")
+metadata/_edit_use_anchors_ = true
+
+[node name="Fences" parent="CanvasLayer" instance=ExtResource("14_o23tu")]
+offset_left = 689.0
+offset_top = 202.0
+offset_right = 729.0
+offset_bottom = 242.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Fences2" parent="CanvasLayer" instance=ExtResource("14_o23tu")]
+offset_left = 335.0
+offset_top = 88.0
+offset_right = 375.0
+offset_bottom = 128.0
+
+[node name="Fences3" parent="CanvasLayer" instance=ExtResource("14_o23tu")]
+offset_left = 691.0
+offset_top = 311.0
+offset_right = 731.0
+offset_bottom = 351.0
+
+[node name="Fences4" parent="CanvasLayer" instance=ExtResource("14_o23tu")]
+offset_left = 323.0
+offset_top = 427.0
+offset_right = 363.0
+offset_bottom = 467.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_7mpt5")
+autoplay = true
+parameters/looping = true
+
+[connection signal="mouse_entered" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane1" to="CanvasLayer/Lane1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Lane2" to="CanvasLayer/Lane2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane2" to="CanvasLayer/Lane2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Lane3" to="CanvasLayer/Lane3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane3" to="CanvasLayer/Lane3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Lane4" to="CanvasLayer/Lane4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Lane4" to="CanvasLayer/Lane4" method="_on_mouse_exited"]
