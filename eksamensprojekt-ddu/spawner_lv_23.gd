@@ -14,14 +14,20 @@ var lanes = [
 
 # Format: [enemy_type_index, delay_seconds, lane_index, loop (true/false)]
 var spawn_pattern = [
-	[2, 15.5, 0, true],
-	[3, 16.0, 1, true],
-	[2, 16.5, 2, true],
-	[3, 17.0, 3, true],
-	[3, 24.0, 0, false],
-	[4, 25.0, 1, false],
-	[4, 25.5, 2, false],
-	[3, 26.0, 3, false],
+	[14, 9.6, 0, true],
+	[13, 10.0, 1, true],
+	[9, 10.3, 2, true],
+	[8, 10.6, 3, true],
+
+	[15, 32.0, 0, false],
+	[16, 32.5, 1, false],
+	[13, 33.0, 2, false],
+	[12, 33.5, 3, false],
+
+	[14, 50.0, 0, false],
+	[11, 50.5, 1, false],
+	[5, 51.0, 2, false],
+	[9, 51.5, 3, false],
 ]
 
 var current_spawn_index := 0
