@@ -9,7 +9,7 @@ func _ready():
 	
 	file.close()
 
-func get_texture_name(ID = "o"):
+func get_texture_name(ID = "0"):
 	return content[ID]["Texture"]
 
 func get_item_name(ID = "0"):

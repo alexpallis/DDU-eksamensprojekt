@@ -1,22 +1,19 @@
 extends Control
 
 # Preload enemy scenes
-var enemy_types = [
-	preload("res://Scenes/enemy_unit.tscn")
-]
-
+var enemy_types = Global.enemy
 	
 var lanes = [
 	Vector2(1000, 100),  # lane1
-	Vector2(1000, 200),  # lane2
-	Vector2(1000, 300),  # lane3
-	Vector2(1000, 400),  # lane4
+	Vector2(1000, 210),  # lane2
+	Vector2(1000, 320),  # lane3
+	Vector2(1000, 430),  # lane4
 ]
 
 # Format: [enemy_type_index, delay_seconds, lane_index, loop (true/false)]
 var spawn_pattern = [
-	[0, 5.5, 0, false],  # spawn once
-	[0, 10.0, 2, true],   # loop this one
+	[0, 5.5, 0, false], 
+	[0, 10.0, 2, true],   
 	[0, 1.0, 3, false],
 	[0, 8.2, 1, true],
 ]

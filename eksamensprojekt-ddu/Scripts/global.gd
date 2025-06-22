@@ -5,7 +5,16 @@ var Lane2MouseOn = false
 var Lane3MouseOn = false
 var Lane4MouseOn = false
 
-
+var Hand1MouseOn = false
+var Hand2MouseOn = false
+var Hand3MouseOn = false
+var Hand4MouseOn = false
+var Hand5MouseOn = false
+var Hand6MouseOn = false
+var Hand7MouseOn = false
+var Hand8MouseOn = false
+var Hand9MouseOn = false
+var Hand10MouseOn = false
 
 var Layer1hovering = false
 
@@ -20,12 +29,50 @@ var nonce = null
 var request_que : Array = []
 var is_requesting : bool = false
 
-var StandardCoinSpeed = 1
+var StandardCoinSpeed = 5
 var CoinSpeed = 1
 var Coin = 0
+var money = 0
+var enemy_difficulty = 1
 
-var mony = 0
+#unit id number
+var handdave1 = 0
+var handdave2 = 1
+var handdave3 = 2
+var handdave4 = 3
+var handdave5 = 4
+var handdave6 = 5
+var handdave7 = 5
+var handdave8 = 5
+var handdave9 = 5
+var handdave10 = 5
 
+#unit cooldown in seconds
+var handdave1cd = 4.0
+var handdave2cd = 4.0
+var handdave3cd = 4.0
+var handdave4cd = 4.0
+var handdave5cd = 4.0
+var handdave6cd = 4.0
+
+#Cooldown checker slighty messy but idc
+var handdave1cdstart = false
+var handdave2cdstart = false
+var handdave3cdstart = false
+var handdave4cdstart = false
+var handdave5cdstart = false
+var handdave6cdstart = false
+
+#list of enemys
+var enemy = [
+	preload("res://Scenes/enemy_unit.tscn"), 
+	preload("res://Scenes/david_legs.tscn"), 
+	preload("res://Scenes/david_arms.tscn"), 
+	preload("res://Scenes/david_thief.tscn") 
+]
+
+#current level
+var level = 0
 
 func _ready():
 	
@@ -129,7 +176,6 @@ func _send_request(request: Dictionary):
 	
 func  _submit_level():
 	var id = ""
-	var level = 0
 	
 	var command = "add_level"
 	var data = {"level" : level, "id" : id}

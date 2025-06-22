@@ -7,14 +7,39 @@
 size = Vector2(20, 176)
 
 [node name="House_Dave" type="Container"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ql63i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 2
 script = ExtResource("2_fcj1s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_8llum")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dave_health_bar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 250.0
+offset_bottom = 35.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 92.0
+offset_top = 5.0
+offset_right = 132.0
+offset_bottom = 28.0
+
+[node name="Coin_counter" type="Label" parent="CanvasLayer"]
+offset_left = 299.0
+offset_top = 7.0
+offset_right = 339.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27

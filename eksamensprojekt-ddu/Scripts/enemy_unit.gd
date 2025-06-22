@@ -9,14 +9,12 @@ var lane3 = false
 var lane4 = false
 var moving = true
 var attacking = false
-var speed = -100  # Speed of movement to the right
-var speed2 = -150
 
-var steal_value = 10
-
-var attack_cooldown = 1.0  # Time between attacks
-var attack_damage = 10  # Default attack damage
-var health = 80  # Unit health
+var speed = 100 * Global.enemy_difficulty  # Speed of movement to the right
+var steal_value = 10 * Global.enemy_difficulty # the amount the unit steals from the hous
+var attack_cooldown = 1.0 * Global.enemy_difficulty # Time between attacks
+var attack_damage = 10 * Global.enemy_difficulty # Default attack damage
+var health = 100 * Global.enemy_difficulty # Unit health
 var can_attack = true
 
 @onready var attack_area = $AttackArea2D
@@ -86,7 +84,7 @@ func _process(delta):
 		else:
 			nolane()
 	elif moving and !attacking:
-		self.global_position.x += speed * delta  # Moves right
+		self.global_position.x += -speed * delta  # Moves right
 
 	
 
